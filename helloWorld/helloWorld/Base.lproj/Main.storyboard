@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="helloWorld" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gke-Dc-iUZ" customClass="RoundedButton" customModule="helloWorld" customModuleProvider="target">
+                                <rect key="frame" x="86" y="486" width="148" height="50"/>
+                                <color key="backgroundColor" red="0.33641280313801553" green="0.3397436229710652" blue="0.3397436229710652" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="K0B-4u-XzV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Press me please">
+                                    <color key="titleColor" red="0.99019607843137258" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="button1Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vcD-st-i7J"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dots" translatesAutoresizingMaskIntoConstraints="NO" id="MyA-ay-21S">
+                                <rect key="frame" x="138" y="389" width="49" height="89"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hello" translatesAutoresizingMaskIntoConstraints="NO" id="Irw-fV-1bT">
+                                <rect key="frame" x="0.0" y="42" width="320" height="243"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="243" id="BUz-tk-QEW"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="syG-P0-907" customClass="RoundedButton" customModule="helloWorld" customModuleProvider="target">
+                                <rect key="frame" x="88" y="331" width="148" height="50"/>
+                                <color key="backgroundColor" red="0.33641280309999999" green="0.33974362299999999" blue="0.33974362299999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="h57-i3-dOo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Now press me">
+                                    <color key="titleColor" red="0.99019607840000001" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="displayHelloWorld:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JuA-su-rFq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="syG-P0-907" secondAttribute="trailing" constant="68" id="9Rn-gu-8Vc"/>
+                            <constraint firstItem="Irw-fV-1bT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="AP8-h8-gCx"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="gke-Dc-iUZ" secondAttribute="bottom" constant="32" id="Gqg-9w-kcX"/>
+                            <constraint firstItem="MyA-ay-21S" firstAttribute="top" secondItem="syG-P0-907" secondAttribute="bottom" constant="8" id="J9Y-ZU-5oH"/>
+                            <constraint firstItem="syG-P0-907" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="72" id="KwU-gy-DmT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gke-Dc-iUZ" secondAttribute="trailing" constant="70" id="NHE-Tc-hJM"/>
+                            <constraint firstItem="gke-Dc-iUZ" firstAttribute="top" secondItem="MyA-ay-21S" secondAttribute="bottom" constant="8" id="NUT-cp-TIb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="MyA-ay-21S" secondAttribute="trailing" constant="117" id="e2u-hc-LKC"/>
+                            <constraint firstItem="gke-Dc-iUZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="70" id="gSh-hh-D1J"/>
+                            <constraint firstAttribute="trailing" secondItem="Irw-fV-1bT" secondAttribute="trailing" id="ieT-a6-tFq"/>
+                            <constraint firstItem="Irw-fV-1bT" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="22" id="im3-za-NGp"/>
+                            <constraint firstItem="MyA-ay-21S" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="122" id="yxM-kz-dip"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="button2IMG" destination="syG-P0-907" id="Gwf-ui-tT4"/>
+                        <outlet property="helloWorld" destination="Irw-fV-1bT" id="7M2-rZ-bKz"/>
+                        <outlet property="loadingImage" destination="MyA-ay-21S" id="432-9h-baz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-452" y="-73"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="dots" width="19" height="89"/>
+        <image name="hello" width="348" height="384"/>
+    </resources>
+</document>
