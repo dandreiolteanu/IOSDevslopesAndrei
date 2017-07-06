@@ -11,6 +11,7 @@ class Logangs {
     private var _imageURL: String!
     private var _videoURL: String!
     private var _videoTitle: String!
+    private var _viewsNumber: String!
     
     //Getters
     var imageURL: String {
@@ -22,12 +23,18 @@ class Logangs {
     var videoTitle: String {
         return _videoTitle
     }
+    var viewsNumber: String {
+        return _viewsNumber
+    }
+    
     //End getters
     
-    init(imageURL: String, videoURL: String, videoTitle : String) {
+    init(imageURL: String, videoURL: String, videoTitle : String, viewsNumber: String) {
         
         _imageURL = imageURL
         _videoURL = videoURL
-        _videoTitle = videoURL
+        _videoTitle = videoTitle
+        _viewsNumber = viewsNumber
+    
     }
 }

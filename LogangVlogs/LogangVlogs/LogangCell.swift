@@ -24,6 +24,21 @@ class LogangCell: UITableViewCell {
         videoTitle.text = logangs.videoTitle
         //TODO: set image from url
         
+        let url = URL(string: logangs.imageURL)!
+        
+        DispatchQueue.global().async {
+            do {
+                
+                let data = try Data(contentsOf: url)
+                DispatchQueue.global().sync {
+                    self.videoPreviewImage.image = UIImage(data: data)
+                    
+                }
+            } catch {
+                //handle the error
+            }
+        }
+        
         
     }
 }

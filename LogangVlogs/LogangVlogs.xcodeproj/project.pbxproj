@@ -19,6 +19,7 @@
 		0464CF341F0E3205007C5D28 /* VideoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0464CF331F0E3205007C5D28 /* VideoVC.swift */; };
 		0464CF361F0E37CF007C5D28 /* LogangCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0464CF351F0E37CF007C5D28 /* LogangCell.swift */; };
 		0464CF381F0E3945007C5D28 /* Logangs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0464CF371F0E3945007C5D28 /* Logangs.swift */; };
+		0464CF3A1F0E5B10007C5D28 /* Raleway-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0464CF391F0E5AF6007C5D28 /* Raleway-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		0464CF331F0E3205007C5D28 /* VideoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoVC.swift; sourceTree = "<group>"; };
 		0464CF351F0E37CF007C5D28 /* LogangCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogangCell.swift; sourceTree = "<group>"; };
 		0464CF371F0E3945007C5D28 /* Logangs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logangs.swift; sourceTree = "<group>"; };
+		0464CF391F0E5AF6007C5D28 /* Raleway-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 		0464CF2A1F0E2B3E007C5D28 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				0464CF391F0E5AF6007C5D28 /* Raleway-Regular.ttf */,
 				0464CF2E1F0E2B87007C5D28 /* girolight001.otf */,
 				0464CF2B1F0E2B66007C5D28 /* Hero Light.otf */,
 				0464CF2C1F0E2B66007C5D28 /* Hero.otf */,
@@ -177,6 +180,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0464CF3A1F0E5B10007C5D28 /* Raleway-Regular.ttf in Resources */,
 				0464CF301F0E2C83007C5D28 /* Hero Light.otf in Resources */,
 				0464CF311F0E2C83007C5D28 /* Hero.otf in Resources */,
 				0464CF321F0E2C83007C5D28 /* SIMPLIFICA Typeface.ttf in Resources */,
@@ -362,6 +366,7 @@
 				0464CF261F0E1D7F007C5D28 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
