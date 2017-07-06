@@ -1,0 +1,369 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0464CF161F0E1D7F007C5D28 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0464CF151F0E1D7F007C5D28 /* AppDelegate.swift */; };
+		0464CF181F0E1D7F007C5D28 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0464CF171F0E1D7F007C5D28 /* MainVC.swift */; };
+		0464CF1B1F0E1D7F007C5D28 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0464CF191F0E1D7F007C5D28 /* Main.storyboard */; };
+		0464CF1D1F0E1D7F007C5D28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0464CF1C1F0E1D7F007C5D28 /* Assets.xcassets */; };
+		0464CF201F0E1D7F007C5D28 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0464CF1E1F0E1D7F007C5D28 /* LaunchScreen.storyboard */; };
+		0464CF2F1F0E2C79007C5D28 /* girolight001.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0464CF2E1F0E2B87007C5D28 /* girolight001.otf */; };
+		0464CF301F0E2C83007C5D28 /* Hero Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0464CF2B1F0E2B66007C5D28 /* Hero Light.otf */; };
+		0464CF311F0E2C83007C5D28 /* Hero.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0464CF2C1F0E2B66007C5D28 /* Hero.otf */; };
+		0464CF321F0E2C83007C5D28 /* SIMPLIFICA Typeface.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0464CF2D1F0E2B76007C5D28 /* SIMPLIFICA Typeface.ttf */; };
+		0464CF341F0E3205007C5D28 /* VideoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0464CF331F0E3205007C5D28 /* VideoVC.swift */; };
+		0464CF361F0E37CF007C5D28 /* LogangCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0464CF351F0E37CF007C5D28 /* LogangCell.swift */; };
+		0464CF381F0E3945007C5D28 /* Logangs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0464CF371F0E3945007C5D28 /* Logangs.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0464CF121F0E1D7F007C5D28 /* LogangVlogs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LogangVlogs.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0464CF151F0E1D7F007C5D28 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0464CF171F0E1D7F007C5D28 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		0464CF1A1F0E1D7F007C5D28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0464CF1C1F0E1D7F007C5D28 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0464CF1F1F0E1D7F007C5D28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0464CF211F0E1D7F007C5D28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0464CF2B1F0E2B66007C5D28 /* Hero Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Hero Light.otf"; sourceTree = "<group>"; };
+		0464CF2C1F0E2B66007C5D28 /* Hero.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Hero.otf; sourceTree = "<group>"; };
+		0464CF2D1F0E2B76007C5D28 /* SIMPLIFICA Typeface.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SIMPLIFICA Typeface.ttf"; sourceTree = "<group>"; };
+		0464CF2E1F0E2B87007C5D28 /* girolight001.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = girolight001.otf; sourceTree = "<group>"; };
+		0464CF331F0E3205007C5D28 /* VideoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoVC.swift; sourceTree = "<group>"; };
+		0464CF351F0E37CF007C5D28 /* LogangCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogangCell.swift; sourceTree = "<group>"; };
+		0464CF371F0E3945007C5D28 /* Logangs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logangs.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0464CF0F1F0E1D7E007C5D28 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0464CF091F0E1D7E007C5D28 = {
+			isa = PBXGroup;
+			children = (
+				0464CF141F0E1D7F007C5D28 /* LogangVlogs */,
+				0464CF131F0E1D7F007C5D28 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0464CF131F0E1D7F007C5D28 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0464CF121F0E1D7F007C5D28 /* LogangVlogs.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0464CF141F0E1D7F007C5D28 /* LogangVlogs */ = {
+			isa = PBXGroup;
+			children = (
+				0464CF2A1F0E2B3E007C5D28 /* Fonts */,
+				0464CF291F0E1DEC007C5D28 /* Model */,
+				0464CF281F0E1DE6007C5D28 /* View */,
+				0464CF271F0E1DD7007C5D28 /* Controller */,
+				0464CF151F0E1D7F007C5D28 /* AppDelegate.swift */,
+				0464CF191F0E1D7F007C5D28 /* Main.storyboard */,
+				0464CF1C1F0E1D7F007C5D28 /* Assets.xcassets */,
+				0464CF1E1F0E1D7F007C5D28 /* LaunchScreen.storyboard */,
+				0464CF211F0E1D7F007C5D28 /* Info.plist */,
+			);
+			path = LogangVlogs;
+			sourceTree = "<group>";
+		};
+		0464CF271F0E1DD7007C5D28 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0464CF171F0E1D7F007C5D28 /* MainVC.swift */,
+				0464CF331F0E3205007C5D28 /* VideoVC.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		0464CF281F0E1DE6007C5D28 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0464CF351F0E37CF007C5D28 /* LogangCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		0464CF291F0E1DEC007C5D28 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0464CF371F0E3945007C5D28 /* Logangs.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		0464CF2A1F0E2B3E007C5D28 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				0464CF2E1F0E2B87007C5D28 /* girolight001.otf */,
+				0464CF2B1F0E2B66007C5D28 /* Hero Light.otf */,
+				0464CF2C1F0E2B66007C5D28 /* Hero.otf */,
+				0464CF2D1F0E2B76007C5D28 /* SIMPLIFICA Typeface.ttf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0464CF111F0E1D7E007C5D28 /* LogangVlogs */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0464CF241F0E1D7F007C5D28 /* Build configuration list for PBXNativeTarget "LogangVlogs" */;
+			buildPhases = (
+				0464CF0E1F0E1D7E007C5D28 /* Sources */,
+				0464CF0F1F0E1D7E007C5D28 /* Frameworks */,
+				0464CF101F0E1D7E007C5D28 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LogangVlogs;
+			productName = LogangVlogs;
+			productReference = 0464CF121F0E1D7F007C5D28 /* LogangVlogs.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0464CF0A1F0E1D7E007C5D28 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = Mac;
+				TargetAttributes = {
+					0464CF111F0E1D7E007C5D28 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = LFJ323P8L8;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 0464CF0D1F0E1D7E007C5D28 /* Build configuration list for PBXProject "LogangVlogs" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0464CF091F0E1D7E007C5D28;
+			productRefGroup = 0464CF131F0E1D7F007C5D28 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0464CF111F0E1D7E007C5D28 /* LogangVlogs */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0464CF101F0E1D7E007C5D28 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0464CF301F0E2C83007C5D28 /* Hero Light.otf in Resources */,
+				0464CF311F0E2C83007C5D28 /* Hero.otf in Resources */,
+				0464CF321F0E2C83007C5D28 /* SIMPLIFICA Typeface.ttf in Resources */,
+				0464CF2F1F0E2C79007C5D28 /* girolight001.otf in Resources */,
+				0464CF201F0E1D7F007C5D28 /* LaunchScreen.storyboard in Resources */,
+				0464CF1D1F0E1D7F007C5D28 /* Assets.xcassets in Resources */,
+				0464CF1B1F0E1D7F007C5D28 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0464CF0E1F0E1D7E007C5D28 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0464CF341F0E3205007C5D28 /* VideoVC.swift in Sources */,
+				0464CF381F0E3945007C5D28 /* Logangs.swift in Sources */,
+				0464CF181F0E1D7F007C5D28 /* MainVC.swift in Sources */,
+				0464CF161F0E1D7F007C5D28 /* AppDelegate.swift in Sources */,
+				0464CF361F0E37CF007C5D28 /* LogangCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		0464CF191F0E1D7F007C5D28 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0464CF1A1F0E1D7F007C5D28 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0464CF1E1F0E1D7F007C5D28 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0464CF1F1F0E1D7F007C5D28 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0464CF221F0E1D7F007C5D28 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0464CF231F0E1D7F007C5D28 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0464CF251F0E1D7F007C5D28 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = LFJ323P8L8;
+				INFOPLIST_FILE = LogangVlogs/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = andreio.LogangVlogs;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		0464CF261F0E1D7F007C5D28 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = LFJ323P8L8;
+				INFOPLIST_FILE = LogangVlogs/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = andreio.LogangVlogs;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0464CF0D1F0E1D7E007C5D28 /* Build configuration list for PBXProject "LogangVlogs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0464CF221F0E1D7F007C5D28 /* Debug */,
+				0464CF231F0E1D7F007C5D28 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0464CF241F0E1D7F007C5D28 /* Build configuration list for PBXNativeTarget "LogangVlogs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0464CF251F0E1D7F007C5D28 /* Debug */,
+				0464CF261F0E1D7F007C5D28 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0464CF0A1F0E1D7E007C5D28 /* Project object */;
+}
