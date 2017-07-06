@@ -85,7 +85,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="85"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loganPaul-Background" translatesAutoresizingMaskIntoConstraints="NO" id="JZE-ZW-8ud">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JZE-ZW-8ud">
                                                     <rect key="frame" x="5" y="9" width="68" height="68"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="68" id="Tdr-Vb-Otf"/>

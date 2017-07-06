@@ -21,6 +21,8 @@ class LogangCell: UITableViewCell {
     }
     
     func uptadeUI(logangs: Logangs) {
+        
+        videoPreviewImage.loadGif(name: "loading2")
         videoTitle.text = logangs.videoTitle
         //TODO: set image from url
         
@@ -32,6 +34,7 @@ class LogangCell: UITableViewCell {
                 let data = try Data(contentsOf: url)
                 DispatchQueue.global().sync {
                     self.videoPreviewImage.image = UIImage(data: data)
+
                     
                 }
             } catch {
