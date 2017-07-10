@@ -123,7 +123,7 @@
 				TargetAttributes = {
 					041B02E31F0FBA12002B348F = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = LFJ323P8L8;
+						DevelopmentTeam = 6W3S65F5BY;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -339,10 +339,10 @@
 			baseConfigurationReference = 24C82049F1AD6713BC7C286E /* Pods-weTheWeather.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = LFJ323P8L8;
+				DEVELOPMENT_TEAM = 6W3S65F5BY;
 				INFOPLIST_FILE = weTheWeather/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = andreio.weTheWeather;
+				PRODUCT_BUNDLE_IDENTIFIER = andreiolteanu.weTheWeather;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -354,10 +354,10 @@
 			baseConfigurationReference = B4F2586CB17DC092258AE618 /* Pods-weTheWeather.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = LFJ323P8L8;
+				DEVELOPMENT_TEAM = 6W3S65F5BY;
 				INFOPLIST_FILE = weTheWeather/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = andreio.weTheWeather;
+				PRODUCT_BUNDLE_IDENTIFIER = andreiolteanu.weTheWeather;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
