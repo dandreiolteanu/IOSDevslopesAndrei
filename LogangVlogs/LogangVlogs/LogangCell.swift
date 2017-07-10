@@ -14,6 +14,8 @@ class LogangCell: UITableViewCell {
     
     @IBOutlet weak var videoTitle: UILabel!
     
+    @IBOutlet weak var loading: UIActivityIndicatorView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -22,26 +24,25 @@ class LogangCell: UITableViewCell {
     
     func uptadeUI(logangs: Logangs) {
         
-        videoPreviewImage.loadGif(name: "loading2")
+//        videoPreviewImage.loadGif(name: "loading2")
         videoTitle.text = logangs.videoTitle
         //TODO: set image from url
         
         let url = URL(string: logangs.imageURL)!
+        loading.startAnimating()
         
         DispatchQueue.global().async {
             do {
-                
                 let data = try Data(contentsOf: url)
-                DispatchQueue.global().sync {
+                DispatchQueue.main.sync {
                     self.videoPreviewImage.image = UIImage(data: data)
-
-                    
+                    self.loading.stopAnimating()
                 }
             } catch {
                 //handle the error
             }
+            
         }
-        
         
     }
 }

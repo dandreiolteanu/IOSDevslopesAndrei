@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -19,6 +20,9 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
     
     var currentWeather: CurrentWeather!
+    var forecast: Forecast!
+    
+    var forecasts = [Forecast]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,20 +35,40 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         print("############### API LINK #################")
         
         currentWeather = CurrentWeather()
-        currentWeather.downloadWeatherDetails {
-            //Setup UI to load downloaded data
+        
+        forecast = Forecast()
+        
+        currentWeather.downloadWeatherDetails{
             self.updateMainUI()
-            print(dateLabel.text!)
-            print(currentTempLabel.text!)
-            print("\(currentWeather.currentTemp)")
-            print(currentWeather.cityName)
-
-
-
-
-            print("aaa")
         }
     }
+    
+    
+    
+//    func downloadForecastData(completed: @escaping DownloadComplete) {
+//        //Downloading forecast weather data for TableView
+//        let forecastURL = URL(string: FORECAST_URL)!
+//        Alamofire.request(forecastURL).responseJSON { response in
+//            let result = response.result
+//            
+//            if let dict = result.value as? Dictionary<String, AnyObject> {
+//                
+//                if let list = dict["list"] as? [Dictionary<String, AnyObject>] {
+//                    for obj in list {
+//                        let forecast = Forecast(weatherDict: obj)
+//                        self.forecasts.append(forecast)
+//                    }
+//                }
+//                
+//            }
+//        }
+//        
+//    }
+    
+    
+    
+    
+    
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -64,9 +88,13 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     func updateMainUI() {
         dateLabel.text = currentWeather.date
+        //Temperature
+        let formatter = NumberFormatter()
+        formatter.minimumFractionDigits = 0
+        formatter.maximumFractionDigits = 1
+        currentTempLabel.text = "\(formatter.string(from: currentWeather.currentTemp as NSNumber) ?? "n/a")°"
         
-        currentTempLabel.text = "\(currentWeather.currentTemp)"
-        
+
         currentWeatherTypeLabel.text = currentWeather.weatherType
         
         locationLabel.text = currentWeather.cityName

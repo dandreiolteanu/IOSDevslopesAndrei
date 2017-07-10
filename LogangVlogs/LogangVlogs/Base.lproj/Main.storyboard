@@ -98,16 +98,24 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="BSw-6N-MHn">
+                                                    <rect key="frame" x="8" y="8" width="73" height="69.5"/>
+                                                </activityIndicatorView>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="BSw-6N-MHn" firstAttribute="top" secondItem="zKV-nW-rlf" secondAttribute="topMargin" id="0IU-aP-YOe"/>
                                                 <constraint firstAttribute="trailing" secondItem="rLJ-QW-TDP" secondAttribute="trailing" id="D10-ai-vu1"/>
                                                 <constraint firstItem="rLJ-QW-TDP" firstAttribute="leading" secondItem="JZE-ZW-8ud" secondAttribute="trailing" constant="8" id="GgC-Tl-Z34"/>
                                                 <constraint firstItem="rLJ-QW-TDP" firstAttribute="centerY" secondItem="zKV-nW-rlf" secondAttribute="centerY" id="Hp6-ld-ZdI"/>
+                                                <constraint firstItem="BSw-6N-MHn" firstAttribute="leading" secondItem="zKV-nW-rlf" secondAttribute="leadingMargin" id="NPF-hS-R3r"/>
                                                 <constraint firstItem="JZE-ZW-8ud" firstAttribute="centerY" secondItem="zKV-nW-rlf" secondAttribute="centerY" id="atg-gy-gwV"/>
                                                 <constraint firstItem="JZE-ZW-8ud" firstAttribute="leading" secondItem="zKV-nW-rlf" secondAttribute="leading" constant="5" id="eb1-pL-w5a"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="BSw-6N-MHn" secondAttribute="bottom" id="iyW-2H-QBm"/>
+                                                <constraint firstItem="rLJ-QW-TDP" firstAttribute="leading" secondItem="BSw-6N-MHn" secondAttribute="trailing" id="wJg-3p-xyy"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="loading" destination="BSw-6N-MHn" id="c68-qi-8l2"/>
                                             <outlet property="videoPreviewImage" destination="JZE-ZW-8ud" id="ynP-6v-gdu"/>
                                             <outlet property="videoTitle" destination="rLJ-QW-TDP" id="4Fo-6g-ARj"/>
                                         </connections>
@@ -177,7 +185,7 @@
                                     <color key="titleColor" red="0.99019607843137258" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="4Dg-Hj-M17"/>
+                                    <segue destination="KYr-g7-4Pg" kind="unwind" unwindAction="unwindToMainWithSegue:" id="vSk-Hx-9pr"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Views" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V7V-hO-6gV">
@@ -225,6 +233,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q8Q-6F-sJu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="KYr-g7-4Pg" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="810" y="35.91549295774648"/>
         </scene>
