@@ -1,12 +1,15 @@
 PODS:
   - Alamofire (4.5.0)
+  - RevealingSplashView (0.4.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.4)
+  - RevealingSplashView
 
 SPEC CHECKSUMS:
   Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
+  RevealingSplashView: 72be158ad5e1bc72713e8f78383dc3e1803ce4d1
 
-PODFILE CHECKSUM: 2470d470e033b8bae9d150e5ac8d028cbe6a3b31
+PODFILE CHECKSUM: 0ccfe8ced38b0c82fd8ef6f4a4422956177ef084
 
 COCOAPODS: 1.2.1
