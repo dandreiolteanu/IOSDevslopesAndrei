@@ -62,6 +62,8 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         locationAuthStatus()
+        self.entryPointView.isHidden = true
+
     }
     
     
@@ -75,7 +77,7 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
             currentWeather.downloadWeatherDetails{
                 self.downloadForecastData {
                     self.updateMainUI()
-                    self.entryPointView.isHidden = true
+//                    self.entryPointView.isHidden = true
                 }
             }
         } else {
@@ -142,8 +144,13 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
         
 
         currentWeatherTypeLabel.text = currentWeather.weatherType
-        
-        locationLabel.text = currentWeather.cityName
+        if currentWeather.cityName == "Certeju De Sus" {
+            locationLabel.text = "Bánffy Castle"
+        } else {
+            locationLabel.text = currentWeather.cityName
+
+        }
+//        locationLabel.text = currentWeather.cityName
         
         currentWeatherImage.image = UIImage(named: currentWeather.weatherType)
         
