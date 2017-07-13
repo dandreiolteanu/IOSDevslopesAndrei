@@ -22,6 +22,7 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var entryPointView: UIView!
     
+    @IBOutlet weak var mainImage: UIImageView!
     
     let locationManager = CLLocationManager()
     var currentLocation: CLLocation!
@@ -146,6 +147,7 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
         currentWeatherTypeLabel.text = currentWeather.weatherType
         if currentWeather.cityName == "Certeju De Sus" {
             locationLabel.text = "Bánffy Castle"
+            mainImage.image = UIImage(named: "Electric castle-1")
         } else {
             locationLabel.text = currentWeather.cityName
 
