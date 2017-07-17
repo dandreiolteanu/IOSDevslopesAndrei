@@ -14,10 +14,25 @@
 			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
+		<key>RevealingSplashView.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>29B602E5965B686798F8C7915776FD9E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4103EC550603FDEE2C16849CBAAB7053</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5E98AB49E2E2EDBD4D718E39F1733037</key>
 		<dict>
 			<key>primary</key>
 			<true/>

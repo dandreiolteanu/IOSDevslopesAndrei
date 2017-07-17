@@ -93,7 +93,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Fall of Jake Paul" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rLJ-QW-TDP">
-                                                    <rect key="frame" x="81" y="32.5" width="239" height="21"/>
+                                                    <rect key="frame" x="81" y="31" width="239" height="24.5"/>
                                                     <fontDescription key="fontDescription" name="Hero" family="Hero" pointSize="21"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
