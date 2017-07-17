@@ -1,6 +1,6 @@
 //
-//  ItemType+CoreDataClass.swift
-//  iWantThat
+//  Item+CoreDataClass.swift
+//  check123123
 //
 //  Created by Mac on 17/07/2017.
 //  Copyright © 2017 Mac. All rights reserved.
@@ -10,7 +10,7 @@
 import Foundation
 import CoreData
 
-@objc(ItemType)
-public class ItemType: NSManagedObject {
+@objc(Item)
+public class Item: NSManagedObject {
 
 }

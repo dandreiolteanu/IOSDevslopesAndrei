@@ -1,6 +1,6 @@
 //
 //  Item+CoreDataProperties.swift
-//  iWantThat
+//  check123123
 //
 //  Created by Mac on 17/07/2017.
 //  Copyright © 2017 Mac. All rights reserved.
@@ -18,11 +18,6 @@ extension Item {
     }
 
     @NSManaged public var created: NSDate?
-    @NSManaged public var details: String?
     @NSManaged public var title: String?
-    @NSManaged public var price: Double
-    @NSManaged public var toImage: Image?
-    @NSManaged public var toItemType: ItemType?
-    @NSManaged public var toStore: Store?
 
 }
