@@ -33,9 +33,12 @@
                                     <segment title="Title"/>
                                 </segments>
                                 <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="segmentChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="q4U-DV-a38"/>
+                                </connections>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="170" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XZ2-ok-9Ri">
-                                <rect key="frame" x="0.0" y="132" width="375" height="535"/>
+                                <rect key="frame" x="0.0" y="192" width="375" height="475"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="itemCell" rowHeight="170" id="wsk-x8-2kW" customClass="ItemCell" customModule="iWantThat" customModuleProvider="target">
@@ -128,16 +131,48 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Qv-P1-Or1">
+                                <rect key="frame" x="137" y="162" width="102" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Choose store">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="shopPickerBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yjb-sA-87O"/>
+                                </connections>
+                            </button>
+                            <pickerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EP4-mb-ild">
+                                <rect key="frame" x="46" y="162" width="283" height="305"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="305" id="N4s-VU-S0a"/>
+                                </constraints>
+                            </pickerView>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="ydB-V6-mzA">
+                                <rect key="frame" x="0.0" y="112" width="375" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="dVC-fO-vSv"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="XZ2-ok-9Ri" firstAttribute="top" secondItem="fBB-E3-moO" secondAttribute="bottom" constant="20" id="Ah9-C2-USD"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="EP4-mb-ild" secondAttribute="trailing" constant="30" id="4th-NC-7fh"/>
+                            <constraint firstItem="XZ2-ok-9Ri" firstAttribute="top" secondItem="fBB-E3-moO" secondAttribute="bottom" constant="80" id="Ah9-C2-USD"/>
                             <constraint firstAttribute="trailing" secondItem="XZ2-ok-9Ri" secondAttribute="trailing" id="Lz2-ai-R4a"/>
                             <constraint firstItem="XZ2-ok-9Ri" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="On5-BD-55B"/>
+                            <constraint firstItem="9Qv-P1-Or1" firstAttribute="top" secondItem="fBB-E3-moO" secondAttribute="bottom" constant="50" id="RtJ-sp-9fc"/>
                             <constraint firstItem="fBB-E3-moO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="VQy-sj-XxN"/>
+                            <constraint firstItem="EP4-mb-ild" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="at6-xZ-dfa"/>
+                            <constraint firstAttribute="trailing" secondItem="ydB-V6-mzA" secondAttribute="trailing" id="cxB-1z-xs9"/>
+                            <constraint firstItem="ydB-V6-mzA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="e9e-QG-Rne"/>
+                            <constraint firstItem="EP4-mb-ild" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="h49-Kk-czu"/>
+                            <constraint firstItem="ydB-V6-mzA" firstAttribute="top" secondItem="fBB-E3-moO" secondAttribute="bottom" id="jeL-xL-Vtz"/>
+                            <constraint firstItem="EP4-mb-ild" firstAttribute="top" secondItem="fBB-E3-moO" secondAttribute="bottom" constant="50" id="ld3-rZ-Hnk"/>
                             <constraint firstItem="fBB-E3-moO" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="nw6-eY-oOw"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="XZ2-ok-9Ri" secondAttribute="bottom" id="rlp-xj-BBm"/>
                             <constraint firstItem="fBB-E3-moO" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="wzx-1m-phg"/>
+                            <constraint firstItem="9Qv-P1-Or1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="x5k-iu-UPv"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="iWant" id="qVQ-hC-lIq">
@@ -149,7 +184,10 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="searchBar" destination="ydB-V6-mzA" id="LSG-fY-7K2"/>
                         <outlet property="segment" destination="fBB-E3-moO" id="7g8-Gn-gj3"/>
+                        <outlet property="shopPicker" destination="EP4-mb-ild" id="eE8-tl-fmG"/>
+                        <outlet property="shopPickerBtn" destination="9Qv-P1-Or1" id="mC7-qS-WDY"/>
                         <outlet property="tableView" destination="XZ2-ok-9Ri" id="oYe-Sd-bvO"/>
                         <segue destination="kJI-Ta-1ae" kind="show" identifier="ItemDetailsVC" id="g7V-Qp-ICR"/>
                     </connections>

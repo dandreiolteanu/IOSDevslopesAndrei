@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class ItemDetailsVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class ItemDetailsVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
 
     @IBOutlet weak var storePicker: UIPickerView!
     @IBOutlet weak var titleField: CustomTextField!
@@ -35,6 +35,9 @@ class ItemDetailsVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
         
         imagePicker = UIImagePickerController()
         imagePicker.delegate = self
+        titleField.delegate = self
+        detailsField.delegate = self
+        priceField.delegate = self
         
 //        let store = Store(context: context)
 //        store.name = "Altex"
@@ -63,12 +66,21 @@ class ItemDetailsVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
         getStores()
         
         if itemToEdit != nil {
-            
+            print("\(itemToEdit?.toStore?.name)")
             loadItemData()
         }
 
     }
     
+//    Returns from the text fields
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        titleField.resignFirstResponder()
+        detailsField.resignFirstResponder()
+        priceField.resignFirstResponder()
+        return true
+    }
+    
+//    PickerView delegate functions
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         
         let store = stores[row]
@@ -110,6 +122,8 @@ class ItemDetailsVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
     @IBAction func savePressed(_ sender: Any) {
         
         var item: Item!
+        let picture =  Image(context: context)
+        picture.image = thumbImg.image
         
         if itemToEdit == nil {
             
@@ -119,6 +133,8 @@ class ItemDetailsVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
             
             item = itemToEdit
         }
+        
+        item.toImage = picture
         
         if let title = titleField.text {
             
@@ -149,6 +165,8 @@ class ItemDetailsVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
             titleField.text = item.title
             priceField.text = "\(item.price)"
             detailsField.text = item.details
+            
+            thumbImg.image = item.toImage?.image as? UIImage
             
             if let store = item.toStore {
                 

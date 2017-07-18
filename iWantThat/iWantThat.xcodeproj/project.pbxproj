@@ -17,6 +17,7 @@
 		040BA9C21F1CD27F0094C514 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040BA9C11F1CD27F0094C514 /* ItemCell.swift */; };
 		0451CFE81F1CEE7E00B5A2D2 /* ItemDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0451CFE71F1CEE7E00B5A2D2 /* ItemDetailsVC.swift */; };
 		0451CFEA1F1CF36A00B5A2D2 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0451CFE91F1CF36A00B5A2D2 /* CustomTextField.swift */; };
+		0451CFEC1F1DF82400B5A2D2 /* ItemCoreDataExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0451CFEB1F1DF82400B5A2D2 /* ItemCoreDataExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		040BA9C11F1CD27F0094C514 /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		0451CFE71F1CEE7E00B5A2D2 /* ItemDetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetailsVC.swift; sourceTree = "<group>"; };
 		0451CFE91F1CF36A00B5A2D2 /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		0451CFEB1F1DF82400B5A2D2 /* ItemCoreDataExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCoreDataExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				040BA9BD1F1CC5780094C514 /* Generated */,
+				0451CFEB1F1DF82400B5A2D2 /* ItemCoreDataExtension.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -143,7 +146,7 @@
 				TargetAttributes = {
 					040BA97E1F1CB0E60094C514 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = 6W3S65F5BY;
+						DevelopmentTeam = 945V6ZBHK3;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -189,6 +192,7 @@
 				0451CFE81F1CEE7E00B5A2D2 /* ItemDetailsVC.swift in Sources */,
 				040BA9C01F1CCE8C0094C514 /* MaterialView.swift in Sources */,
 				040BA9851F1CB0E60094C514 /* MainVC.swift in Sources */,
+				0451CFEC1F1DF82400B5A2D2 /* ItemCoreDataExtension.swift in Sources */,
 				040BA9AB1F1CC2240094C514 /* iWantThat.xcdatamodeld in Sources */,
 				040BA9831F1CB0E60094C514 /* AppDelegate.swift in Sources */,
 			);
@@ -311,7 +315,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 6W3S65F5BY;
+				DEVELOPMENT_TEAM = 945V6ZBHK3;
 				INFOPLIST_FILE = iWantThat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = andreio.iWantThat;
@@ -324,7 +328,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 6W3S65F5BY;
+				DEVELOPMENT_TEAM = 945V6ZBHK3;
 				INFOPLIST_FILE = iWantThat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = andreio.iWantThat;

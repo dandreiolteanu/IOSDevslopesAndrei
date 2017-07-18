@@ -9,23 +9,151 @@
 import UIKit
 import CoreData
 
-class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFetchedResultsControllerDelegate {
+class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFetchedResultsControllerDelegate, UIPickerViewDelegate, UIPickerViewDataSource, UISearchBarDelegate {
 
+    
+    @IBOutlet weak var shopPicker: UIPickerView!
+    @IBOutlet weak var shopPickerBtn: UIButton!
+    @IBOutlet weak var searchBar: UISearchBar!
+    
+    
+    
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var segment: UISegmentedControl!
     
     var controller: NSFetchedResultsController<Item>!
     
+    var inSearchMode = false
+    
+    var stores = [Store]()
+    var filteredItemsByStore = [Item]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
         
+        shopPicker.delegate = self
+        shopPicker.dataSource = self
+        
+        searchBar.delegate = self
+        
+        
 //        generateTestData()
+        
+        
+        getStores()
         attemptFetch()
     }
+    
+    
+    
+    func getStores() {
+        
+        let fetchRequest: NSFetchRequest<Store> = Store.fetchRequest()
+        
+        do {
+            
+            self.stores = try context.fetch(fetchRequest)
+            self.shopPicker.reloadAllComponents()
+            
+        } catch {
+            
+            // handle the error
+        }
+    }
+
+    
+//    SearchBar functions 
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
+        if searchBar.text == nil || searchBar.text == "" {
+            do {
+                controller.fetchRequest.predicate = nil
+                try controller.performFetch()
+                self.tableView.reloadData()
+                searchBar.resignFirstResponder()
+            } catch {
+                
+                print("fetch task failed", error)
+            }
+            
+        } else {
+            do {
+                
+                var predicate:NSPredicate? = nil
+                predicate = NSPredicate(format: "(title contains [cd] %@) || (title contains[cd] %@)", searchBar.text!, searchBar.text!)
+                controller.fetchRequest.predicate = predicate
+                try controller.performFetch()
+                self.tableView.reloadData()
+            } catch {
+                
+            print ("fetch task failed", error)
+            }
+        }
+    }
+
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar)
+    {
+        self.view.endEditing(true)
+    }
+    
+//    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+//        
+//        searchBar.resignFirstResponder()
+//        searchBar.text = ""
+//        controller.fetchRequest.predicate = nil
+//    }
+    
+    
+//    PickerView functions
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return stores.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        let store = stores[row]
+        return store.name
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        
+        shopPickerBtn.setTitle(stores[row].name, for: UIControlState())
+        shopPicker.isHidden = true
+        tableView.isHidden = false
+        print("before fetching")
+        
+        //let context1 = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        do {
+            var predicate:NSPredicate? = nil
+            predicate = NSPredicate(format: "toStore.name =%@", (shopPickerBtn.titleLabel?.text)!)
+            controller.fetchRequest.predicate = predicate
+            try controller.performFetch()
+            tableView.reloadData()
+        }
+        catch {
+            print ("fetch task failed", error)
+        }
+
+        print("after fetching")
+        tableView.reloadData()
+    }
+    
+    @IBAction func shopPickerBtnPressed(_ sender: Any) {
+        
+        shopPicker.isHidden = false
+        tableView.isHidden = true
+    }
+    
 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -89,12 +217,25 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 170
     }
-
+    
     func attemptFetch() {
         
         let fetchRequest: NSFetchRequest<Item> = Item.fetchRequest()
         let dateSort = NSSortDescriptor(key: "created", ascending: false)
-        fetchRequest.sortDescriptors = [dateSort]
+        let priceSort = NSSortDescriptor(key: "price", ascending: true)
+        let titleSort = NSSortDescriptor(key: "title", ascending: true)
+        if segment.selectedSegmentIndex == 0 {
+            
+            fetchRequest.sortDescriptors = [dateSort]
+            
+        } else if  segment.selectedSegmentIndex == 1 {
+            
+            fetchRequest.sortDescriptors = [priceSort]
+            
+        } else if segment.selectedSegmentIndex == 2 {
+            
+            fetchRequest.sortDescriptors = [titleSort]
+        }
         
         let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
         
@@ -109,6 +250,13 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
             let error = error as NSError
             print("\(error)")
         }
+    }
+    
+//    Segment changed 
+    @IBAction func segmentChange(_ sender: Any) {
+        
+        attemptFetch()
+        tableView.reloadData()
     }
     
     
