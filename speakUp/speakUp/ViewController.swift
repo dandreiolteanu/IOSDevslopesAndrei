@@ -12,87 +12,88 @@ import AVFoundation
 
 class ViewController: UIViewController, AVAudioRecorderDelegate {
 
-    var recordButton: UIButton!
-    var recordingSession: AVAudioSession!
-    var audioRecorder: AVAudioRecorder!
+    @IBOutlet weak var btnAudioRecord: UIButton!
+    var recordingSession : AVAudioSession!
+    var audioRecorder    :AVAudioRecorder!
+    var settings         = [String : Int]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        
         recordingSession = AVAudioSession.sharedInstance()
-        
         do {
             try recordingSession.setCategory(AVAudioSessionCategoryPlayAndRecord)
             try recordingSession.setActive(true)
             recordingSession.requestRecordPermission() { [unowned self] allowed in
                 DispatchQueue.main.async {
                     if allowed {
-                        self.loadRecordingUI()
+                        print("Allow")
                     } else {
-                        // failed to record!
+                        print("Dont Allow")
                     }
                 }
             }
         } catch {
-            // failed to record!
+            print("failed to record!")
         }
         
-    }
-    
-    func loadRecordingUI() {
-        recordButton = UIButton(frame: CGRect(x: 64, y: 64, width: 128, height: 64))
-        recordButton.setTitle("Tap to Record", for: .normal)
-        recordButton.titleLabel?.font = UIFont.preferredFont(forTextStyle: UIFontTextStyle.title1)
-        recordButton.addTarget(self, action: #selector(recordTapped), for: .touchUpInside)
-        view.addSubview(recordButton)
-    }
-    
-    func startRecording() {
-        let audioFilename = getDocumentsDirectory().appendingPathComponent("recording.m4a")
+        // Audio Settings
         
-        let settings = [
+        settings = [
             AVFormatIDKey: Int(kAudioFormatMPEG4AAC),
             AVSampleRateKey: 12000,
             AVNumberOfChannelsKey: 1,
             AVEncoderAudioQualityKey: AVAudioQuality.high.rawValue
         ]
         
+    
+    }
+    
+    func directoryURL() -> URL? {
+        let fileManager = FileManager.default
+        let urls = fileManager.urls(for: .documentDirectory, in: .userDomainMask)
+        let documentDirectory = urls[0] as NSURL
+        let soundURL = documentDirectory.appendingPathComponent("andrei.m4a")
+        print(soundURL)
+        return soundURL as URL?
+    }
+    
+    func startRecording() {
+        let audioSession = AVAudioSession.sharedInstance()
         do {
-            audioRecorder = try AVAudioRecorder(url: audioFilename, settings: settings)
+            audioRecorder = try AVAudioRecorder(url: self.directoryURL()! as URL,
+                                                settings: settings)
             audioRecorder.delegate = self
-            audioRecorder.record()
-            
-            recordButton.setTitle("Tap to Stop", for: .normal)
+            audioRecorder.prepareToRecord()
         } catch {
             finishRecording(success: false)
         }
-    }
-    
-    func getDocumentsDirectory() -> URL {
-        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-        let documentsDirectory = paths[0]
-        return documentsDirectory
+        do {
+            try audioSession.setActive(true)
+            audioRecorder.record()
+        } catch {
+        }
     }
     
     func finishRecording(success: Bool) {
         audioRecorder.stop()
-        audioRecorder = nil
-        
         if success {
-            recordButton.setTitle("Tap to Re-record", for: .normal)
+            print(success)
         } else {
-            recordButton.setTitle("Tap to Record", for: .normal)
-            // recording failed :(
+            audioRecorder = nil
+            print("Somthing Wrong.")
         }
     }
-    
-    func recordTapped() {
+
+    @IBAction func click_AudioRecord(_ sender: AnyObject) {
         if audioRecorder == nil {
-            startRecording()
+            self.btnAudioRecord.setTitle("Stop", for: UIControlState.normal)
+            self.btnAudioRecord.backgroundColor = UIColor(red: 119.0/255.0, green: 119.0/255.0, blue: 119.0/255.0, alpha: 1.0)
+            self.startRecording()
         } else {
-            finishRecording(success: true)
+            self.btnAudioRecord.setTitle("Record", for: UIControlState.normal)
+            self.btnAudioRecord.backgroundColor = UIColor(red: 221.0/255.0, green: 27.0/255.0, blue: 50.0/255.0, alpha: 1.0)
+            self.finishRecording(success: true)
         }
     }
     
@@ -102,8 +103,6 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
         }
     }
     
-    
-
     
 }
 

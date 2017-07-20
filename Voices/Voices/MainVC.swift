@@ -19,11 +19,11 @@ class MainVC: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDelegate {
     @IBOutlet weak var pulsatorLayer: UIView!
     
     let pulsator = Pulsator()
-    var audioPlayer: AVAudioPlayer!
+
+    var audioPlayer: AVAudioPlayer
     var recordingSession: AVAudioSession!
     var audioRecorder: AVAudioRecorder!
-    var recordButton: UIButton!
-    
+    var settings = [String : Int]()
     
     @IBOutlet weak var recordButtonPressed: UIButton!
     
@@ -38,53 +38,81 @@ class MainVC: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDelegate {
         pulsator.radius = 90.0
         
         recordingSession = AVAudioSession.sharedInstance()
+        do {
+            try recordingSession.setCategory(AVAudioSessionCategoryPlayAndRecord)
+            try recordingSession.setActive(true)
+            recordingSession.requestRecordPermission() { [unowned self] allowed in
+                DispatchQueue.main.async {
+                    if allowed {
+                        print("Allow")
+                    } else {
+                        print("Dont Allow")
+                    }
+                }
+            }
+        } catch {
+            print("failed to record!")
+        }
         
+        // Audio Settings
         
-    }
-    
-    func startRecording() {
-        let audioFilename = getDocumentsDirectory().appendingPathComponent("andrei.m4a")
-        
-        let settings = [
+        settings = [
             AVFormatIDKey: Int(kAudioFormatMPEG4AAC),
             AVSampleRateKey: 12000,
             AVNumberOfChannelsKey: 1,
             AVEncoderAudioQualityKey: AVAudioQuality.high.rawValue
         ]
+
         
+        
+        
+    }
+    
+    func directoryURL() -> URL? {
+        let fileManager = FileManager.default
+        let urls = fileManager.urls(for: .documentDirectory, in: .userDomainMask)
+        let documentDirectory = urls[0] as NSURL
+        let soundURL = documentDirectory.appendingPathComponent("andrei.m4a")
+        print(soundURL)
+        return soundURL as URL?
+    }
+    
+    func startRecording() {
+        let audioSession = AVAudioSession.sharedInstance()
         do {
-            audioRecorder = try AVAudioRecorder(url: audioFilename, settings: settings)
+            audioRecorder = try AVAudioRecorder(url: self.directoryURL()! as URL,
+                                                settings: settings)
             audioRecorder.delegate = self
-            audioRecorder.record()
-            
+            audioRecorder.prepareToRecord()
         } catch {
             finishRecording(success: false)
         }
+        do {
+            try audioSession.setActive(true)
+            audioRecorder.record()
+        } catch {
+        }
     }
-    
-    func getDocumentsDirectory() -> URL {
-        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-        let documentsDirectory = paths[0]
-        return documentsDirectory
-    }
-    
+
     func finishRecording(success: Bool) {
         audioRecorder.stop()
-        audioRecorder = nil
-        
         if success {
-            recordButtonPressed.setTitle("Tap to Re-record", for: .normal)
+            print(success)
         } else {
-            recordButtonPressed.setTitle("Tap to Record", for: .normal)
-            // recording failed :(
+            audioRecorder = nil
+            print("Somthing Wrong.")
         }
     }
     
-    func recordTapped() {
+    @IBAction func click_AudioRecord(_ sender: AnyObject) {
         if audioRecorder == nil {
-            startRecording()
+            self.btnAudioRecord.setTitle("Stop", for: UIControlState.normal)
+            self.btnAudioRecord.backgroundColor = UIColor(red: 119.0/255.0, green: 119.0/255.0, blue: 119.0/255.0, alpha: 1.0)
+            self.startRecording()
         } else {
-            finishRecording(success: true)
+            self.btnAudioRecord.setTitle("Record", for: UIControlState.normal)
+            self.btnAudioRecord.backgroundColor = UIColor(red: 221.0/255.0, green: 27.0/255.0, blue: 50.0/255.0, alpha: 1.0)
+            self.finishRecording(success: true)
         }
     }
     
@@ -94,30 +122,9 @@ class MainVC: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDelegate {
         }
     }
     
-    @IBAction func RecordButtonPressed(_ sender: Any) {
-        
-        do {
-            try recordingSession.setCategory(AVAudioSessionCategoryPlayAndRecord)
-            try recordingSession.setActive(true)
-            recordingSession.requestRecordPermission() { [unowned self] allowed in
-                DispatchQueue.main.async {
-                    if allowed {
-                        self.recordTapped()
-                    } else {
-                        print("Error")
-                    }
-                }
-            }
-        } catch {
-            print("Error!!!")
-        }
+    
 
-        
-    }
-    
-    
-    
-    
+
     
     
     func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
@@ -131,6 +138,10 @@ class MainVC: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDelegate {
     func requestSpeechAuth() {
         SFSpeechRecognizer.requestAuthorization { authStatus in
             if authStatus == SFSpeechRecognizerAuthorizationStatus.authorized {
+                
+                
+                
+                
                 // Handling the media file, maybe here we will handle our voice recording
                 if let path = Bundle.main.url(forResource: "test", withExtension: "m4a") {
                     do {
@@ -168,9 +179,9 @@ class MainVC: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDelegate {
     }
     
     
-    
-    
-    
+
     
 }
+
+
 
