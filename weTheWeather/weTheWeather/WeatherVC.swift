@@ -11,7 +11,7 @@ import CoreLocation
 import Alamofire
 import RevealingSplashView
 
-class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, CLLocationManagerDelegate {
+class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, CLLocationManagerDelegate, Blurring {
     
     
     @IBOutlet weak var dateLabel: UILabel!
@@ -54,8 +54,9 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
         splashView.animationType = SplashAnimationType.swingAndZoomOut
 
         splashView.startAnimation() {
-            print("ANIMATING SPLAH VIEW")
+            print("ANIMATING SPLASH VIEW")
         }
+        self.unblurWithDuration(duration: 2.0)
         
     }
     
@@ -64,6 +65,8 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
         super.viewDidAppear(animated)
         locationAuthStatus()
         self.entryPointView.isHidden = true
+//        self.unblurWithDuration(duration: 2.0)
+
 
     }
     

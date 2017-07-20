@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0421E08F1F20AD00007F450E /* Blurring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0421E08E1F20AD00007F450E /* Blurring.swift */; };
 		043851471F1F8C55000A97A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043851461F1F8C55000A97A1 /* AppDelegate.swift */; };
 		043851491F1F8C55000A97A1 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043851481F1F8C55000A97A1 /* MainVC.swift */; };
 		0438514C1F1F8C55000A97A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0438514A1F1F8C55000A97A1 /* Main.storyboard */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0421E08E1F20AD00007F450E /* Blurring.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Blurring.swift; sourceTree = "<group>"; };
 		043851431F1F8C55000A97A1 /* BurgerFactory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BurgerFactory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		043851461F1F8C55000A97A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		043851481F1F8C55000A97A1 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 				043851781F1F9B5F000A97A1 /* ReusableView.swift */,
 				0438517B1F1F9BE5000A97A1 /* NibLoadableView.swift */,
 				043851831F1FAC6D000A97A1 /* Shakeable.swift */,
+				0421E08E1F20AD00007F450E /* Blurring.swift */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";
@@ -288,6 +291,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				043851491F1F8C55000A97A1 /* MainVC.swift in Sources */,
+				0421E08F1F20AD00007F450E /* Blurring.swift in Sources */,
 				043851801F1FA21A000A97A1 /* MutableCollection+Ext.swift in Sources */,
 				043851731F1F8F54000A97A1 /* HeaderView.swift in Sources */,
 				043851761F1F9510000A97A1 /* BurgerCell.swift in Sources */,
@@ -506,6 +510,7 @@
 				043851621F1F8C56000A97A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		043851631F1F8C56000A97A1 /* Build configuration list for PBXNativeTarget "BurgerFactoryTests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +519,7 @@
 				043851651F1F8C56000A97A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

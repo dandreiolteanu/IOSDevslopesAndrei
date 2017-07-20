@@ -8,4 +8,4 @@
 
 import UIKit
 
-class HeaderView: UIView, DropShadow {}
+class HeaderView: UIView, DropShadow, Shakeable {}

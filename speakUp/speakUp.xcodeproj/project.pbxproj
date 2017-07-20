@@ -1,0 +1,425 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		04A9818E1F20E8E6001D8EA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A9818D1F20E8E6001D8EA4 /* AppDelegate.swift */; };
+		04A981901F20E8E6001D8EA4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A9818F1F20E8E6001D8EA4 /* ViewController.swift */; };
+		04A981931F20E8E6001D8EA4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04A981911F20E8E6001D8EA4 /* Main.storyboard */; };
+		04A981951F20E8E6001D8EA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04A981941F20E8E6001D8EA4 /* Assets.xcassets */; };
+		04A981981F20E8E6001D8EA4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04A981961F20E8E6001D8EA4 /* LaunchScreen.storyboard */; };
+		04A981A31F20E8E6001D8EA4 /* speakUpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A981A21F20E8E6001D8EA4 /* speakUpTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		04A9819F1F20E8E6001D8EA4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04A981821F20E8E6001D8EA4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 04A981891F20E8E6001D8EA4;
+			remoteInfo = speakUp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		04A9818A1F20E8E6001D8EA4 /* speakUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = speakUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		04A9818D1F20E8E6001D8EA4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		04A9818F1F20E8E6001D8EA4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		04A981921F20E8E6001D8EA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		04A981941F20E8E6001D8EA4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		04A981971F20E8E6001D8EA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		04A981991F20E8E6001D8EA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04A9819E1F20E8E6001D8EA4 /* speakUpTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = speakUpTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		04A981A21F20E8E6001D8EA4 /* speakUpTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = speakUpTests.swift; sourceTree = "<group>"; };
+		04A981A41F20E8E6001D8EA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		04A981871F20E8E6001D8EA4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04A9819B1F20E8E6001D8EA4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		04A981811F20E8E6001D8EA4 = {
+			isa = PBXGroup;
+			children = (
+				04A9818C1F20E8E6001D8EA4 /* speakUp */,
+				04A981A11F20E8E6001D8EA4 /* speakUpTests */,
+				04A9818B1F20E8E6001D8EA4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		04A9818B1F20E8E6001D8EA4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				04A9818A1F20E8E6001D8EA4 /* speakUp.app */,
+				04A9819E1F20E8E6001D8EA4 /* speakUpTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		04A9818C1F20E8E6001D8EA4 /* speakUp */ = {
+			isa = PBXGroup;
+			children = (
+				04A9818D1F20E8E6001D8EA4 /* AppDelegate.swift */,
+				04A9818F1F20E8E6001D8EA4 /* ViewController.swift */,
+				04A981911F20E8E6001D8EA4 /* Main.storyboard */,
+				04A981941F20E8E6001D8EA4 /* Assets.xcassets */,
+				04A981961F20E8E6001D8EA4 /* LaunchScreen.storyboard */,
+				04A981991F20E8E6001D8EA4 /* Info.plist */,
+			);
+			path = speakUp;
+			sourceTree = "<group>";
+		};
+		04A981A11F20E8E6001D8EA4 /* speakUpTests */ = {
+			isa = PBXGroup;
+			children = (
+				04A981A21F20E8E6001D8EA4 /* speakUpTests.swift */,
+				04A981A41F20E8E6001D8EA4 /* Info.plist */,
+			);
+			path = speakUpTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		04A981891F20E8E6001D8EA4 /* speakUp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04A981A71F20E8E6001D8EA4 /* Build configuration list for PBXNativeTarget "speakUp" */;
+			buildPhases = (
+				04A981861F20E8E6001D8EA4 /* Sources */,
+				04A981871F20E8E6001D8EA4 /* Frameworks */,
+				04A981881F20E8E6001D8EA4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = speakUp;
+			productName = speakUp;
+			productReference = 04A9818A1F20E8E6001D8EA4 /* speakUp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		04A9819D1F20E8E6001D8EA4 /* speakUpTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04A981AA1F20E8E6001D8EA4 /* Build configuration list for PBXNativeTarget "speakUpTests" */;
+			buildPhases = (
+				04A9819A1F20E8E6001D8EA4 /* Sources */,
+				04A9819B1F20E8E6001D8EA4 /* Frameworks */,
+				04A9819C1F20E8E6001D8EA4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				04A981A01F20E8E6001D8EA4 /* PBXTargetDependency */,
+			);
+			name = speakUpTests;
+			productName = speakUpTests;
+			productReference = 04A9819E1F20E8E6001D8EA4 /* speakUpTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		04A981821F20E8E6001D8EA4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = Mac;
+				TargetAttributes = {
+					04A981891F20E8E6001D8EA4 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 945V6ZBHK3;
+						ProvisioningStyle = Automatic;
+					};
+					04A9819D1F20E8E6001D8EA4 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 945V6ZBHK3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 04A981891F20E8E6001D8EA4;
+					};
+				};
+			};
+			buildConfigurationList = 04A981851F20E8E6001D8EA4 /* Build configuration list for PBXProject "speakUp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 04A981811F20E8E6001D8EA4;
+			productRefGroup = 04A9818B1F20E8E6001D8EA4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				04A981891F20E8E6001D8EA4 /* speakUp */,
+				04A9819D1F20E8E6001D8EA4 /* speakUpTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		04A981881F20E8E6001D8EA4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04A981981F20E8E6001D8EA4 /* LaunchScreen.storyboard in Resources */,
+				04A981951F20E8E6001D8EA4 /* Assets.xcassets in Resources */,
+				04A981931F20E8E6001D8EA4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04A9819C1F20E8E6001D8EA4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		04A981861F20E8E6001D8EA4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04A981901F20E8E6001D8EA4 /* ViewController.swift in Sources */,
+				04A9818E1F20E8E6001D8EA4 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04A9819A1F20E8E6001D8EA4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04A981A31F20E8E6001D8EA4 /* speakUpTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		04A981A01F20E8E6001D8EA4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 04A981891F20E8E6001D8EA4 /* speakUp */;
+			targetProxy = 04A9819F1F20E8E6001D8EA4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		04A981911F20E8E6001D8EA4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04A981921F20E8E6001D8EA4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		04A981961F20E8E6001D8EA4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04A981971F20E8E6001D8EA4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		04A981A51F20E8E6001D8EA4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		04A981A61F20E8E6001D8EA4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		04A981A81F20E8E6001D8EA4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 945V6ZBHK3;
+				INFOPLIST_FILE = speakUp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = andreio.speakUp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		04A981A91F20E8E6001D8EA4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 945V6ZBHK3;
+				INFOPLIST_FILE = speakUp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = andreio.speakUp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		04A981AB1F20E8E6001D8EA4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 945V6ZBHK3;
+				INFOPLIST_FILE = speakUpTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = andreio.speakUpTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/speakUp.app/speakUp";
+			};
+			name = Debug;
+		};
+		04A981AC1F20E8E6001D8EA4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 945V6ZBHK3;
+				INFOPLIST_FILE = speakUpTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = andreio.speakUpTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/speakUp.app/speakUp";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		04A981851F20E8E6001D8EA4 /* Build configuration list for PBXProject "speakUp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04A981A51F20E8E6001D8EA4 /* Debug */,
+				04A981A61F20E8E6001D8EA4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04A981A71F20E8E6001D8EA4 /* Build configuration list for PBXNativeTarget "speakUp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04A981A81F20E8E6001D8EA4 /* Debug */,
+				04A981A91F20E8E6001D8EA4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		04A981AA1F20E8E6001D8EA4 /* Build configuration list for PBXNativeTarget "speakUpTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04A981AB1F20E8E6001D8EA4 /* Debug */,
+				04A981AC1F20E8E6001D8EA4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 04A981821F20E8E6001D8EA4 /* Project object */;
+}

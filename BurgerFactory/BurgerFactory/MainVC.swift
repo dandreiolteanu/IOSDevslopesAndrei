@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainVC: UIViewController, DataServiceDelegate {
+class MainVC: UIViewController, DataServiceDelegate, Blurring {
 
     @IBOutlet weak var headerView: HeaderView!
     @IBOutlet weak var collectionView: UICollectionView!
@@ -18,6 +18,9 @@ class MainVC: UIViewController, DataServiceDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.blurWithDuration(duration: 0)
+        self.unblurWithDuration(duration: 1.0)
+
         ds.delegate = self
         ds.loadDeliciousBurgerData()
         ds.burgerArray.shuffle()
@@ -26,12 +29,16 @@ class MainVC: UIViewController, DataServiceDelegate {
         collectionView.dataSource = self
         
         headerView.addDropShadow()
+        headerView.shake()
+        
         
         // Old way for nib
         /*
         let nib = UINib(nibName: "BurgerCell", bundle: nil)
         collectionView.register(nib, forCellWithReuseIdentifier: "BurgerCell")
         */
+        
+        
         collectionView.register(BurgerCell.self)
         
         
