@@ -66,7 +66,6 @@ class ItemDetailsVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
         getStores()
         
         if itemToEdit != nil {
-            print("\(itemToEdit?.toStore?.name)")
             loadItemData()
         }
 
