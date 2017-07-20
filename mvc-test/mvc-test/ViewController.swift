@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var hpField: UITextField!
     @IBOutlet weak var modelField: UITextField!
@@ -19,11 +19,19 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        hpField.delegate = self
+        modelField.delegate = self
+        
         labelDesc.text = car1.carDescription
         
     }
-
-   
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        hpField.resignFirstResponder()
+        modelField.resignFirstResponder()
+        return true
+    }
+    
     @IBAction func buttonPressed(_ sender: Any) {
         if let txt = modelField.text {
             car1.carModel = txt
@@ -34,7 +42,10 @@ class ViewController: UIViewController {
            car1.carHP = txt2
             labelDesc.text = car1.carDescription
         }
+        
     }
+    
+    
 
 }
 

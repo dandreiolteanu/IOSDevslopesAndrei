@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="nYu-06-TS5">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--MainVC-->
+        <scene sceneID="XRP-Iv-IlE">
+            <objects>
+                <viewController id="nYu-06-TS5" customClass="MainVC" customModule="BurgerFactory" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ujy-1F-rNc"/>
+                        <viewControllerLayoutGuide type="bottom" id="m0g-Vb-iR6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="htG-qJ-PU2">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg1" translatesAutoresizingMaskIntoConstraints="NO" id="NIS-64-tvv">
+                                <rect key="frame" x="0.0" y="80" width="320" height="488"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GaL-7T-3SH" customClass="HeaderView" customModule="BurgerFactory" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoText2-1" translatesAutoresizingMaskIntoConstraints="NO" id="33M-Zr-7ru">
+                                        <rect key="frame" x="56.5" y="16" width="207" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="207" id="vwH-HW-323"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="DgQ-LD-rnS"/>
+                                    <constraint firstItem="33M-Zr-7ru" firstAttribute="centerX" secondItem="GaL-7T-3SH" secondAttribute="centerX" id="Wlw-oj-Ik3"/>
+                                    <constraint firstAttribute="bottom" secondItem="33M-Zr-7ru" secondAttribute="bottom" constant="4" id="lTr-nc-PkX"/>
+                                    <constraint firstItem="33M-Zr-7ru" firstAttribute="top" secondItem="GaL-7T-3SH" secondAttribute="top" constant="16" id="ouZ-qy-N5z"/>
+                                </constraints>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="KEP-E3-M98">
+                                <rect key="frame" x="0.0" y="100" width="320" height="468"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="flO-W8-Nmx">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="KEP-E3-M98" firstAttribute="leading" secondItem="htG-qJ-PU2" secondAttribute="leading" id="3ns-3z-TrX"/>
+                            <constraint firstItem="m0g-Vb-iR6" firstAttribute="top" secondItem="NIS-64-tvv" secondAttribute="bottom" id="UHt-Df-hF7"/>
+                            <constraint firstAttribute="trailing" secondItem="NIS-64-tvv" secondAttribute="trailing" id="YG6-Ka-Uz6"/>
+                            <constraint firstItem="NIS-64-tvv" firstAttribute="top" secondItem="GaL-7T-3SH" secondAttribute="bottom" id="aFy-es-NJ8"/>
+                            <constraint firstItem="KEP-E3-M98" firstAttribute="top" secondItem="GaL-7T-3SH" secondAttribute="bottom" constant="20" id="ayf-Vc-I9A"/>
+                            <constraint firstItem="GaL-7T-3SH" firstAttribute="top" secondItem="htG-qJ-PU2" secondAttribute="top" id="bae-ou-55P"/>
+                            <constraint firstItem="m0g-Vb-iR6" firstAttribute="top" secondItem="KEP-E3-M98" secondAttribute="bottom" id="cJO-5o-kiw"/>
+                            <constraint firstItem="NIS-64-tvv" firstAttribute="leading" secondItem="htG-qJ-PU2" secondAttribute="leading" id="g7l-1R-LaT"/>
+                            <constraint firstAttribute="trailing" secondItem="GaL-7T-3SH" secondAttribute="trailing" id="ghe-Vc-zsS"/>
+                            <constraint firstAttribute="trailing" secondItem="KEP-E3-M98" secondAttribute="trailing" id="mlQ-18-Wfq"/>
+                            <constraint firstItem="GaL-7T-3SH" firstAttribute="leading" secondItem="htG-qJ-PU2" secondAttribute="leading" id="oJa-Nl-bur"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="KEP-E3-M98" id="Jb3-BD-r5y"/>
+                        <outlet property="headerView" destination="GaL-7T-3SH" id="8O0-bl-PIp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bEd-Fz-gsr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="109.59999999999999" y="-50.824587706146929"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bg1" width="375" height="590"/>
+        <image name="logoText2-1" width="313" height="147"/>
+    </resources>
+</document>
