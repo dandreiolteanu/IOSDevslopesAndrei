@@ -16,6 +16,19 @@
 		0421E0C31F20C4EA007F450E /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0421E0C21F20C4EA007F450E /* CircleButton.swift */; };
 		0421E0C61F20CA28007F450E /* test.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 0421E0C51F20CA28007F450E /* test.m4a */; };
 		048862161F20DBD600E2F635 /* LFTPulseAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048862151F20DBD600E2F635 /* LFTPulseAnimation.swift */; };
+		04FE6AAB1F2232AF00C84F2D /* aqua.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04FE6AAA1F2232AF00C84F2D /* aqua.ttf */; };
+		04FE6AAD1F22357100C84F2D /* notifAttachment1.png in Resources */ = {isa = PBXBuildFile; fileRef = 04FE6AAC1F22357100C84F2D /* notifAttachment1.png */; };
+		04FE6AAF1F22357500C84F2D /* notifAttachment.png in Resources */ = {isa = PBXBuildFile; fileRef = 04FE6AAE1F22357500C84F2D /* notifAttachment.png */; };
+		04FE6AB11F22370B00C84F2D /* notifAttachment2.png in Resources */ = {isa = PBXBuildFile; fileRef = 04FE6AB01F22370B00C84F2D /* notifAttachment2.png */; };
+		04FE6AB31F2237E600C84F2D /* notifAttachment3.png in Resources */ = {isa = PBXBuildFile; fileRef = 04FE6AB21F2237E600C84F2D /* notifAttachment3.png */; };
+		04FE6AB51F2238C000C84F2D /* notifAttachment4.png in Resources */ = {isa = PBXBuildFile; fileRef = 04FE6AB41F2238C000C84F2D /* notifAttachment4.png */; };
+		04FE6ABC1F223A4200C84F2D /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04FE6ABB1F223A4200C84F2D /* UserNotifications.framework */; };
+		04FE6ABE1F223A4200C84F2D /* UserNotificationsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04FE6ABD1F223A4200C84F2D /* UserNotificationsUI.framework */; };
+		04FE6AC11F223A4200C84F2D /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FE6AC01F223A4200C84F2D /* NotificationViewController.swift */; };
+		04FE6AC41F223A4200C84F2D /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04FE6AC21F223A4200C84F2D /* MainInterface.storyboard */; };
+		04FE6AC81F223A4200C84F2D /* myContentExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 04FE6ABA1F223A4200C84F2D /* myContentExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		04FE6ACE1F2246C200C84F2D /* bannerNotif.png in Resources */ = {isa = PBXBuildFile; fileRef = 04FE6ACD1F2246C200C84F2D /* bannerNotif.png */; };
+		04FE6ACF1F2246C200C84F2D /* bannerNotif.png in Resources */ = {isa = PBXBuildFile; fileRef = 04FE6ACD1F2246C200C84F2D /* bannerNotif.png */; };
 		1D23658E9F98A19F35A7644C /* Pods_VoicesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA34521416FD1CE6F575CAB1 /* Pods_VoicesTests.framework */; };
 		62284DBCF2A528652CAAF609 /* Pods_Voices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E8F76A756C001AFA8408922 /* Pods_Voices.framework */; };
 		95BB2A1F1F21161300BED7AE /* andrei.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 95BB2A1E1F21161300BED7AE /* andrei.m4a */; };
@@ -30,7 +43,28 @@
 			remoteGlobalIDString = 0421E09B1F20BA42007F450E;
 			remoteInfo = Voices;
 		};
+		04FE6AC61F223A4200C84F2D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0421E0941F20BA42007F450E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 04FE6AB91F223A4200C84F2D;
+			remoteInfo = myContentExtension;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		04FE6ACC1F223A4200C84F2D /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				04FE6AC81F223A4200C84F2D /* myContentExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0421E09C1F20BA42007F450E /* Voices.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Voices.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,6 +80,19 @@
 		0421E0C21F20C4EA007F450E /* CircleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
 		0421E0C51F20CA28007F450E /* test.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = test.m4a; sourceTree = "<group>"; };
 		048862151F20DBD600E2F635 /* LFTPulseAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LFTPulseAnimation.swift; sourceTree = "<group>"; };
+		04FE6AAA1F2232AF00C84F2D /* aqua.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = aqua.ttf; sourceTree = "<group>"; };
+		04FE6AAC1F22357100C84F2D /* notifAttachment1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = notifAttachment1.png; sourceTree = "<group>"; };
+		04FE6AAE1F22357500C84F2D /* notifAttachment.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = notifAttachment.png; sourceTree = "<group>"; };
+		04FE6AB01F22370B00C84F2D /* notifAttachment2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = notifAttachment2.png; sourceTree = "<group>"; };
+		04FE6AB21F2237E600C84F2D /* notifAttachment3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = notifAttachment3.png; sourceTree = "<group>"; };
+		04FE6AB41F2238C000C84F2D /* notifAttachment4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = notifAttachment4.png; sourceTree = "<group>"; };
+		04FE6ABA1F223A4200C84F2D /* myContentExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = myContentExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		04FE6ABB1F223A4200C84F2D /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		04FE6ABD1F223A4200C84F2D /* UserNotificationsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotificationsUI.framework; path = System/Library/Frameworks/UserNotificationsUI.framework; sourceTree = SDKROOT; };
+		04FE6AC01F223A4200C84F2D /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
+		04FE6AC31F223A4200C84F2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		04FE6AC51F223A4200C84F2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04FE6ACD1F2246C200C84F2D /* bannerNotif.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bannerNotif.png; sourceTree = "<group>"; };
 		4B2958FC9338DACE5AA7F773 /* Pods-Voices.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Voices.release.xcconfig"; path = "Pods/Target Support Files/Pods-Voices/Pods-Voices.release.xcconfig"; sourceTree = "<group>"; };
 		7AA94DEA95ABB3A8F8F45970 /* Pods-VoicesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VoicesTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VoicesTests/Pods-VoicesTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7EDCDED8D35B6306B453DD3A /* Pods-VoicesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VoicesTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-VoicesTests/Pods-VoicesTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -73,6 +120,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		04FE6AB71F223A4200C84F2D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04FE6ABE1F223A4200C84F2D /* UserNotificationsUI.framework in Frameworks */,
+				04FE6ABC1F223A4200C84F2D /* UserNotifications.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -80,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				0421E09E1F20BA42007F450E /* Voices */,
+				04FE6ABF1F223A4200C84F2D /* myContentExtension */,
 				0421E0B31F20BA42007F450E /* VoicesTests */,
 				0421E09D1F20BA42007F450E /* Products */,
 				6E8A8D77AD2C2BAC284D1C4A /* Pods */,
@@ -92,6 +149,7 @@
 			children = (
 				0421E09C1F20BA42007F450E /* Voices.app */,
 				0421E0B01F20BA42007F450E /* VoicesTests.xctest */,
+				04FE6ABA1F223A4200C84F2D /* myContentExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -147,12 +205,29 @@
 		0421E0C41F20C9EE007F450E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				04FE6ACD1F2246C200C84F2D /* bannerNotif.png */,
+				04FE6AAE1F22357500C84F2D /* notifAttachment.png */,
+				04FE6AAC1F22357100C84F2D /* notifAttachment1.png */,
+				04FE6AB01F22370B00C84F2D /* notifAttachment2.png */,
+				04FE6AB21F2237E600C84F2D /* notifAttachment3.png */,
+				04FE6AB41F2238C000C84F2D /* notifAttachment4.png */,
+				04FE6AAA1F2232AF00C84F2D /* aqua.ttf */,
 				95BB2A201F2116AE00BED7AE /* andrei1.m4a */,
 				95BB2A1E1F21161300BED7AE /* andrei.m4a */,
 				0421E0C51F20CA28007F450E /* test.m4a */,
 				048862151F20DBD600E2F635 /* LFTPulseAnimation.swift */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		04FE6ABF1F223A4200C84F2D /* myContentExtension */ = {
+			isa = PBXGroup;
+			children = (
+				04FE6AC01F223A4200C84F2D /* NotificationViewController.swift */,
+				04FE6AC21F223A4200C84F2D /* MainInterface.storyboard */,
+				04FE6AC51F223A4200C84F2D /* Info.plist */,
+			);
+			path = myContentExtension;
 			sourceTree = "<group>";
 		};
 		6E8A8D77AD2C2BAC284D1C4A /* Pods */ = {
@@ -171,6 +246,8 @@
 			children = (
 				9E8F76A756C001AFA8408922 /* Pods_Voices.framework */,
 				BA34521416FD1CE6F575CAB1 /* Pods_VoicesTests.framework */,
+				04FE6ABB1F223A4200C84F2D /* UserNotifications.framework */,
+				04FE6ABD1F223A4200C84F2D /* UserNotificationsUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -188,10 +265,12 @@
 				0421E09A1F20BA42007F450E /* Resources */,
 				1255BF4FDBDF9911F80B798F /* [CP] Embed Pods Frameworks */,
 				7970BA95393A3CC27B38B15F /* [CP] Copy Pods Resources */,
+				04FE6ACC1F223A4200C84F2D /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				04FE6AC71F223A4200C84F2D /* PBXTargetDependency */,
 			);
 			name = Voices;
 			productName = Voices;
@@ -219,13 +298,30 @@
 			productReference = 0421E0B01F20BA42007F450E /* VoicesTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		04FE6AB91F223A4200C84F2D /* myContentExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04FE6AC91F223A4200C84F2D /* Build configuration list for PBXNativeTarget "myContentExtension" */;
+			buildPhases = (
+				04FE6AB61F223A4200C84F2D /* Sources */,
+				04FE6AB71F223A4200C84F2D /* Frameworks */,
+				04FE6AB81F223A4200C84F2D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = myContentExtension;
+			productName = myContentExtension;
+			productReference = 04FE6ABA1F223A4200C84F2D /* myContentExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		0421E0941F20BA42007F450E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0810;
+				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = Mac;
 				TargetAttributes = {
@@ -239,6 +335,11 @@
 						DevelopmentTeam = 945V6ZBHK3;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 0421E09B1F20BA42007F450E;
+					};
+					04FE6AB91F223A4200C84F2D = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 945V6ZBHK3;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -257,6 +358,7 @@
 			targets = (
 				0421E09B1F20BA42007F450E /* Voices */,
 				0421E0AF1F20BA42007F450E /* VoicesTests */,
+				04FE6AB91F223A4200C84F2D /* myContentExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -267,9 +369,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				0421E0C61F20CA28007F450E /* test.m4a in Resources */,
+				04FE6AAD1F22357100C84F2D /* notifAttachment1.png in Resources */,
 				0421E0AA1F20BA42007F450E /* LaunchScreen.storyboard in Resources */,
 				95BB2A1F1F21161300BED7AE /* andrei.m4a in Resources */,
+				04FE6AB51F2238C000C84F2D /* notifAttachment4.png in Resources */,
+				04FE6AB11F22370B00C84F2D /* notifAttachment2.png in Resources */,
+				04FE6ACE1F2246C200C84F2D /* bannerNotif.png in Resources */,
+				04FE6AAB1F2232AF00C84F2D /* aqua.ttf in Resources */,
 				95BB2A211F2116AE00BED7AE /* andrei1.m4a in Resources */,
+				04FE6AB31F2237E600C84F2D /* notifAttachment3.png in Resources */,
+				04FE6AAF1F22357500C84F2D /* notifAttachment.png in Resources */,
 				0421E0A71F20BA42007F450E /* Assets.xcassets in Resources */,
 				0421E0A51F20BA42007F450E /* Main.storyboard in Resources */,
 			);
@@ -279,6 +388,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04FE6AB81F223A4200C84F2D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04FE6ACF1F2246C200C84F2D /* bannerNotif.png in Resources */,
+				04FE6AC41F223A4200C84F2D /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,6 +515,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		04FE6AB61F223A4200C84F2D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04FE6AC11F223A4200C84F2D /* NotificationViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -404,6 +530,11 @@
 			isa = PBXTargetDependency;
 			target = 0421E09B1F20BA42007F450E /* Voices */;
 			targetProxy = 0421E0B11F20BA42007F450E /* PBXContainerItemProxy */;
+		};
+		04FE6AC71F223A4200C84F2D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 04FE6AB91F223A4200C84F2D /* myContentExtension */;
+			targetProxy = 04FE6AC61F223A4200C84F2D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -422,6 +553,14 @@
 				0421E0A91F20BA42007F450E /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		04FE6AC21F223A4200C84F2D /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04FE6AC31F223A4200C84F2D /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -524,6 +663,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = EBB67BE13E9E7EDB38B4061F /* Pods-Voices.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 945V6ZBHK3;
 				INFOPLIST_FILE = Voices/Info.plist;
@@ -538,6 +678,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4B2958FC9338DACE5AA7F773 /* Pods-Voices.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 945V6ZBHK3;
 				INFOPLIST_FILE = Voices/Info.plist;
@@ -580,6 +721,36 @@
 			};
 			name = Release;
 		};
+		04FE6ACA1F223A4200C84F2D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				DEVELOPMENT_TEAM = 945V6ZBHK3;
+				INFOPLIST_FILE = myContentExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = andreio.Voices.myContentExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		04FE6ACB1F223A4200C84F2D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				DEVELOPMENT_TEAM = 945V6ZBHK3;
+				INFOPLIST_FILE = myContentExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = andreio.Voices.myContentExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -609,6 +780,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		04FE6AC91F223A4200C84F2D /* Build configuration list for PBXNativeTarget "myContentExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04FE6ACA1F223A4200C84F2D /* Debug */,
+				04FE6ACB1F223A4200C84F2D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

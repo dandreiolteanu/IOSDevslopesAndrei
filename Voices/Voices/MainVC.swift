@@ -40,6 +40,17 @@ class MainVC: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDelegate {
         pulsator.backgroundColor = UIColor(red:0.24, green:0.65, blue:0.73, alpha:1.0).cgColor
         pulsator.radius = 90.0
         
+        // 1. REQUEST PERMISSION
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound], completionHandler: { (granted, error) in
+            if granted {
+                print("Notification acces granted")
+            } else {
+                print(error?.localizedDescription as Any)
+            }
+        })
+        
+        
+        
         recordingSession = AVAudioSession.sharedInstance()
         do {
           try recordingSession.setCategory(AVAudioSessionCategoryPlayAndRecord)
@@ -123,7 +134,6 @@ class MainVC: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDelegate {
                 let sound = try AVAudioPlayer(contentsOf: path as URL)
                 self.audioPlayer = sound
                 self.audioPlayer.delegate = self
-                sound.play()
             } catch {
                 print("Error!!!!")
             }
@@ -157,6 +167,15 @@ class MainVC: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDelegate {
         activitySpinner.stopAnimating()
         activitySpinner.isHidden = true
         pulsator.stop()
+        
+        scheduleNotification(inSeconds: 15, completion: {succes in
+            if succes {
+                print("Succesfully scheduled notif")
+            } else {
+                print("Error scheduling notif")
+            }
+        })
+
     }
     
 
@@ -183,10 +202,63 @@ class MainVC: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDelegate {
         
         //activitySpinner.isHidden = true
         //activitySpinner.startAnimating()
+        scheduleNotification(inSeconds: 5, completion: {succes in
+            if succes {
+                print("Succesfully scheduled notif")
+            } else {
+                print("Error scheduling notif")
+            }
+        })
         
         requestSpeechAuth()
         pulsator.start()
     }
+
+    
+    func scheduleNotification(inSeconds: TimeInterval, completion: @escaping (_ Succes: Bool) -> ()) {
+        
+        // Add an attachment
+        let myImage = "bannerNotif"
+        guard let imageUrl = Bundle.main.url(forResource: myImage, withExtension: "png") else {
+            completion(false)
+            return
+        }
+        var attachment: UNNotificationAttachment
+        
+        attachment = try! UNNotificationAttachment(identifier: "myNotification", url: imageUrl, options: .none)
+        
+        let notif = UNMutableNotificationContent()
+        
+        // ONLY FOR EXTENSION
+        notif.categoryIdentifier = "myNotificationCategory"
+        
+        notif.title = "Friendly reminder"
+        //notif.subtitle = "And we'll take care of the rest"
+        notif.body = "Voices will learn much more if you interact with it, that's why I need to send you this notifications"
+        notif.attachments = [attachment]
+        
+        let notifTrigger = UNTimeIntervalNotificationTrigger(timeInterval: inSeconds, repeats: false)
+        
+        let request = UNNotificationRequest(identifier: "myNotification", content: notif, trigger: notifTrigger)
+        
+        UNUserNotificationCenter.current().add(request, withCompletionHandler: { error in
+            if error != nil {
+                print(error as Any)
+                completion(false)
+            } else {
+                completion(true)
+            }
+        })
+    }
+
+
+
+
+
+
+
+
+
 }
 
 
