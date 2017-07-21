@@ -4,30 +4,20 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Voices.xcscheme</key>
+		<key>BurgerFactory.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
-		<key>myContentExtension.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>4</integer>
-		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0421E09B1F20BA42007F450E</key>
+		<key>043851421F1F8C55000A97A1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>0421E0AF1F20BA42007F450E</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>04FE6AB91F223A4200C84F2D</key>
+		<key>043851561F1F8C56000A97A1</key>
 		<dict>
 			<key>primary</key>
 			<true/>

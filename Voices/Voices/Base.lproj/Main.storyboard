@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -31,7 +31,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="voices" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Wl-cy-w2x">
-                                        <rect key="frame" x="109.5" y="33" width="156" height="41"/>
+                                        <rect key="frame" x="110" y="33" width="156" height="41"/>
                                         <fontDescription key="fontDescription" name="AquaGrotesque" family="Aqua Grotesque" pointSize="46"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -45,12 +45,20 @@
                                     <constraint firstItem="7Wl-cy-w2x" firstAttribute="top" secondItem="1ml-nv-f3c" secondAttribute="top" constant="33" id="ypV-As-2BL"/>
                                 </constraints>
                             </view>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Tap the button bellow to transcribe the audio embedded in this app." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="c6S-5J-gzi">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Tap the button bellow and let me hear your voice, I'll do the rest." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="c6S-5J-gzi">
                                 <rect key="frame" x="16" y="100" width="343" height="398"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="32"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0B2-Iq-Xsa">
+                                <rect key="frame" x="187" y="552" width="1" height="1"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="K02-qF-SS3"/>
+                                    <constraint firstAttribute="width" constant="1" id="l8J-Sf-hUp"/>
+                                </constraints>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7if-4L-2va">
                                 <rect key="frame" x="187" y="552" width="1" height="1"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -81,13 +89,6 @@
                                 <color key="textColor" red="0.10196078431372549" green="0.10196078431372549" blue="0.10196078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="m6e-Ae-vZ8">
-                                <rect key="frame" x="152.5" y="518.5" width="70" height="70"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="70" id="i66-Wc-dip"/>
-                                    <constraint firstAttribute="height" constant="70" id="xoV-nl-F30"/>
-                                </constraints>
-                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -97,9 +98,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="VDO-YF-60j" secondAttribute="trailing" constant="20" id="MfG-Hy-DI5"/>
                             <constraint firstItem="VDO-YF-60j" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="15" id="MpA-Up-Jma"/>
                             <constraint firstItem="1ml-nv-f3c" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="U3U-LX-ZHl"/>
-                            <constraint firstItem="m6e-Ae-vZ8" firstAttribute="centerY" secondItem="2Ic-dM-265" secondAttribute="centerY" id="V4h-Fy-9p2"/>
                             <constraint firstItem="2Ic-dM-265" firstAttribute="top" secondItem="c6S-5J-gzi" secondAttribute="bottom" constant="20" id="Wri-En-jiv"/>
-                            <constraint firstItem="m6e-Ae-vZ8" firstAttribute="centerX" secondItem="2Ic-dM-265" secondAttribute="centerX" id="X2e-HE-idt"/>
                             <constraint firstItem="VDO-YF-60j" firstAttribute="top" secondItem="2Ic-dM-265" secondAttribute="bottom" constant="27" id="ZEh-p8-fS8"/>
                             <constraint firstItem="1ml-nv-f3c" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="aei-ay-TNt"/>
                             <constraint firstItem="c6S-5J-gzi" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="cxh-QI-PLM"/>
@@ -107,12 +106,14 @@
                             <constraint firstAttribute="trailing" secondItem="1ml-nv-f3c" secondAttribute="trailing" id="gHs-oX-Pc1"/>
                             <constraint firstItem="2Ic-dM-265" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="l8t-8m-FqI"/>
                             <constraint firstItem="c6S-5J-gzi" firstAttribute="top" secondItem="1ml-nv-f3c" secondAttribute="bottom" constant="20" id="pL9-ED-MWu"/>
+                            <constraint firstItem="0B2-Iq-Xsa" firstAttribute="centerY" secondItem="2Ic-dM-265" secondAttribute="centerY" id="tEN-Eg-WMS"/>
+                            <constraint firstItem="0B2-Iq-Xsa" firstAttribute="centerX" secondItem="2Ic-dM-265" secondAttribute="centerX" id="wtJ-Ku-oeK"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="activitySpinner" destination="m6e-Ae-vZ8" id="OjW-2E-7P3"/>
                         <outlet property="playButton" destination="2Ic-dM-265" id="FEb-dU-ShT"/>
                         <outlet property="pulsatorLayer" destination="7if-4L-2va" id="9kQ-ct-cIs"/>
+                        <outlet property="pulsatorLayer2" destination="0B2-Iq-Xsa" id="sDX-bE-1Sm"/>
                         <outlet property="transcriptionTextField" destination="c6S-5J-gzi" id="um1-rO-EN6"/>
                     </connections>
                 </viewController>

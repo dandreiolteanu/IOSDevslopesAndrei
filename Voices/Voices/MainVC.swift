@@ -10,18 +10,18 @@ import UIKit
 import Speech
 import AVFoundation
 import Pulsator
-import  UserNotifications
+import UserNotifications
 
 
-class MainVC: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDelegate {
+class MainVC: UIViewController, Blurring, AVAudioPlayerDelegate, AVAudioRecorderDelegate {
 
-    @IBOutlet weak var activitySpinner: UIActivityIndicatorView!
     @IBOutlet weak var transcriptionTextField: UITextView!
     @IBOutlet weak var playButton: CircleButton!
     @IBOutlet weak var pulsatorLayer: UIView!
+    @IBOutlet weak var pulsatorLayer2: UIView!
     
     let pulsator = Pulsator()
-
+    let pulsator2 = Pulsator()
     var audioPlayer: AVAudioPlayer!
     var recordingSession: AVAudioSession!
     var audioRecorder: AVAudioRecorder!
@@ -33,12 +33,24 @@ class MainVC: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        activitySpinner.isHidden = true
         
+        self.blurWithDuration(duration: 0)
+        self.unblurWithDuration(duration: 1.5)
+        
+        transcriptionTextField.isEditable = false
         pulsatorLayer.layer.addSublayer(pulsator)
+        pulsatorLayer2.layer.addSublayer(pulsator2)
+        
         pulsator.numPulse = 4
+        pulsator2.numPulse = 10
+        
         pulsator.backgroundColor = UIColor(red:0.24, green:0.65, blue:0.73, alpha:1.0).cgColor
+        pulsator2.backgroundColor = UIColor(red:0.70, green:0.05, blue:0.05, alpha:1.0).cgColor
+        
         pulsator.radius = 90.0
+        pulsator2.radius = 120.0
+        
+        pulsator.start()
         
         // 1. REQUEST PERMISSION
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound], completionHandler: { (granted, error) in
@@ -67,9 +79,7 @@ class MainVC: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDelegate {
       } catch {
             print("failed to record!")
         }
-        
-        // Audio Settings
-        
+      // Audio Settings
       settings = [
             AVFormatIDKey: Int(kAudioFormatMPEG4AAC),
             AVSampleRateKey: 12000,
@@ -81,6 +91,11 @@ class MainVC: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDelegate {
         
         
         
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        
+        pulsator.stop()
     }
     
     func directoryURL() -> NSURL? {
@@ -125,7 +140,7 @@ class MainVC: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDelegate {
             finishRecording(success: false)
             
         }
-        pulsator.stop()
+        pulsator2.stop()
         
         if let path = pathNSURL {
             
@@ -150,34 +165,15 @@ class MainVC: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDelegate {
             }
             
         }
-        
         pathNSURL = self.directoryURL()
         print("NEW: ",pathNSURL)
         self.audioRecorder = nil
-        
     }
-    
-    
-
-
-    
     
     func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
         player.stop()
-        activitySpinner.stopAnimating()
-        activitySpinner.isHidden = true
-        pulsator.stop()
-        
-        scheduleNotification(inSeconds: 15, completion: {succes in
-            if succes {
-                print("Succesfully scheduled notif")
-            } else {
-                print("Error scheduling notif")
-            }
-        })
-
+        pulsator2.stop()
     }
-    
 
     func requestSpeechAuth() {
         SFSpeechRecognizer.requestAuthorization { authStatus in
@@ -190,18 +186,11 @@ class MainVC: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDelegate {
                     self.finishRecording(success: true)
                 }
             }
-                
-                
-                
-                //if let path = Bundle.main.url(forResource: "andrei1", withExtension: "m4a") {
-                
-            }
         }
+    }
   
     @IBAction func playBtnPressed(_ sender: Any) {
         
-        //activitySpinner.isHidden = true
-        //activitySpinner.startAnimating()
         scheduleNotification(inSeconds: 5, completion: {succes in
             if succes {
                 print("Succesfully scheduled notif")
@@ -211,9 +200,8 @@ class MainVC: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDelegate {
         })
         
         requestSpeechAuth()
-        pulsator.start()
+        pulsator2.start()
     }
-
     
     func scheduleNotification(inSeconds: TimeInterval, completion: @escaping (_ Succes: Bool) -> ()) {
         
@@ -250,16 +238,5 @@ class MainVC: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDelegate {
             }
         })
     }
-
-
-
-
-
-
-
-
-
+    
 }
-
-
-

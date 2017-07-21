@@ -17,7 +17,6 @@
 		0421E0C61F20CA28007F450E /* test.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 0421E0C51F20CA28007F450E /* test.m4a */; };
 		048862161F20DBD600E2F635 /* LFTPulseAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048862151F20DBD600E2F635 /* LFTPulseAnimation.swift */; };
 		04FE6AAB1F2232AF00C84F2D /* aqua.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04FE6AAA1F2232AF00C84F2D /* aqua.ttf */; };
-		04FE6AAD1F22357100C84F2D /* notifAttachment1.png in Resources */ = {isa = PBXBuildFile; fileRef = 04FE6AAC1F22357100C84F2D /* notifAttachment1.png */; };
 		04FE6AAF1F22357500C84F2D /* notifAttachment.png in Resources */ = {isa = PBXBuildFile; fileRef = 04FE6AAE1F22357500C84F2D /* notifAttachment.png */; };
 		04FE6AB11F22370B00C84F2D /* notifAttachment2.png in Resources */ = {isa = PBXBuildFile; fileRef = 04FE6AB01F22370B00C84F2D /* notifAttachment2.png */; };
 		04FE6AB31F2237E600C84F2D /* notifAttachment3.png in Resources */ = {isa = PBXBuildFile; fileRef = 04FE6AB21F2237E600C84F2D /* notifAttachment3.png */; };
@@ -33,6 +32,8 @@
 		62284DBCF2A528652CAAF609 /* Pods_Voices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E8F76A756C001AFA8408922 /* Pods_Voices.framework */; };
 		95BB2A1F1F21161300BED7AE /* andrei.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 95BB2A1E1F21161300BED7AE /* andrei.m4a */; };
 		95BB2A211F2116AE00BED7AE /* andrei1.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 95BB2A201F2116AE00BED7AE /* andrei1.m4a */; };
+		95CD70C01F227C75001F4001 /* Blurring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CD70BF1F227C75001F4001 /* Blurring.swift */; };
+		95CD70C21F22A26D001F4001 /* loadingScreen.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 95CD70C11F22A26D001F4001 /* loadingScreen.PNG */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,7 +82,6 @@
 		0421E0C51F20CA28007F450E /* test.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = test.m4a; sourceTree = "<group>"; };
 		048862151F20DBD600E2F635 /* LFTPulseAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LFTPulseAnimation.swift; sourceTree = "<group>"; };
 		04FE6AAA1F2232AF00C84F2D /* aqua.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = aqua.ttf; sourceTree = "<group>"; };
-		04FE6AAC1F22357100C84F2D /* notifAttachment1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = notifAttachment1.png; sourceTree = "<group>"; };
 		04FE6AAE1F22357500C84F2D /* notifAttachment.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = notifAttachment.png; sourceTree = "<group>"; };
 		04FE6AB01F22370B00C84F2D /* notifAttachment2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = notifAttachment2.png; sourceTree = "<group>"; };
 		04FE6AB21F2237E600C84F2D /* notifAttachment3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = notifAttachment3.png; sourceTree = "<group>"; };
@@ -98,6 +98,8 @@
 		7EDCDED8D35B6306B453DD3A /* Pods-VoicesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VoicesTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-VoicesTests/Pods-VoicesTests.release.xcconfig"; sourceTree = "<group>"; };
 		95BB2A1E1F21161300BED7AE /* andrei.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = andrei.m4a; sourceTree = "<group>"; };
 		95BB2A201F2116AE00BED7AE /* andrei1.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = andrei1.m4a; sourceTree = "<group>"; };
+		95CD70BF1F227C75001F4001 /* Blurring.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Blurring.swift; sourceTree = "<group>"; };
+		95CD70C11F22A26D001F4001 /* loadingScreen.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loadingScreen.PNG; sourceTree = "<group>"; };
 		9E8F76A756C001AFA8408922 /* Pods_Voices.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Voices.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA34521416FD1CE6F575CAB1 /* Pods_VoicesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VoicesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBB67BE13E9E7EDB38B4061F /* Pods-Voices.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Voices.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Voices/Pods-Voices.debug.xcconfig"; sourceTree = "<group>"; };
@@ -207,15 +209,16 @@
 			children = (
 				04FE6ACD1F2246C200C84F2D /* bannerNotif.png */,
 				04FE6AAE1F22357500C84F2D /* notifAttachment.png */,
-				04FE6AAC1F22357100C84F2D /* notifAttachment1.png */,
 				04FE6AB01F22370B00C84F2D /* notifAttachment2.png */,
 				04FE6AB21F2237E600C84F2D /* notifAttachment3.png */,
 				04FE6AB41F2238C000C84F2D /* notifAttachment4.png */,
+				95CD70C11F22A26D001F4001 /* loadingScreen.PNG */,
 				04FE6AAA1F2232AF00C84F2D /* aqua.ttf */,
 				95BB2A201F2116AE00BED7AE /* andrei1.m4a */,
 				95BB2A1E1F21161300BED7AE /* andrei.m4a */,
 				0421E0C51F20CA28007F450E /* test.m4a */,
 				048862151F20DBD600E2F635 /* LFTPulseAnimation.swift */,
+				95CD70BF1F227C75001F4001 /* Blurring.swift */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -369,7 +372,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0421E0C61F20CA28007F450E /* test.m4a in Resources */,
-				04FE6AAD1F22357100C84F2D /* notifAttachment1.png in Resources */,
 				0421E0AA1F20BA42007F450E /* LaunchScreen.storyboard in Resources */,
 				95BB2A1F1F21161300BED7AE /* andrei.m4a in Resources */,
 				04FE6AB51F2238C000C84F2D /* notifAttachment4.png in Resources */,
@@ -377,6 +379,7 @@
 				04FE6ACE1F2246C200C84F2D /* bannerNotif.png in Resources */,
 				04FE6AAB1F2232AF00C84F2D /* aqua.ttf in Resources */,
 				95BB2A211F2116AE00BED7AE /* andrei1.m4a in Resources */,
+				95CD70C21F22A26D001F4001 /* loadingScreen.PNG in Resources */,
 				04FE6AB31F2237E600C84F2D /* notifAttachment3.png in Resources */,
 				04FE6AAF1F22357500C84F2D /* notifAttachment.png in Resources */,
 				0421E0A71F20BA42007F450E /* Assets.xcassets in Resources */,
@@ -502,6 +505,7 @@
 			files = (
 				0421E0C31F20C4EA007F450E /* CircleButton.swift in Sources */,
 				048862161F20DBD600E2F635 /* LFTPulseAnimation.swift in Sources */,
+				95CD70C01F227C75001F4001 /* Blurring.swift in Sources */,
 				0421E0A21F20BA42007F450E /* MainVC.swift in Sources */,
 				0421E0A01F20BA42007F450E /* AppDelegate.swift in Sources */,
 			);
@@ -788,6 +792,7 @@
 				04FE6ACB1F223A4200C84F2D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
