@@ -232,9 +232,9 @@ class MainVC: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDelegate {
         // ONLY FOR EXTENSION
         notif.categoryIdentifier = "myNotificationCategory"
         
-        notif.title = "Friendly reminder"
+        notif.title = "Missed me?"
         //notif.subtitle = "And we'll take care of the rest"
-        notif.body = "Voices will learn much more if you interact with it, that's why I need to send you this notifications"
+        notif.body = "Voices will learn much more if you interact with it, that's why I need to send you this notifications."
         notif.attachments = [attachment]
         
         let notifTrigger = UNTimeIntervalNotificationTrigger(timeInterval: inSeconds, repeats: false)
