@@ -21,7 +21,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loadingScreen.PNG" translatesAutoresizingMaskIntoConstraints="NO" id="g7Y-YT-nQS">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loadingScreen2.PNG" translatesAutoresizingMaskIntoConstraints="NO" id="g7Y-YT-nQS">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ifo-G3-nL5">
@@ -53,6 +53,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="loadingScreen.PNG" width="750" height="1334"/>
+        <image name="loadingScreen2.PNG" width="750" height="1334"/>
     </resources>
 </document>

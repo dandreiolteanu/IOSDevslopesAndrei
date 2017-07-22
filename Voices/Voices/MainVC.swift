@@ -30,6 +30,7 @@ class MainVC: UIViewController, Blurring, AVAudioPlayerDelegate, AVAudioRecorder
     @IBOutlet weak var recordButtonPressed: UIButton!
     
     var pathNSURL: NSURL!
+    var sameText: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,13 +42,13 @@ class MainVC: UIViewController, Blurring, AVAudioPlayerDelegate, AVAudioRecorder
         pulsatorLayer.layer.addSublayer(pulsator)
         pulsatorLayer2.layer.addSublayer(pulsator2)
         
-        pulsator.numPulse = 4
+        pulsator.numPulse = 3
         pulsator2.numPulse = 10
         
         pulsator.backgroundColor = UIColor(red:0.24, green:0.65, blue:0.73, alpha:1.0).cgColor
         pulsator2.backgroundColor = UIColor(red:0.70, green:0.05, blue:0.05, alpha:1.0).cgColor
         
-        pulsator.radius = 90.0
+        pulsator.radius = 80.0
         pulsator2.radius = 120.0
         
         pulsator.start()
@@ -67,7 +68,7 @@ class MainVC: UIViewController, Blurring, AVAudioPlayerDelegate, AVAudioRecorder
         do {
           try recordingSession.setCategory(AVAudioSessionCategoryPlayAndRecord)
             try recordingSession.setActive(true)
-            recordingSession.requestRecordPermission() { [unowned self] allowed in
+            recordingSession.requestRecordPermission() { allowed in
               DispatchQueue.main.async {
                     if allowed {
                         print("Allow")
@@ -94,7 +95,7 @@ class MainVC: UIViewController, Blurring, AVAudioPlayerDelegate, AVAudioRecorder
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        
+        super.viewWillDisappear(true)
         pulsator.stop()
     }
     
@@ -159,6 +160,7 @@ class MainVC: UIViewController, Blurring, AVAudioPlayerDelegate, AVAudioRecorder
                 
                 if let error = error {
                     print("There was an error: \(error)")
+                    self.transcriptionTextField.text = "Didn't quite hear your voice, could you speak louder?"
                 } else {
                     self.transcriptionTextField.text = result?.bestTranscription.formattedString
                 }
@@ -168,6 +170,16 @@ class MainVC: UIViewController, Blurring, AVAudioPlayerDelegate, AVAudioRecorder
         pathNSURL = self.directoryURL()
         print("NEW: ",pathNSURL)
         self.audioRecorder = nil
+        
+        // Scheduling the notification after we succesfully recorded a session
+        scheduleNotification(inSeconds: 5, completion: {succes in
+            if succes {
+                print("Succesfully scheduled notif")
+            } else {
+                print("Error scheduling notif")
+            }
+        })
+
     }
     
     func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
@@ -190,14 +202,6 @@ class MainVC: UIViewController, Blurring, AVAudioPlayerDelegate, AVAudioRecorder
     }
   
     @IBAction func playBtnPressed(_ sender: Any) {
-        
-        scheduleNotification(inSeconds: 5, completion: {succes in
-            if succes {
-                print("Succesfully scheduled notif")
-            } else {
-                print("Error scheduling notif")
-            }
-        })
         
         requestSpeechAuth()
         pulsator2.start()

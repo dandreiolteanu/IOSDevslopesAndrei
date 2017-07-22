@@ -1,6 +1,6 @@
 //
 //  Blurring.swift
-//  BurgerFactory
+//  Voices
 //
 //  Created by Mac on 20/07/2017.
 //  Copyright © 2017 Mac. All rights reserved.
