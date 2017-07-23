@@ -25,3 +25,10 @@ class CircleButton: UIButton {
         layer.cornerRadius = cornerRadius
     }
 }
+
+class NonHighlightingButton: UIButton {
+    override var isHighlighted: Bool {
+        set { }
+        get { return super.isHighlighted }
+    }
+}

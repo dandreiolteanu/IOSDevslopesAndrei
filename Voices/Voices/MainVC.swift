@@ -11,7 +11,7 @@ import Speech
 import AVFoundation
 import Pulsator
 import UserNotifications
-
+import NVActivityIndicatorView
 
 class MainVC: UIViewController, Blurring, AVAudioPlayerDelegate, AVAudioRecorderDelegate {
 
@@ -27,7 +27,7 @@ class MainVC: UIViewController, Blurring, AVAudioPlayerDelegate, AVAudioRecorder
     var audioRecorder: AVAudioRecorder!
     var settings = [String : Int]()
     
-    @IBOutlet weak var recordButtonPressed: UIButton!
+    @IBOutlet weak var activityIndicator: NVActivityIndicatorView!
     
     var pathNSURL: NSURL!
     var sameText: String!
@@ -35,25 +35,29 @@ class MainVC: UIViewController, Blurring, AVAudioPlayerDelegate, AVAudioRecorder
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // The blur effect before wich dismisses after launching the app
         self.blurWithDuration(duration: 0)
         self.unblurWithDuration(duration: 1.5)
         
+
         transcriptionTextField.isEditable = false
+        
+        // Pulsator, the pulse effect from the recordButton
         pulsatorLayer.layer.addSublayer(pulsator)
         pulsatorLayer2.layer.addSublayer(pulsator2)
         
-        pulsator.numPulse = 3
-        pulsator2.numPulse = 10
+        pulsator.numPulse = 2
+        pulsator2.numPulse = 9
         
         pulsator.backgroundColor = UIColor(red:0.24, green:0.65, blue:0.73, alpha:1.0).cgColor
         pulsator2.backgroundColor = UIColor(red:0.70, green:0.05, blue:0.05, alpha:1.0).cgColor
         
-        pulsator.radius = 80.0
-        pulsator2.radius = 120.0
+        pulsator.radius = 60.0
+        pulsator2.radius = 80.0
         
         pulsator.start()
         
-        // 1. REQUEST PERMISSION
+        // REQUEST PERMISSION for NOTIFICATIONS
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound], completionHandler: { (granted, error) in
             if granted {
                 print("Notification acces granted")
@@ -63,7 +67,7 @@ class MainVC: UIViewController, Blurring, AVAudioPlayerDelegate, AVAudioRecorder
         })
         
         
-        
+        // REQUEST PERMISSION for ACCESING MICROPHONE
         recordingSession = AVAudioSession.sharedInstance()
         do {
           try recordingSession.setCategory(AVAudioSessionCategoryPlayAndRecord)
@@ -141,7 +145,10 @@ class MainVC: UIViewController, Blurring, AVAudioPlayerDelegate, AVAudioRecorder
             finishRecording(success: false)
             
         }
+        activityIndicator.isHidden = true
+        activityIndicator.stopAnimating()
         pulsator2.stop()
+        pulsator.start()
         
         if let path = pathNSURL {
             
@@ -185,6 +192,7 @@ class MainVC: UIViewController, Blurring, AVAudioPlayerDelegate, AVAudioRecorder
     func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
         player.stop()
         pulsator2.stop()
+        pulsator.start()
     }
 
     func requestSpeechAuth() {
@@ -204,7 +212,10 @@ class MainVC: UIViewController, Blurring, AVAudioPlayerDelegate, AVAudioRecorder
     @IBAction func playBtnPressed(_ sender: Any) {
         
         requestSpeechAuth()
+        pulsator.stop()
         pulsator2.start()
+        activityIndicator.isHidden = false
+        activityIndicator.startAnimating()
     }
     
     func scheduleNotification(inSeconds: TimeInterval, completion: @escaping (_ Succes: Bool) -> ()) {

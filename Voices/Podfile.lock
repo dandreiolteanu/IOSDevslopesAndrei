@@ -1,12 +1,15 @@
 PODS:
+  - NVActivityIndicatorView (3.6.1)
   - Pulsator (0.3.0)
 
 DEPENDENCIES:
+  - NVActivityIndicatorView
   - Pulsator
 
 SPEC CHECKSUMS:
+  NVActivityIndicatorView: 9f52a7f84bf5c6a798722c450fe3c198e01c56ed
   Pulsator: 0191f14f7ab82d6dbde6fdbde42036f07a4450e3
 
-PODFILE CHECKSUM: f896d594cc94d8ce62ca6e91ccbb26e8ed9e5a2a
+PODFILE CHECKSUM: b3e6829f816b359d5bc69f7741338645cbceaaf8
 
 COCOAPODS: 1.2.1

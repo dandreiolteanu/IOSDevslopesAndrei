@@ -7,7 +7,8 @@ target 'Voices' do
 
   # Pods for Voices
 pod "Pulsator"
-  target 'VoicesTests' do
+pod 'NVActivityIndicatorView' 
+ target 'VoicesTests' do
     inherit! :search_paths
     # Pods for testing
   end
