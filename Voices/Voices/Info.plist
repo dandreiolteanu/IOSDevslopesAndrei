@@ -18,12 +18,30 @@
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>Fabric</key>
+	<dict>
+		<key>APIKey</key>
+		<string>5b7e9e56c0c4d214570d5c1bbf4c3c7ca9ae600c</string>
+		<key>Kits</key>
+		<array>
+			<dict>
+				<key>KitInfo</key>
+				<dict/>
+				<key>KitName</key>
+				<string>Crashlytics</string>
+			</dict>
+		</array>
+	</dict>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>You can help us by hearing out your voice.</string>
 	<key>NSSpeechRecognitionUsageDescription</key>
 	<string>We need to analyze your audio only for transcribing...soon your voice.🤙🏼</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>aqua.ttf</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
@@ -35,10 +53,6 @@
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
-	</array>
-	<key>UIAppFonts</key>
-	<array>
-		<string>aqua.ttf</string>
 	</array>
 </dict>
 </plist>

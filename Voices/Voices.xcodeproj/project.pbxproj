@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		040179D81F2629BF007E5F15 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 040179D61F2629BF007E5F15 /* Fabric.framework */; };
+		040179D91F2629BF007E5F15 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 040179D71F2629BF007E5F15 /* Crashlytics.framework */; };
 		0421E0A01F20BA42007F450E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0421E09F1F20BA42007F450E /* AppDelegate.swift */; };
 		0421E0A21F20BA42007F450E /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0421E0A11F20BA42007F450E /* MainVC.swift */; };
 		0421E0A51F20BA42007F450E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0421E0A31F20BA42007F450E /* Main.storyboard */; };
@@ -68,6 +70,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		040179D61F2629BF007E5F15 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = SOURCE_ROOT; };
+		040179D71F2629BF007E5F15 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = SOURCE_ROOT; };
 		0421E09C1F20BA42007F450E /* Voices.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Voices.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0421E09F1F20BA42007F450E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0421E0A11F20BA42007F450E /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
@@ -111,6 +115,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				62284DBCF2A528652CAAF609 /* Pods_Voices.framework in Frameworks */,
+				040179D91F2629BF007E5F15 /* Crashlytics.framework in Frameworks */,
+				040179D81F2629BF007E5F15 /* Fabric.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,6 +165,8 @@
 		0421E09E1F20BA42007F450E /* Voices */ = {
 			isa = PBXGroup;
 			children = (
+				040179D61F2629BF007E5F15 /* Fabric.framework */,
+				040179D71F2629BF007E5F15 /* Crashlytics.framework */,
 				0421E0C41F20C9EE007F450E /* Resources */,
 				0421E0BF1F20C48B007F450E /* Model */,
 				0421E0C01F20C4A3007F450E /* View */,
@@ -269,6 +277,7 @@
 				1255BF4FDBDF9911F80B798F /* [CP] Embed Pods Frameworks */,
 				7970BA95393A3CC27B38B15F /* [CP] Copy Pods Resources */,
 				04FE6ACC1F223A4200C84F2D /* Embed App Extensions */,
+				040179D51F26291A007E5F15 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -405,6 +414,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		040179D51F26291A007E5F15 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run 5b7e9e56c0c4d214570d5c1bbf4c3c7ca9ae600c 641266a41feb0625f12770aa81d70b5ad4b4aa9f7777633359f1d084dc8100b3";
+		};
 		1255BF4FDBDF9911F80B798F /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -669,6 +691,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 945V6ZBHK3;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Voices/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = andreio.Voices;
@@ -683,6 +709,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 945V6ZBHK3;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Voices/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = andreio.Voices;

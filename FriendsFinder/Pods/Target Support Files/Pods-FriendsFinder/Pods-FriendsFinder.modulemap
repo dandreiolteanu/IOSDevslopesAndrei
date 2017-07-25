@@ -1,0 +1,6 @@
+framework module Pods_FriendsFinder {
+  umbrella header "Pods-FriendsFinder-umbrella.h"
+
+  export *
+  module * { export * }
+}
