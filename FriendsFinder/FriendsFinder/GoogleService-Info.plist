@@ -7,21 +7,21 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>1042898458762-4v94hkrf4si25u8n0fo25sg623fnv5m8.apps.googleusercontent.com</string>
+	<string>537626217232-cpvhgc907osvpeu3nq9eie56l7q8r1ml.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.1042898458762-4v94hkrf4si25u8n0fo25sg623fnv5m8</string>
+	<string>com.googleusercontent.apps.537626217232-cpvhgc907osvpeu3nq9eie56l7q8r1ml</string>
 	<key>API_KEY</key>
-	<string>AIzaSyBJSEL3OO-7hAVTjyq5h2Im_d7fefc09-4</string>
+	<string>AIzaSyCb2rRahObLQMcmkPgvSc2hWCjm2Yby24s</string>
 	<key>GCM_SENDER_ID</key>
-	<string>1042898458762</string>
+	<string>537626217232</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.andreiolteanu.FirendsFinder</string>
+	<string>com.andreiolteanu.FriendsFinder</string>
 	<key>PROJECT_ID</key>
-	<string>friendsfinder-45647</string>
+	<string>friendsfinder-70535</string>
 	<key>STORAGE_BUCKET</key>
-	<string>friendsfinder-45647.appspot.com</string>
+	<string>friendsfinder-70535.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<true/>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -33,8 +33,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true/>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:1042898458762:ios:4eda0718c8d4b2cd</string>
+	<string>1:537626217232:ios:10be38599f09a21a</string>
 	<key>DATABASE_URL</key>
-	<string>https://friendsfinder-45647.firebaseio.com</string>
+	<string>https://friendsfinder-70535.firebaseio.com</string>
 </dict>
 </plist>

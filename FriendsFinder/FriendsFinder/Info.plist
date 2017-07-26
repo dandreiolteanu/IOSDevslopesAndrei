@@ -38,5 +38,7 @@
 	<array>
 		<string>aqua.ttf</string>
 	</array>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>We would enjoy you becoming our friend.Use your location to help us.👨🏼‍💻</string>
 </dict>
 </plist>
