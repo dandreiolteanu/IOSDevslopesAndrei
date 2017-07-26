@@ -176,8 +176,8 @@ class MainVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     
     @IBAction func locateMeBtnPressed(_ sender: Any) {
 
-        locationManager.startUpdatingLocation()
-        
+        mapView.showsUserLocation = true
+        mapView.setUserTrackingMode(.follow, animated: true)
 //        self.mapView.setCenter(self.mapView.userLocation.coordinate, animated: true)
 
     }
