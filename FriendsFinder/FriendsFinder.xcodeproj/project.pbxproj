@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		048046561F2A0AD200C84FB7 /* ModalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048046551F2A0AD200C84FB7 /* ModalVC.swift */; };
+		0480465F1F2A361E00C84FB7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0480465E1F2A361D00C84FB7 /* Constants.swift */; };
 		04E81D181F28BCB000789749 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04E81D171F28BCB000789749 /* GoogleService-Info.plist */; };
 		04F9ED991F27830A00753F65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F9ED981F27830A00753F65 /* AppDelegate.swift */; };
 		04F9ED9B1F27830A00753F65 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F9ED9A1F27830A00753F65 /* MainVC.swift */; };
@@ -36,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		048046551F2A0AD200C84FB7 /* ModalVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalVC.swift; sourceTree = "<group>"; };
+		0480465E1F2A361D00C84FB7 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		04E81D171F28BCB000789749 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		04F9ED951F27830900753F65 /* FriendsFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FriendsFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04F9ED981F27830A00753F65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -182,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				04F9ED9A1F27830A00753F65 /* MainVC.swift */,
+				048046551F2A0AD200C84FB7 /* ModalVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -190,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				04F9EDD91F289D2E00753F65 /* FriendsAnnotation.swift */,
+				0480465E1F2A361D00C84FB7 /* Constants.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -433,8 +439,10 @@
 				04F9ED9B1F27830A00753F65 /* MainVC.swift in Sources */,
 				04F9EDCE1F2783F100753F65 /* GFGeoHash.m in Sources */,
 				04F9ED991F27830A00753F65 /* AppDelegate.swift in Sources */,
+				0480465F1F2A361E00C84FB7 /* Constants.swift in Sources */,
 				04F9EDCC1F2783F100753F65 /* GeoFire.m in Sources */,
 				04F9EDCF1F2783F100753F65 /* GFGeoHashQuery.m in Sources */,
+				048046561F2A0AD200C84FB7 /* ModalVC.swift in Sources */,
 				04F9EDD01F2783F100753F65 /* GFQuery.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

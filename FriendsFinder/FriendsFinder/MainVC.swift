@@ -12,17 +12,26 @@ import Firebase
 import FirebaseDatabase
 
 class MainVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
+    
 
     @IBOutlet weak var spotRandomBtn: UIButton!
     @IBOutlet weak var mapView: MKMapView!
-   
+    
+    
+    var currentLocation: CLLocation!
     let locationManager = CLLocationManager()
     var mapHasCenteredOnce = false
     var geoFire: GeoFire!
     var geoFireRef: DatabaseReference!
     var wasChoosed = false
     
-
+    var currentCity = ""
+    var currentCountry =  String()
+    var currentAddress = String()
+    var currentLatitude = String()
+    var currentLongitude = String()
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,15 +40,71 @@ class MainVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
         
         mapView.delegate = self
         mapView.userTrackingMode = MKUserTrackingMode.follow
-        
         geoFireRef = Database.database().reference()
         geoFire = GeoFire(firebaseRef: geoFireRef)
         
-    
+        locationManager.requestWhenInUseAuthorization()
+        
+        if (CLLocationManager.authorizationStatus() == CLAuthorizationStatus.authorizedWhenInUse ||
+            CLLocationManager.authorizationStatus() == CLAuthorizationStatus.authorizedAlways){
+            currentLocation = locationManager.location
+            print(currentLocation.coordinate.latitude)
+            print(currentLocation.coordinate.longitude)
+        }
+        
+        let geoCoder = CLGeocoder()
+        let location = CLLocation(latitude: currentLocation.coordinate.latitude, longitude: currentLocation.coordinate.longitude)
+        geoCoder.reverseGeocodeLocation(location, completionHandler: { (placemarks, error) -> Void in
+            print(String.localizedStringWithFormat("%.2f", self.mapView.userLocation.coordinate.latitude))
+            
+            self.currentLatitude = String.localizedStringWithFormat("%.2f", self.mapView.userLocation.coordinate.latitude)
+            self.currentLatitude = self.currentLatitude.replacingOccurrences(of: ",", with: ".")
+            
+            self.currentLongitude = String.localizedStringWithFormat("%.2f", self.mapView.userLocation.coordinate.longitude)
+            self.currentLongitude = self.currentLongitude.replacingOccurrences(of: ",", with: ".")
+            
+            
+            // Place details
+            var placeMark: CLPlacemark!
+            placeMark = placemarks?[0]
+            
+            // Address dictionary
+            print(placeMark.addressDictionary as Any)
+            
+            // Location name
+            if let locationName = placeMark.addressDictionary!["Name"] as? NSString {
+                print(locationName)
+            }
+            // Street address
+            if let street = placeMark.addressDictionary!["Thoroughfare"] as? NSString {
+                self.currentAddress = street as String!
+                print(street)
+            }
+            // City
+            if let city = placeMark.addressDictionary!["City"] as? NSString {
+                self.currentCity = city as String!
+                print(city)
+            }
+            // Zip code
+            if let zip = placeMark.addressDictionary!["ZIP"] as? NSString {
+                print(zip)
+            }
+            // Country
+            if let country = placeMark.addressDictionary!["Country"] as? NSString {
+                self.currentCountry = country as String!
+                print(country)
+                print(self.currentCountry," @@@@@@@@@@@@@@@")
+            }
+        })
+
+        
+        
+
     }
     
     override func viewDidAppear(_ animated: Bool) {
         locationAuthStatus()
+
     }
     
     func locationAuthStatus() {
@@ -54,7 +119,9 @@ class MainVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
         
         if status == .authorizedWhenInUse {
             mapView.showsUserLocation = true
+//            getDetailsForModalVC()
         }
+
     }
     
     func centerMapOnLocation(location: CLLocation) {
@@ -178,8 +245,68 @@ class MainVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
 
         mapView.showsUserLocation = true
         mapView.setUserTrackingMode(.follow, animated: true)
-//        self.mapView.setCenter(self.mapView.userLocation.coordinate, animated: true)
-
     }
-}
+    
+//    func getDetailsForModalVC() {
+//        
+//        let geoCoder = CLGeocoder()
+//        let location = CLLocation(latitude: mapView.userLocation.coordinate.latitude, longitude: mapView.userLocation.coordinate.longitude)
+//        geoCoder.reverseGeocodeLocation(location, completionHandler: { (placemarks, error) -> Void in
+//            print(String.localizedStringWithFormat("%.2f", self.mapView.userLocation.coordinate.latitude))
+//            
+//            self.currentLatitude = String.localizedStringWithFormat("%.2f", self.mapView.userLocation.coordinate.latitude)
+//            self.currentLatitude = self.currentLatitude.replacingOccurrences(of: ",", with: ".")
+//            
+//            self.currentLongitude = String.localizedStringWithFormat("%.2f", self.mapView.userLocation.coordinate.longitude)
+//            self.currentLongitude = self.currentLatitude.replacingOccurrences(of: ",", with: ".")
+//            
+//            
+//            // Place details
+//            var placeMark: CLPlacemark!
+//            placeMark = placemarks?[0]
+//            
+//            // Address dictionary
+//            print(placeMark.addressDictionary as Any)
+//            
+//            // Location name
+//            if let locationName = placeMark.addressDictionary!["Name"] as? NSString {
+//                print(locationName)
+//            }
+//            // Street address
+//            if let street = placeMark.addressDictionary!["Thoroughfare"] as? NSString {
+//                self.currentAddress = street as String!
+//                print(street)
+//            }
+//            // City
+//            if let city = placeMark.addressDictionary!["City"] as? NSString {
+//                self.currentCity = city as String!
+//                print(city)
+//            }
+//            // Zip code
+//            if let zip = placeMark.addressDictionary!["ZIP"] as? NSString {
+//                print(zip)
+//            }
+//            // Country
+//            if let country = placeMark.addressDictionary!["Country"] as? NSString {
+//                self.currentCountry = country as String!
+//                print(country)
+//                print(self.currentCountry," @@@@@@@@@@@@@@@")
+//            }
+//        })
+//
+//    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+//        getDetailsForModalVC()
+        
+        let modalVC = segue.destination as! ModalVC
 
+        modalVC.currentCity1 = self.currentCity
+        modalVC.currentCountry1 = self.currentCountry
+        modalVC.currentAddress1 = self.currentAddress
+        modalVC.currentLatitude1 = self.currentLatitude
+        modalVC.currentLongitude1 = self.currentLongitude
+        print("()()()()",modalVC.currentCity1)
+    }
+    
+}
