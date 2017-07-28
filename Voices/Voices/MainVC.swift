@@ -35,12 +35,14 @@ class MainVC: UIViewController, Blurring, AVAudioPlayerDelegate, AVAudioRecorder
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         // The blur effect before wich dismisses after launching the app
         self.blurWithDuration(duration: 0)
         self.unblurWithDuration(duration: 1.5)
         
+        
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: #selector(SSASideMenu.presentLeftMenuViewController))
 
-        transcriptionTextField.isEditable = false
         
         // Pulsator, the pulse effect from the recordButton
         pulsatorLayer.layer.addSublayer(pulsator)

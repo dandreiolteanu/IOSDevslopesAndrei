@@ -13,7 +13,7 @@ import Crashlytics
 
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: SSASideMenu, UIApplicationDelegate {
 
     var window: UIWindow?
 
@@ -25,7 +25,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         configureUserNotifications()
         
+<<<<<<< Updated upstream
         Fabric.with([Crashlytics.self])
+=======
+        window = UIWindow(frame: UIScreen.main.bounds)
+        
+        //MARK : Setup SSASideMenu
+        
+        let sideMenu = SSASideMenu(contentViewController: UINavigationController(rootViewController: MainVC()), leftMenuViewController: MenuVC())
+        sideMenu.backgroundImage = UIImage(named: "menuBG.png")
+        sideMenu.configure(SSASideMenu.MenuViewEffect(fade: true, scale: true, scaleBackground: false))
+        sideMenu.configure(SSASideMenu.ContentViewEffect(alpha: 1.0, scale: 0.7))
+        sideMenu.configure(SSASideMenu.ContentViewShadow(enabled: true, color: UIColor.black, opacity: 0.6, radius: 6.0))
+        sideMenu.delegate = self as? SSASideMenuDelegate
+        
+        window?.rootViewController = sideMenu
+        window?.makeKeyAndVisible()
+        
+>>>>>>> Stashed changes
         
         return true
     }
