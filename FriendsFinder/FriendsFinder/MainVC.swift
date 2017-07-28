@@ -32,7 +32,6 @@ class MainVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     var currentLongitude = String()
     
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         

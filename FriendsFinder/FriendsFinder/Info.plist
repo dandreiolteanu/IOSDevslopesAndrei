@@ -40,5 +40,9 @@
 	</array>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>We would enjoy you becoming our friend.Use your location to help us.👨🏼‍💻</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Take cool snapshots of you. 📷🔥📷</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Select cool snapshots that you already have. 📷🔥📷</string>
 </dict>
 </plist>
