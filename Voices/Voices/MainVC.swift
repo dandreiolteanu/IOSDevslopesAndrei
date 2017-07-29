@@ -41,9 +41,6 @@ class MainVC: UIViewController, Blurring, AVAudioPlayerDelegate, AVAudioRecorder
         self.unblurWithDuration(duration: 1.5)
         
         
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: #selector(SSASideMenu.presentLeftMenuViewController))
-
-        
         // Pulsator, the pulse effect from the recordButton
         pulsatorLayer.layer.addSublayer(pulsator)
         pulsatorLayer2.layer.addSublayer(pulsator2)
@@ -54,7 +51,7 @@ class MainVC: UIViewController, Blurring, AVAudioPlayerDelegate, AVAudioRecorder
         pulsator.backgroundColor = UIColor(red:0.24, green:0.65, blue:0.73, alpha:1.0).cgColor
         pulsator2.backgroundColor = UIColor(red:0.70, green:0.05, blue:0.05, alpha:1.0).cgColor
         
-        pulsator.radius = 60.0
+        pulsator.radius = 63.0
         pulsator2.radius = 80.0
         
         pulsator.start()
