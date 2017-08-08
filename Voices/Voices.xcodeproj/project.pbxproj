@@ -425,7 +425,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "./Fabric.framework/run 5b7e9e56c0c4d214570d5c1bbf4c3c7ca9ae600c 641266a41feb0625f12770aa81d70b5ad4b4aa9f7777633359f1d084dc8100b3";
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" 5b7e9e56c0c4d214570d5c1bbf4c3c7ca9ae600c 641266a41feb0625f12770aa81d70b5ad4b4aa9f7777633359f1d084dc8100b3";
 		};
 		1255BF4FDBDF9911F80B798F /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -690,6 +690,7 @@
 			baseConfigurationReference = EBB67BE13E9E7EDB38B4061F /* Pods-Voices.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 945V6ZBHK3;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

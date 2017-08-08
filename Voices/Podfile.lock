@@ -1,15 +1,22 @@
 PODS:
+  - Crashlytics (3.8.5):
+    - Fabric (~> 1.6.3)
+  - Fabric (1.6.11)
   - NVActivityIndicatorView (3.6.1)
   - Pulsator (0.3.0)
 
 DEPENDENCIES:
+  - Crashlytics
+  - Fabric
   - NVActivityIndicatorView
   - Pulsator
 
 SPEC CHECKSUMS:
+  Crashlytics: dfbae35ef22ca189240d230ad501feea4ee85d2d
+  Fabric: 5911403591946b8228ab1c51d98f1d7137e863c6
   NVActivityIndicatorView: 9f52a7f84bf5c6a798722c450fe3c198e01c56ed
   Pulsator: 0191f14f7ab82d6dbde6fdbde42036f07a4450e3
 
-PODFILE CHECKSUM: b3e6829f816b359d5bc69f7741338645cbceaaf8
+PODFILE CHECKSUM: b3003683aa1586b627d8a6a8543c3f96e19d92a1
 
 COCOAPODS: 1.2.1

@@ -8,6 +8,8 @@ target 'Voices' do
   # Pods for Voices
 pod "Pulsator"
 pod 'NVActivityIndicatorView' 
+pod 'Fabric'
+pod 'Crashlytics'
  target 'VoicesTests' do
     inherit! :search_paths
     # Pods for testing

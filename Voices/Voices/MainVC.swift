@@ -35,12 +35,11 @@ class MainVC: UIViewController, Blurring, AVAudioPlayerDelegate, AVAudioRecorder
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         // The blur effect before wich dismisses after launching the app
         self.blurWithDuration(duration: 0)
         self.unblurWithDuration(duration: 1.5)
         
-
-        transcriptionTextField.isEditable = false
         
         // Pulsator, the pulse effect from the recordButton
         pulsatorLayer.layer.addSublayer(pulsator)
@@ -52,7 +51,7 @@ class MainVC: UIViewController, Blurring, AVAudioPlayerDelegate, AVAudioRecorder
         pulsator.backgroundColor = UIColor(red:0.24, green:0.65, blue:0.73, alpha:1.0).cgColor
         pulsator2.backgroundColor = UIColor(red:0.70, green:0.05, blue:0.05, alpha:1.0).cgColor
         
-        pulsator.radius = 60.0
+        pulsator.radius = 63.0
         pulsator2.radius = 80.0
         
         pulsator.start()
