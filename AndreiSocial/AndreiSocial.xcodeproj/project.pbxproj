@@ -13,6 +13,8 @@
 		04C0BCD21F39B46200204A8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04C0BCD11F39B46200204A8F /* Assets.xcassets */; };
 		04C0BCD51F39B46200204A8F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04C0BCD31F39B46200204A8F /* LaunchScreen.storyboard */; };
 		04C0BCE01F39B46200204A8F /* AndreiSocialTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C0BCDF1F39B46200204A8F /* AndreiSocialTests.swift */; };
+		04C0BCEB1F39B4B500204A8F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04C0BCEA1F39B4B500204A8F /* GoogleService-Info.plist */; };
+		DABEC14B81AD93E5A7139473 /* Pods_AndreiSocial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C21992B46665030F6DC8F7D5 /* Pods_AndreiSocial.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,11 @@
 		04C0BCDB1F39B46200204A8F /* AndreiSocialTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AndreiSocialTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04C0BCDF1F39B46200204A8F /* AndreiSocialTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AndreiSocialTests.swift; sourceTree = "<group>"; };
 		04C0BCE11F39B46200204A8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04C0BCEA1F39B4B500204A8F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3FF611517C1AFB35EAB4D787 /* Pods-AndreiSocial.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AndreiSocial.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AndreiSocial/Pods-AndreiSocial.debug.xcconfig"; sourceTree = "<group>"; };
+		6BF2C2611F8457912D138BC9 /* Pods-AndreiSocial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AndreiSocial.release.xcconfig"; path = "Pods/Target Support Files/Pods-AndreiSocial/Pods-AndreiSocial.release.xcconfig"; sourceTree = "<group>"; };
+		86921104A1A22AFBA382A580 /* Pods_AndreiSocialTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AndreiSocialTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C21992B46665030F6DC8F7D5 /* Pods_AndreiSocial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AndreiSocial.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DABEC14B81AD93E5A7139473 /* Pods_AndreiSocial.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +70,8 @@
 				04C0BCC91F39B46200204A8F /* AndreiSocial */,
 				04C0BCDE1F39B46200204A8F /* AndreiSocialTests */,
 				04C0BCC81F39B46200204A8F /* Products */,
+				6CA807F7056E824E350B05B4 /* Pods */,
+				6AA655F6890AC2770C56C24A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,6 +93,7 @@
 				04C0BCD11F39B46200204A8F /* Assets.xcassets */,
 				04C0BCD31F39B46200204A8F /* LaunchScreen.storyboard */,
 				04C0BCD61F39B46200204A8F /* Info.plist */,
+				04C0BCEA1F39B4B500204A8F /* GoogleService-Info.plist */,
 			);
 			path = AndreiSocial;
 			sourceTree = "<group>";
@@ -96,6 +107,24 @@
 			path = AndreiSocialTests;
 			sourceTree = "<group>";
 		};
+		6AA655F6890AC2770C56C24A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C21992B46665030F6DC8F7D5 /* Pods_AndreiSocial.framework */,
+				86921104A1A22AFBA382A580 /* Pods_AndreiSocialTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6CA807F7056E824E350B05B4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3FF611517C1AFB35EAB4D787 /* Pods-AndreiSocial.debug.xcconfig */,
+				6BF2C2611F8457912D138BC9 /* Pods-AndreiSocial.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -103,9 +132,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 04C0BCE41F39B46200204A8F /* Build configuration list for PBXNativeTarget "AndreiSocial" */;
 			buildPhases = (
+				7AACBC147BC3DDBB147342F1 /* [CP] Check Pods Manifest.lock */,
 				04C0BCC31F39B46200204A8F /* Sources */,
 				04C0BCC41F39B46200204A8F /* Frameworks */,
 				04C0BCC51F39B46200204A8F /* Resources */,
+				65F61D74DF6E08E2A0E1DCCC /* [CP] Embed Pods Frameworks */,
+				23FA3AA7A87659CA9CB972B1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -183,6 +215,7 @@
 			files = (
 				04C0BCD51F39B46200204A8F /* LaunchScreen.storyboard in Resources */,
 				04C0BCD21F39B46200204A8F /* Assets.xcassets in Resources */,
+				04C0BCEB1F39B4B500204A8F /* GoogleService-Info.plist in Resources */,
 				04C0BCD01F39B46200204A8F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -195,6 +228,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		23FA3AA7A87659CA9CB972B1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AndreiSocial/Pods-AndreiSocial-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		65F61D74DF6E08E2A0E1DCCC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AndreiSocial/Pods-AndreiSocial-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7AACBC147BC3DDBB147342F1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		04C0BCC31F39B46200204A8F /* Sources */ = {
@@ -339,6 +420,7 @@
 		};
 		04C0BCE51F39B46200204A8F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3FF611517C1AFB35EAB4D787 /* Pods-AndreiSocial.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 945V6ZBHK3;
@@ -352,6 +434,7 @@
 		};
 		04C0BCE61F39B46200204A8F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6BF2C2611F8457912D138BC9 /* Pods-AndreiSocial.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 945V6ZBHK3;
