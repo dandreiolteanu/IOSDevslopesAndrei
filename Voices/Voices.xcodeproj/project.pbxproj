@@ -32,6 +32,7 @@
 		62284DBCF2A528652CAAF609 /* Pods_Voices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E8F76A756C001AFA8408922 /* Pods_Voices.framework */; };
 		955A2CF41F24C55000BAEF5A /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955A2CF31F24C55000BAEF5A /* CircleView.swift */; };
 		955F9A281F2331D80000CC72 /* loadingScreen2.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 955F9A271F2331D80000CC72 /* loadingScreen2.PNG */; };
+		95B3C5A21F36259C00278AD7 /* SACountingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B3C5A11F36259C00278AD7 /* SACountingLabel.swift */; };
 		95BB2A1F1F21161300BED7AE /* andrei.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 95BB2A1E1F21161300BED7AE /* andrei.m4a */; };
 		95BB2A211F2116AE00BED7AE /* andrei1.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 95BB2A201F2116AE00BED7AE /* andrei1.m4a */; };
 		95CD70C01F227C75001F4001 /* Blurring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CD70BF1F227C75001F4001 /* Blurring.swift */; };
@@ -100,6 +101,7 @@
 		7EDCDED8D35B6306B453DD3A /* Pods-VoicesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VoicesTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-VoicesTests/Pods-VoicesTests.release.xcconfig"; sourceTree = "<group>"; };
 		955A2CF31F24C55000BAEF5A /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		955F9A271F2331D80000CC72 /* loadingScreen2.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loadingScreen2.PNG; sourceTree = "<group>"; };
+		95B3C5A11F36259C00278AD7 /* SACountingLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SACountingLabel.swift; sourceTree = "<group>"; };
 		95BB2A1E1F21161300BED7AE /* andrei.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = andrei.m4a; sourceTree = "<group>"; };
 		95BB2A201F2116AE00BED7AE /* andrei1.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = andrei1.m4a; sourceTree = "<group>"; };
 		95CD70BF1F227C75001F4001 /* Blurring.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Blurring.swift; sourceTree = "<group>"; };
@@ -199,6 +201,7 @@
 		0421E0C01F20C4A3007F450E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				95B3C5A11F36259C00278AD7 /* SACountingLabel.swift */,
 				048862151F20DBD600E2F635 /* LFTPulseAnimation.swift */,
 				95CD70BF1F227C75001F4001 /* Blurring.swift */,
 				0421E0C21F20C4EA007F450E /* CircleButton.swift */,
@@ -529,6 +532,7 @@
 				048862161F20DBD600E2F635 /* LFTPulseAnimation.swift in Sources */,
 				95CD70C01F227C75001F4001 /* Blurring.swift in Sources */,
 				0421E0A21F20BA42007F450E /* MainVC.swift in Sources */,
+				95B3C5A21F36259C00278AD7 /* SACountingLabel.swift in Sources */,
 				0421E0A01F20BA42007F450E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
