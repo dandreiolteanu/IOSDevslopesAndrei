@@ -12,8 +12,13 @@ import FacebookCore
 import FirebaseAuth
 import Firebase
 
-class SignInVC: UIViewController {
+class SignInVC: UIViewController, UITextFieldDelegate {
 
+    @IBOutlet weak var passwordField: UITextFieldX!
+    @IBOutlet weak var emailField: UITextFieldX!
+    @IBOutlet weak var personImage: UIImageView!
+    @IBOutlet weak var keyImage: UIImageView!
+    
     // GRADIENT ANIMATION
     @IBOutlet weak var bgView: UIViewX!
     var colorArray: [(color1: UIColor, color2: UIColor)] = []
@@ -32,7 +37,11 @@ class SignInVC: UIViewController {
         colorArray.append((color1: #colorLiteral(red: 0.2966733277, green: 0.4200778604, blue: 0.7318040729, alpha: 1) , color2: #colorLiteral(red: 0.2784220278, green: 0.525316, blue: 0.8143386245, alpha: 1)))
 
         animateBgView()
-
+        
+        passwordField.delegate = self
+        emailField.delegate = self
+    
+    
     }
     
     func animateBgView() {
@@ -48,17 +57,62 @@ class SignInVC: UIViewController {
         }
     }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        passwordField.resignFirstResponder()
+        emailField.resignFirstResponder()
+        return true
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.emailField.resignFirstResponder()
+        self.passwordField.endEditing(true)
+    }
+    
+    
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    @IBAction func logInPressed(_ sender: Any) {
+        
+        if let email = self.emailField.text, let password = self.passwordField.text {
+            Auth.auth().signIn(withEmail: email, password: password, completion: { (user, error) in
+                
+                if error == nil {
+                    print("FIREBASE: Email user authenticated with Firebase")
+                } else {
+                    Auth.auth().createUser(withEmail: email, password: password, completion: { (user, error) in
+                        
+                        if error != nil {
+                            print("FIREBASE: Unable to authenticate with Firebase using email")
+                            self.emailField.backgroundColor = UIColor(red: 255, green: 0, blue: 0, alpha: 0.8)
+                        } else {
+                            print("FIREBASE: Successfully authenticated with Firebase")
+                        }
+                    })
+                }
+            })
+        }
+    }
+    
+    
     @IBAction func facebookBtnPressed(_ sender: Any) {
 
         let loginManager = LoginManager()
-        loginManager.logIn([ .publicProfile ], viewController: self) { loginResult in
+        loginManager.logIn([ .publicProfile, .email], viewController: self) { loginResult in
             switch loginResult {
             case .failed(let error):
-                print(error)
+                print("FACEBOOK \(error)")
             case .cancelled:
-                print("User cancelled login.")
+                print("FACEBOOK: User cancelled login.")
             case .success:
-                print("Logged in!")
+                print("FACEBOOK: Logged in!")
                 
                 let credential = FacebookAuthProvider.credential(withAccessToken: (AccessToken.current?.authenticationToken)!)
                 self.firebaseAuth(credential)
@@ -70,14 +124,14 @@ class SignInVC: UIViewController {
         
         Auth.auth().signIn(with: credential) { (user, error) in
             if error != nil {
-                print("UNABLE TO CONNECT TO FIREBASE \(error)")
+                print("FIREBASE: UNABLE TO CONNECT TO FIREBASE \(String(describing: error))")
             } else {
-                print("LOGGED IN!")
+                print("FIREBASE: Logged in!")
             }
             
         }
     }
 
-
 }
+
 
