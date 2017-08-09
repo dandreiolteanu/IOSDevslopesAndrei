@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		040B0D291F3B59A900320F83 /* andrei.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 040B0D281F3B59A900320F83 /* andrei.jpg */; };
+		040B0D2B1F3B64C500320F83 /* UIImageViewX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040B0D2A1F3B64C500320F83 /* UIImageViewX.swift */; };
+		04DF1FC31F3B23E400C21AD9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DF1FC21F3B23E400C21AD9 /* Constants.swift */; };
+		04DF1FC61F3B271C00C21AD9 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DF1FC51F3B271C00C21AD9 /* FeedVC.swift */; };
 		0BB6490D21D0AFBF39BCCAE2 /* Pods_LIT_socialMediaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9955BCB131B3001BF6E65C9E /* Pods_LIT_socialMediaUITests.framework */; };
 		7ABFD52E2355868426397AD7 /* Pods_LIT_socialMediaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7388ABE2D6E3EFBF7560434A /* Pods_LIT_socialMediaTests.framework */; };
 		903C1ED5CA8B52DB6E54D43D /* Pods_LIT_socialMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67D95442C149F07F67393DFB /* Pods_LIT_socialMedia.framework */; };
@@ -41,6 +45,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		040B0D281F3B59A900320F83 /* andrei.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = andrei.jpg; sourceTree = "<group>"; };
+		040B0D2A1F3B64C500320F83 /* UIImageViewX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageViewX.swift; sourceTree = "<group>"; };
+		04DF1FC21F3B23E400C21AD9 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		04DF1FC51F3B271C00C21AD9 /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		15A58644CDCCD77A32852E91 /* Pods-LIT-socialMediaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LIT-socialMediaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LIT-socialMediaTests/Pods-LIT-socialMediaTests.release.xcconfig"; sourceTree = "<group>"; };
 		257EECCC5544D13997D3E34B /* Pods-LIT-socialMedia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LIT-socialMedia.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LIT-socialMedia/Pods-LIT-socialMedia.debug.xcconfig"; sourceTree = "<group>"; };
 		27B88FFBA51F46B8CBC12693 /* Pods-LIT-socialMediaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LIT-socialMediaUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LIT-socialMediaUITests/Pods-LIT-socialMediaUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -97,6 +105,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04DF1FC41F3B241900C21AD9 /* Utilitis */ = {
+			isa = PBXGroup;
+			children = (
+				04DF1FC21F3B23E400C21AD9 /* Constants.swift */,
+			);
+			name = Utilitis;
+			sourceTree = "<group>";
+		};
 		0646417CED2591372BBCC829 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -132,6 +148,8 @@
 		9514DBDD1F3A546100D21D56 /* LIT-socialMedia */ = {
 			isa = PBXGroup;
 			children = (
+				040B0D281F3B59A900320F83 /* andrei.jpg */,
+				04DF1FC41F3B241900C21AD9 /* Utilitis */,
 				956FCAB51F3A569300F370D2 /* Model */,
 				956FCAB41F3A568D00F370D2 /* View */,
 				956FCAB31F3A568200F370D2 /* Controller */,
@@ -167,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				9514DC0C1F3A557600D21D56 /* SignInVC.swift */,
+				04DF1FC51F3B271C00C21AD9 /* FeedVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -177,6 +196,7 @@
 				9514DC0D1F3A557600D21D56 /* UIButtonX.swift */,
 				9514DC0E1F3A557600D21D56 /* UITextFieldX.swift */,
 				9514DC0F1F3A557600D21D56 /* UIViewX.swift */,
+				040B0D2A1F3B64C500320F83 /* UIImageViewX.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -322,6 +342,7 @@
 			files = (
 				9514DBE91F3A546100D21D56 /* LaunchScreen.storyboard in Resources */,
 				9514DBE61F3A546100D21D56 /* Assets.xcassets in Resources */,
+				040B0D291F3B59A900320F83 /* andrei.jpg in Resources */,
 				9514DBE41F3A546100D21D56 /* Main.storyboard in Resources */,
 				955F843D1F3A864700D65183 /* GoogleService-Info.plist in Resources */,
 			);
@@ -395,13 +416,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LIT-socialMedia-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		680A1A83133B3D40E9A0109F /* [CP] Embed Pods Frameworks */ = {
@@ -425,13 +449,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LIT-socialMediaTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		75F52FC9B4AB93CB0F1C17C5 /* [CP] Check Pods Manifest.lock */ = {
@@ -440,13 +467,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LIT-socialMediaUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		CF43BBA6B8E40D60FED222DF /* [CP] Embed Pods Frameworks */ = {
@@ -455,9 +485,28 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-LIT-socialMedia/Pods-LIT-socialMedia-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftKeychainWrapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -487,10 +536,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				9514DC121F3A557600D21D56 /* UITextFieldX.swift in Sources */,
+				040B0D2B1F3B64C500320F83 /* UIImageViewX.swift in Sources */,
+				04DF1FC61F3B271C00C21AD9 /* FeedVC.swift in Sources */,
 				9514DC101F3A557600D21D56 /* SignInVC.swift in Sources */,
 				9514DBDF1F3A546100D21D56 /* AppDelegate.swift in Sources */,
 				9514DC131F3A557600D21D56 /* UIViewX.swift in Sources */,
 				9514DC111F3A557600D21D56 /* UIButtonX.swift in Sources */,
+				04DF1FC31F3B23E400C21AD9 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,9 +11,10 @@ import FacebookLogin
 import FacebookCore
 import FirebaseAuth
 import Firebase
+import SwiftKeychainWrapper
 
 class SignInVC: UIViewController, UITextFieldDelegate {
-
+    
     @IBOutlet weak var passwordField: UITextFieldX!
     @IBOutlet weak var emailField: UITextFieldX!
     @IBOutlet weak var personImage: UIImageView!
@@ -35,14 +36,22 @@ class SignInVC: UIViewController, UITextFieldDelegate {
         colorArray.append((color1: #colorLiteral(red: 0.5611749291, green: 0.2202819586, blue: 0.563821733, alpha: 1) , color2: #colorLiteral(red: 0.3987122774, green: 0.314450562, blue: 0.709374249, alpha: 1)))
         colorArray.append((color1: #colorLiteral(red: 0.3987122774, green: 0.314450562, blue: 0.709374249, alpha: 1) , color2: #colorLiteral(red: 0.2966733277, green: 0.4200778604, blue: 0.7318040729, alpha: 1)))
         colorArray.append((color1: #colorLiteral(red: 0.2966733277, green: 0.4200778604, blue: 0.7318040729, alpha: 1) , color2: #colorLiteral(red: 0.2784220278, green: 0.525316, blue: 0.8143386245, alpha: 1)))
-
-        animateBgView()
         
+        animateBgView()
         passwordField.delegate = self
         emailField.delegate = self
-    
-    
+        
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        self.passwordField.text = ""
+        self.emailField.text = ""
+        if let _ = KeychainWrapper.standard.string(forKey: KEY_UID) {
+            performSegue(withIdentifier: "goToFeed", sender: nil)
+        }
+    }
+    
     
     func animateBgView() {
         currentColorArrayIndex = currentColorArrayIndex == (colorArray.count - 1) ? 0 : currentColorArrayIndex + 1
@@ -56,7 +65,7 @@ class SignInVC: UIViewController, UITextFieldDelegate {
             self.animateBgView()
         }
     }
-    
+    //  TEXT FIELDS RETURN
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         passwordField.resignFirstResponder()
         emailField.resignFirstResponder()
@@ -68,9 +77,11 @@ class SignInVC: UIViewController, UITextFieldDelegate {
         self.passwordField.endEditing(true)
     }
     
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        self.passwordField.backgroundColor = UIColor(red: 255, green: 255, blue: 255, alpha: 0.15)
+        self.emailField.backgroundColor = UIColor(red: 255, green: 255, blue: 255, alpha: 0.15)
+    }
     
-
-
     
     
     
@@ -85,15 +96,22 @@ class SignInVC: UIViewController, UITextFieldDelegate {
             Auth.auth().signIn(withEmail: email, password: password, completion: { (user, error) in
                 
                 if error == nil {
-                    print("FIREBASE: Email user authenticated with Firebase")
+                    print("ANDREI: FIREBASE: Email user authenticated with Firebase")
+                    if let user = user {
+                        self.completeSignIn(id: user.uid)
+                    }
                 } else {
                     Auth.auth().createUser(withEmail: email, password: password, completion: { (user, error) in
                         
                         if error != nil {
-                            print("FIREBASE: Unable to authenticate with Firebase using email")
+                            print("ANDREI: FIREBASE: Unable to authenticate with Firebase using email")
                             self.emailField.backgroundColor = UIColor(red: 255, green: 0, blue: 0, alpha: 0.8)
+                            self.passwordField.backgroundColor = UIColor(red: 255, green: 0, blue: 0, alpha: 0.8)
                         } else {
-                            print("FIREBASE: Successfully authenticated with Firebase")
+                            print("ANDREI: FIREBASE: Successfully authenticated with Firebase")
+                            if let user = user {
+                                self.completeSignIn(id: user.uid)
+                            }
                         }
                     })
                 }
@@ -103,16 +121,16 @@ class SignInVC: UIViewController, UITextFieldDelegate {
     
     
     @IBAction func facebookBtnPressed(_ sender: Any) {
-
+        
         let loginManager = LoginManager()
         loginManager.logIn([ .publicProfile, .email], viewController: self) { loginResult in
             switch loginResult {
             case .failed(let error):
-                print("FACEBOOK \(error)")
+                print("ANDREI: FACEBOOK \(error)")
             case .cancelled:
-                print("FACEBOOK: User cancelled login.")
+                print("ANDREI: FACEBOOK: User cancelled login.")
             case .success:
-                print("FACEBOOK: Logged in!")
+                print("ANDREI: FACEBOOK: Logged in!")
                 
                 let credential = FacebookAuthProvider.credential(withAccessToken: (AccessToken.current?.authenticationToken)!)
                 self.firebaseAuth(credential)
@@ -124,14 +142,23 @@ class SignInVC: UIViewController, UITextFieldDelegate {
         
         Auth.auth().signIn(with: credential) { (user, error) in
             if error != nil {
-                print("FIREBASE: UNABLE TO CONNECT TO FIREBASE \(String(describing: error))")
+                print("ANDREI: FIREBASE: UNABLE TO CONNECT TO FIREBASE \(String(describing: error))")
             } else {
-                print("FIREBASE: Logged in!")
+                print("ANDREI: FIREBASE: Logged in!")
+                if let user = user {
+                    self.completeSignIn(id: user.uid)
+                }
             }
-            
         }
     }
-
+    
+    func completeSignIn(id: String) {
+        let keychainResult = KeychainWrapper.standard.set(id, forKey: KEY_UID)
+        print("ANDREI: Data saved to keychain \(keychainResult)")
+        performSegue(withIdentifier: "goToFeed", sender: nil)
+        
+    }
+    
 }
 
 
