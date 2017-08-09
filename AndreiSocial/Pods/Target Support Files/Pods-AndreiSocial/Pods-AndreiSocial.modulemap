@@ -1,6 +1,0 @@
-framework module Pods_AndreiSocial {
-  umbrella header "Pods-AndreiSocial-umbrella.h"
-
-  export *
-  module * { export * }
-}
