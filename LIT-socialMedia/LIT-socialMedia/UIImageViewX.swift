@@ -16,7 +16,9 @@ class UIImageViewX: UIImageView {
         self.layer.masksToBounds = false
         self.layer.borderColor = UIColor.white.cgColor
         self.layer.cornerRadius = self.frame.size.width / 2
+        self.layer.shadowColor = UIColor.black.cgColor
+        self.layer.shadowRadius = 15
+        self.layer.shadowOpacity = 0.75
         self.clipsToBounds = true
     }
-
 }

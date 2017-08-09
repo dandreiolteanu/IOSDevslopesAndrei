@@ -24,6 +24,8 @@
 		9514DC111F3A557600D21D56 /* UIButtonX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9514DC0D1F3A557600D21D56 /* UIButtonX.swift */; };
 		9514DC121F3A557600D21D56 /* UITextFieldX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9514DC0E1F3A557600D21D56 /* UITextFieldX.swift */; };
 		9514DC131F3A557600D21D56 /* UIViewX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9514DC0F1F3A557600D21D56 /* UIViewX.swift */; };
+		95459EED1F3BAB6300746B75 /* PostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95459EEC1F3BAB6300746B75 /* PostVC.swift */; };
+		95459EEF1F3BBC3E00746B75 /* ShadowRoundedUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95459EEE1F3BBC3E00746B75 /* ShadowRoundedUIView.swift */; };
 		955F843D1F3A864700D65183 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 955F843C1F3A864700D65183 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +74,8 @@
 		9514DC0D1F3A557600D21D56 /* UIButtonX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonX.swift; sourceTree = "<group>"; };
 		9514DC0E1F3A557600D21D56 /* UITextFieldX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextFieldX.swift; sourceTree = "<group>"; };
 		9514DC0F1F3A557600D21D56 /* UIViewX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewX.swift; sourceTree = "<group>"; };
+		95459EEC1F3BAB6300746B75 /* PostVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostVC.swift; sourceTree = "<group>"; };
+		95459EEE1F3BBC3E00746B75 /* ShadowRoundedUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowRoundedUIView.swift; sourceTree = "<group>"; };
 		955F843C1F3A864700D65183 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9955BCB131B3001BF6E65C9E /* Pods_LIT_socialMediaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LIT_socialMediaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D065C2371B5A8234DA9320D /* Pods-LIT-socialMediaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LIT-socialMediaUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LIT-socialMediaUITests/Pods-LIT-socialMediaUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -186,6 +190,7 @@
 			children = (
 				9514DC0C1F3A557600D21D56 /* SignInVC.swift */,
 				04DF1FC51F3B271C00C21AD9 /* FeedVC.swift */,
+				95459EEC1F3BAB6300746B75 /* PostVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -197,6 +202,7 @@
 				9514DC0E1F3A557600D21D56 /* UITextFieldX.swift */,
 				9514DC0F1F3A557600D21D56 /* UIViewX.swift */,
 				040B0D2A1F3B64C500320F83 /* UIImageViewX.swift */,
+				95459EEE1F3BBC3E00746B75 /* ShadowRoundedUIView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -539,8 +545,10 @@
 				040B0D2B1F3B64C500320F83 /* UIImageViewX.swift in Sources */,
 				04DF1FC61F3B271C00C21AD9 /* FeedVC.swift in Sources */,
 				9514DC101F3A557600D21D56 /* SignInVC.swift in Sources */,
+				95459EEF1F3BBC3E00746B75 /* ShadowRoundedUIView.swift in Sources */,
 				9514DBDF1F3A546100D21D56 /* AppDelegate.swift in Sources */,
 				9514DC131F3A557600D21D56 /* UIViewX.swift in Sources */,
+				95459EED1F3BAB6300746B75 /* PostVC.swift in Sources */,
 				9514DC111F3A557600D21D56 /* UIButtonX.swift in Sources */,
 				04DF1FC31F3B23E400C21AD9 /* Constants.swift in Sources */,
 			);
