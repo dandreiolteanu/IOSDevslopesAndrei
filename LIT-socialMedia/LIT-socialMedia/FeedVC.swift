@@ -16,6 +16,9 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var signOutBtn: UIButton!
     @IBOutlet weak var postBtn: UIButton!
+    
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -23,15 +26,14 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         tableView.dataSource = self
         
         DataService.ds.REF_POSTS.observe(.value) { (snaphot) in
-            print(snaphot.value)
+            print(snaphot.value!)
         }
 
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
-//        self.signOutBtn.isHidden = false
-//        self.postBtn.isHidden = false
+
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -43,6 +45,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         return tableView.dequeueReusableCell(withIdentifier: "PostCell") as! PostCell
     }
 
@@ -55,5 +58,13 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     
     }
-    
+ 
 }
+
+
+
+
+
+
+
+

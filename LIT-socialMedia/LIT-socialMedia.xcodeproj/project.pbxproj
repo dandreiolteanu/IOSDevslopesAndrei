@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		040B0D291F3B59A900320F83 /* andrei.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 040B0D281F3B59A900320F83 /* andrei.jpg */; };
 		040B0D2B1F3B64C500320F83 /* UIImageViewX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040B0D2A1F3B64C500320F83 /* UIImageViewX.swift */; };
-		0445FB681F3CB0BC00D9B7BF /* NewsFeedCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0445FB671F3CB0BC00D9B7BF /* NewsFeedCellView.swift */; };
-		0445FB6A1F3CB4EA00D9B7BF /* ShadowForNewsFeedCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0445FB691F3CB4EA00D9B7BF /* ShadowForNewsFeedCells.swift */; };
 		0445FB6C1F3CB79000D9B7BF /* ShadowView1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0445FB6B1F3CB79000D9B7BF /* ShadowView1.swift */; };
 		04DF1FC31F3B23E400C21AD9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DF1FC21F3B23E400C21AD9 /* Constants.swift */; };
 		04DF1FC61F3B271C00C21AD9 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DF1FC51F3B271C00C21AD9 /* FeedVC.swift */; };
@@ -31,6 +29,7 @@
 		9514DC131F3A557600D21D56 /* UIViewX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9514DC0F1F3A557600D21D56 /* UIViewX.swift */; };
 		95459EED1F3BAB6300746B75 /* PostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95459EEC1F3BAB6300746B75 /* PostVC.swift */; };
 		95459EEF1F3BBC3E00746B75 /* ShadowRoundedUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95459EEE1F3BBC3E00746B75 /* ShadowRoundedUIView.swift */; };
+		95598ED91F3CBF5400B5DF58 /* ShadowView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95598ED81F3CBF5400B5DF58 /* ShadowView2.swift */; };
 		955F843D1F3A864700D65183 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 955F843C1F3A864700D65183 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -54,8 +53,6 @@
 /* Begin PBXFileReference section */
 		040B0D281F3B59A900320F83 /* andrei.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = andrei.jpg; sourceTree = "<group>"; };
 		040B0D2A1F3B64C500320F83 /* UIImageViewX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageViewX.swift; sourceTree = "<group>"; };
-		0445FB671F3CB0BC00D9B7BF /* NewsFeedCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsFeedCellView.swift; sourceTree = "<group>"; };
-		0445FB691F3CB4EA00D9B7BF /* ShadowForNewsFeedCells.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowForNewsFeedCells.swift; sourceTree = "<group>"; };
 		0445FB6B1F3CB79000D9B7BF /* ShadowView1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowView1.swift; sourceTree = "<group>"; };
 		04DF1FC21F3B23E400C21AD9 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		04DF1FC51F3B271C00C21AD9 /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
@@ -86,6 +83,7 @@
 		9514DC0F1F3A557600D21D56 /* UIViewX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewX.swift; sourceTree = "<group>"; };
 		95459EEC1F3BAB6300746B75 /* PostVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostVC.swift; sourceTree = "<group>"; };
 		95459EEE1F3BBC3E00746B75 /* ShadowRoundedUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowRoundedUIView.swift; sourceTree = "<group>"; };
+		95598ED81F3CBF5400B5DF58 /* ShadowView2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowView2.swift; sourceTree = "<group>"; };
 		955F843C1F3A864700D65183 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9955BCB131B3001BF6E65C9E /* Pods_LIT_socialMediaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LIT_socialMediaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D065C2371B5A8234DA9320D /* Pods-LIT-socialMediaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LIT-socialMediaUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LIT-socialMediaUITests/Pods-LIT-socialMediaUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -222,10 +220,9 @@
 				9514DC0F1F3A557600D21D56 /* UIViewX.swift */,
 				040B0D2A1F3B64C500320F83 /* UIImageViewX.swift */,
 				95459EEE1F3BBC3E00746B75 /* ShadowRoundedUIView.swift */,
-				0445FB671F3CB0BC00D9B7BF /* NewsFeedCellView.swift */,
-				0445FB691F3CB4EA00D9B7BF /* ShadowForNewsFeedCells.swift */,
 				04E300681F3C5A7E00B39620 /* PostCell.swift */,
 				0445FB6B1F3CB79000D9B7BF /* ShadowView1.swift */,
+				95598ED81F3CBF5400B5DF58 /* ShadowView2.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -570,15 +567,14 @@
 				04E3006D1F3C7D8900B39620 /* DataService.swift in Sources */,
 				0445FB6C1F3CB79000D9B7BF /* ShadowView1.swift in Sources */,
 				9514DC101F3A557600D21D56 /* SignInVC.swift in Sources */,
-				0445FB681F3CB0BC00D9B7BF /* NewsFeedCellView.swift in Sources */,
 				95459EEF1F3BBC3E00746B75 /* ShadowRoundedUIView.swift in Sources */,
 				9514DBDF1F3A546100D21D56 /* AppDelegate.swift in Sources */,
 				9514DC131F3A557600D21D56 /* UIViewX.swift in Sources */,
 				95459EED1F3BAB6300746B75 /* PostVC.swift in Sources */,
-				0445FB6A1F3CB4EA00D9B7BF /* ShadowForNewsFeedCells.swift in Sources */,
 				04E300691F3C5A7E00B39620 /* PostCell.swift in Sources */,
 				9514DC111F3A557600D21D56 /* UIButtonX.swift in Sources */,
 				04DF1FC31F3B23E400C21AD9 /* Constants.swift in Sources */,
+				95598ED91F3CBF5400B5DF58 /* ShadowView2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

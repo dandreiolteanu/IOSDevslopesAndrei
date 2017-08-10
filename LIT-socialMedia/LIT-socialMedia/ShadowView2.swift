@@ -1,20 +1,20 @@
 //
-//  ShadowView1.swift
+//  ShadowView2.swift
 //  LIT-socialMedia
 //
-//  Created by Mac on 10/08/2017.
+//  Created by Olteanu Andrei on 10/08/2017.
 //  Copyright © 2017 Olteanu Andrei. All rights reserved.
 //
 
 import UIKit
 
-class ShadowView1: UIView {
+class ShadowView2: UIView {
 
     override func awakeFromNib() {
-        
+        self.layer.cornerRadius = 33
         self.layer.shadowColor = UIColor.black.cgColor
         self.layer.shadowOpacity = 0.50
-        self.layer.shadowRadius = 15
+        self.layer.shadowRadius = 12
     }
 
 }
