@@ -13,7 +13,6 @@ class UIViewX: UIView {
     
     
     
-    
     @IBInspectable var cornerRadius: CGFloat = 0.0 {
         didSet {
             layer.cornerRadius = cornerRadius

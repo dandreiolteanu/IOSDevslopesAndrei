@@ -21,6 +21,10 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+        DataService.ds.REF_POSTS.observe(.value) { (snaphot) in
+            print(snaphot.value)
+        }
 
     }
     
@@ -49,8 +53,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         dismiss(animated: true, completion: nil)
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        self.signOutBtn.isHidden = true
-//        self.postBtn.isHidden = true
+    
     }
     
 }

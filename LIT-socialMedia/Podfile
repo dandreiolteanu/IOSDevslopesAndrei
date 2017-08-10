@@ -7,11 +7,15 @@ target 'LIT-socialMedia' do
 
   # Pods for LIT-socialMedia
 
+
   pod 'FacebookCore'
   pod 'FacebookLogin'
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
   pod 'SwiftKeychainWrapper'
+  pod 'Firebase/Database'
+  pod 'Firebase/Storage'
+
   
   target 'LIT-socialMediaTests' do
     inherit! :search_paths
