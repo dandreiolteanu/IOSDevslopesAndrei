@@ -10,9 +10,12 @@ import UIKit
 
 class PostVC: UIViewController, UITextViewDelegate {
 
+    
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var charactersCounter: UILabel!
     @IBOutlet weak var postView: UIViewX!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         textView.delegate = self
@@ -26,19 +29,19 @@ class PostVC: UIViewController, UITextViewDelegate {
     }
     
     func textViewDidBeginEditing(_ textView: UITextView) {
-        movePostView(postView, moveDistance: -45, up: true)
+        movePostView(postView, moveDistance: -70, up: true)
         if textView.textColor == UIColor.lightGray {
             self.textView.text = ""
             self.textView.textColor = UIColor.black
         }
     }
     func textViewDidChange(_ textView: UITextView) {
-        
+        self.postView.translatesAutoresizingMaskIntoConstraints = true
         let len = textView.text.characters.count
         self.charactersCounter.text = "\(len)/45 Characters"
     }
     func textViewDidEndEditing(_ textView: UITextView) {
-        movePostView(postView, moveDistance: -45, up: false)
+        movePostView(postView, moveDistance: -70, up: false)
         if textView.text == "" {
             textView.text = "Say something lit about your photo."
             textView.textColor = UIColor.lightGray
@@ -61,11 +64,11 @@ class PostVC: UIViewController, UITextViewDelegate {
         let moveDuration = 0.3
         let movement: CGFloat = CGFloat(up ? moveDistance : -moveDistance)
         
-        UIView.beginAnimations("animatePostView", context: nil)
-        UIView.setAnimationBeginsFromCurrentState(true)
-        UIView.setAnimationDuration(moveDuration)
+        UIViewX.beginAnimations("animatePostView", context: nil)
+        UIViewX.setAnimationBeginsFromCurrentState(true)
+        UIViewX.setAnimationDuration(moveDuration)
         self.postView.frame = self.postView.frame.offsetBy(dx: 0, dy: movement)
-        UIView.commitAnimations()
+        UIViewX.commitAnimations()
     }
-
+    
 }
