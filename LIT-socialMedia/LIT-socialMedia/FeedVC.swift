@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import SwiftKeychainWrapper
+import FirebaseDatabase
 
 class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextViewDelegate {
     
@@ -42,10 +43,14 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UITe
         self.popUpViewBlurred.alpha = 0.0
         
         
-        DataService.ds.REF_POSTS.observe(.value) { (snaphot) in
-            print(snaphot.value!)
-        }
-
+        DataService.ds.REF_POSTS.observe(.value, with: { (snapshot) in
+            if let snapshot = snapshot.children.allObjects as? [DataSnapshot] {
+                for snap in snapshot {
+                    print("ANDREI: FIREBASE: SNAP: \(snap)")
+                }
+            }
+        })
+    
     }
     
     override func viewDidAppear(_ animated: Bool) {
