@@ -28,8 +28,13 @@ class PostCell: UITableViewCell {
         
         self.post = post
         self.caption.text = post.caption
-        self.likesLbl.text = "\(post.likes)"
-        
+        if post.likes > 1000 {
+            self.likesLbl.text = "\(post.likes / 1000)K"
+            self.likesLbl.text = self.likesLbl.text?.replacingOccurrences(of: ",", with: ".")
+        } else {
+            self.likesLbl.text = "\(post.likes)"
+
+        }
         if image != nil {
             self.postImage.image = image
         } else {

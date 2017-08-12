@@ -12,7 +12,7 @@ import SwiftKeychainWrapper
 import FirebaseDatabase
 
 class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    
+    // FEED VC
     @IBOutlet weak var charactersCounter: UILabel!
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var postView: UIViewX!
@@ -21,7 +21,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UITe
     @IBOutlet weak var postBtn: UIButton!
     @IBOutlet weak var closePostBtn: UIButton!
     
-
+    // POST VIEW, the view sliding from down
     @IBOutlet weak var centerYPopupConstraint: NSLayoutConstraint!
     
 
@@ -205,6 +205,22 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UITe
         self.imageAdd.isHidden = true
         self.imageAddDelete.isHidden = true
         imageAddShadow.isHidden = true
+    }
+    @IBAction func postButtonPressed(_ sender: Any) {
+        
+        guard let caption = textView.text, caption != "" || caption != "Say something lit about your photo." else {
+            print("ANDREI: Caption must be entered")
+            return
+        }
+        
+        guard let image = imageAdd.image, imageAdd.isHidden == false else {
+            print("ANDREI: A valid image was not selected")
+            return
+        }
+        
+//        if let imgData = UIImageJPEGRepresentation(image, 0.2) {
+//            DataService.ds.REF_POST_IMAGES.child("post-photos")
+//        }
     }
 }
 
