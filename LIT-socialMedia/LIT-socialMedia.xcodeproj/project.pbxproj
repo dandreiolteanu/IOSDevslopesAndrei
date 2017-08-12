@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		040B0D291F3B59A900320F83 /* andrei.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 040B0D281F3B59A900320F83 /* andrei.jpg */; };
 		040B0D2B1F3B64C500320F83 /* UIImageViewX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040B0D2A1F3B64C500320F83 /* UIImageViewX.swift */; };
 		0445FB6C1F3CB79000D9B7BF /* ShadowView1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0445FB6B1F3CB79000D9B7BF /* ShadowView1.swift */; };
 		046035AB1F3DBF0500CE1527 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046035AA1F3DBF0500CE1527 /* Post.swift */; };
@@ -28,6 +27,8 @@
 		9514DC111F3A557600D21D56 /* UIButtonX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9514DC0D1F3A557600D21D56 /* UIButtonX.swift */; };
 		9514DC121F3A557600D21D56 /* UITextFieldX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9514DC0E1F3A557600D21D56 /* UITextFieldX.swift */; };
 		9514DC131F3A557600D21D56 /* UIViewX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9514DC0F1F3A557600D21D56 /* UIViewX.swift */; };
+		95264E471F3F7AF8008D21C5 /* andrei.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 95264E461F3F7AF8008D21C5 /* andrei.jpg */; };
+		95264E491F3F82E3008D21C5 /* ShadowRoundedUIView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95264E481F3F82E3008D21C5 /* ShadowRoundedUIView2.swift */; };
 		95459EED1F3BAB6300746B75 /* PostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95459EEC1F3BAB6300746B75 /* PostVC.swift */; };
 		95459EEF1F3BBC3E00746B75 /* ShadowRoundedUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95459EEE1F3BBC3E00746B75 /* ShadowRoundedUIView.swift */; };
 		95598ED91F3CBF5400B5DF58 /* ShadowView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95598ED81F3CBF5400B5DF58 /* ShadowView2.swift */; };
@@ -52,7 +53,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		040B0D281F3B59A900320F83 /* andrei.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = andrei.jpg; sourceTree = "<group>"; };
 		040B0D2A1F3B64C500320F83 /* UIImageViewX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageViewX.swift; sourceTree = "<group>"; };
 		0445FB6B1F3CB79000D9B7BF /* ShadowView1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowView1.swift; sourceTree = "<group>"; };
 		046035AA1F3DBF0500CE1527 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
@@ -83,6 +83,8 @@
 		9514DC0D1F3A557600D21D56 /* UIButtonX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonX.swift; sourceTree = "<group>"; };
 		9514DC0E1F3A557600D21D56 /* UITextFieldX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextFieldX.swift; sourceTree = "<group>"; };
 		9514DC0F1F3A557600D21D56 /* UIViewX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewX.swift; sourceTree = "<group>"; };
+		95264E461F3F7AF8008D21C5 /* andrei.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = andrei.jpg; sourceTree = "<group>"; };
+		95264E481F3F82E3008D21C5 /* ShadowRoundedUIView2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowRoundedUIView2.swift; sourceTree = "<group>"; };
 		95459EEC1F3BAB6300746B75 /* PostVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostVC.swift; sourceTree = "<group>"; };
 		95459EEE1F3BBC3E00746B75 /* ShadowRoundedUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowRoundedUIView.swift; sourceTree = "<group>"; };
 		95598ED81F3CBF5400B5DF58 /* ShadowView2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowView2.swift; sourceTree = "<group>"; };
@@ -170,7 +172,7 @@
 		9514DBDD1F3A546100D21D56 /* LIT-socialMedia */ = {
 			isa = PBXGroup;
 			children = (
-				040B0D281F3B59A900320F83 /* andrei.jpg */,
+				95264E461F3F7AF8008D21C5 /* andrei.jpg */,
 				04E3006B1F3C7D6800B39620 /* Services */,
 				04DF1FC41F3B241900C21AD9 /* Utilitis */,
 				956FCAB51F3A569300F370D2 /* Model */,
@@ -222,9 +224,10 @@
 				9514DC0F1F3A557600D21D56 /* UIViewX.swift */,
 				040B0D2A1F3B64C500320F83 /* UIImageViewX.swift */,
 				95459EEE1F3BBC3E00746B75 /* ShadowRoundedUIView.swift */,
-				04E300681F3C5A7E00B39620 /* PostCell.swift */,
+				95264E481F3F82E3008D21C5 /* ShadowRoundedUIView2.swift */,
 				0445FB6B1F3CB79000D9B7BF /* ShadowView1.swift */,
 				95598ED81F3CBF5400B5DF58 /* ShadowView2.swift */,
+				04E300681F3C5A7E00B39620 /* PostCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -370,8 +373,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9514DBE91F3A546100D21D56 /* LaunchScreen.storyboard in Resources */,
+				95264E471F3F7AF8008D21C5 /* andrei.jpg in Resources */,
 				9514DBE61F3A546100D21D56 /* Assets.xcassets in Resources */,
-				040B0D291F3B59A900320F83 /* andrei.jpg in Resources */,
 				9514DBE41F3A546100D21D56 /* Main.storyboard in Resources */,
 				955F843D1F3A864700D65183 /* GoogleService-Info.plist in Resources */,
 			);
@@ -571,6 +574,7 @@
 				0445FB6C1F3CB79000D9B7BF /* ShadowView1.swift in Sources */,
 				9514DC101F3A557600D21D56 /* SignInVC.swift in Sources */,
 				95459EEF1F3BBC3E00746B75 /* ShadowRoundedUIView.swift in Sources */,
+				95264E491F3F82E3008D21C5 /* ShadowRoundedUIView2.swift in Sources */,
 				9514DBDF1F3A546100D21D56 /* AppDelegate.swift in Sources */,
 				9514DC131F3A557600D21D56 /* UIViewX.swift in Sources */,
 				046035AB1F3DBF0500CE1527 /* Post.swift in Sources */,

@@ -34,27 +34,27 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
-    
-    <key>CFBundleURLTypes</key>
-    <array>
-        <dict>
-            <key>CFBundleURLSchemes</key>
-            <array>
-                <string>fb109978239669687</string>
-            </array>
-        </dict>
-    </array>
-    <key>FacebookAppID</key>
-    <string>109978239669687</string>
-    <key>FacebookDisplayName</key>
-    <string>LIT-socialMedia</string>
-    
-    <key>LSApplicationQueriesSchemes</key>
-    <array>
-        <string>fbapi</string>
-        <string>fb-messenger-api</string>
-        <string>fbauth2</string>
-        <string>fbshareextension</string>
-    </array>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb109978239669687</string>
+			</array>
+		</dict>
+	</array>
+	<key>FacebookAppID</key>
+	<string>109978239669687</string>
+	<key>FacebookDisplayName</key>
+	<string>LIT-socialMedia</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>fbapi</string>
+		<string>fb-messenger-api</string>
+		<string>fbauth2</string>
+		<string>fbshareextension</string>
+	</array>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Choose a Lit Photo from your library.</string>
 </dict>
 </plist>

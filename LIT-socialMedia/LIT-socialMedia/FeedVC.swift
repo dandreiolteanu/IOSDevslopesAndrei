@@ -11,7 +11,7 @@ import Firebase
 import SwiftKeychainWrapper
 import FirebaseDatabase
 
-class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextViewDelegate {
+class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     @IBOutlet weak var charactersCounter: UILabel!
     @IBOutlet weak var textView: UITextView!
@@ -27,12 +27,25 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UITe
 
     var popUpViewBlurred: UIViewX!
     
+    var posts = [Post]()
+    var imagePicker: UIImagePickerController!
+    static var imageCache: NSCache<NSString, UIImage> = NSCache()
+    
+    @IBOutlet weak var imageAddShadow: ShadowRoundedUIView2!
+    @IBOutlet weak var imageAddDelete: UIImageView!
+    @IBOutlet weak var imageAdd: UIImageViewX!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.delegate = self
         tableView.dataSource = self
         textView.delegate = self
+        
+        imagePicker = UIImagePickerController()
+        imagePicker.allowsEditing = true
+        imagePicker.delegate = self
         
         textView.text = "Say something lit about your photo."
         textView.textColor = UIColor.lightGray
@@ -47,8 +60,16 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UITe
             if let snapshot = snapshot.children.allObjects as? [DataSnapshot] {
                 for snap in snapshot {
                     print("ANDREI: FIREBASE: SNAP: \(snap)")
+                    if let postDict = snap.value as? Dictionary<String, AnyObject> {
+                        
+                        let key = snap.key
+                        let post = Post(postKey: key, postData: postDict)
+                        self.posts.append(post)
+                        print(post.imageUrl)
+                    }
                 }
             }
+            self.tableView.reloadData()
         })
     
     }
@@ -63,12 +84,25 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UITe
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return self.posts.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        return tableView.dequeueReusableCell(withIdentifier: "PostCell") as! PostCell
+        let post = posts[indexPath.row]
+        
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell") as? PostCell {
+                        
+            if let img = FeedVC.imageCache.object(forKey: post.imageUrl as NSString) {
+                cell.configureCell(post: post, image: img)
+                return cell
+            } else {
+                cell.configureCell(post: post)
+                return cell
+            }
+        } else {
+            return PostCell()
+        }
     }
 
     @IBAction func signOutTapped(_ sender: Any) {
@@ -149,6 +183,29 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UITe
         return numberOfChars < 46
     }
     
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        
+        if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
+            imageAdd.isHidden = false
+            imageAddDelete.isHidden = false
+            imageAddShadow.isHidden = false
+            imageAdd.image = image
+            
+        } else {
+            print("ANDREI: a valid image wasn't selected")
+        }
+        
+        imagePicker.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func addImagePressed(_ sender: Any) {
+        present(imagePicker, animated: true, completion: nil)
+    }
+    @IBAction func deletePostImagePressed(_ sender: Any) {
+        self.imageAdd.isHidden = true
+        self.imageAddDelete.isHidden = true
+        imageAddShadow.isHidden = true
+    }
 }
 
 

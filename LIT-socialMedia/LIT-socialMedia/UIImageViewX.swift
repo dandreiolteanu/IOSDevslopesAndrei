@@ -10,15 +10,27 @@ import UIKit
 
 class UIImageViewX: UIImageView {
 
+    
     override func awakeFromNib() {
         
-        self.layer.borderWidth = 1.0
+//        self.layer.borderWidth = 1.0
         self.layer.masksToBounds = false
-        self.layer.borderColor = UIColor.white.cgColor
-        self.layer.cornerRadius = self.frame.size.width / 2
-        self.layer.shadowColor = UIColor.black.cgColor
-        self.layer.shadowRadius = 15
-        self.layer.shadowOpacity = 0.75
+//        self.layer.borderColor = UIColor.white.cgColor
         self.clipsToBounds = true
     }
+    
+    @IBInspectable var cornerRadius: CGFloat = 0.0 {
+        didSet {
+            layer.cornerRadius = cornerRadius
+        }
+    }
+    
+    override func prepareForInterfaceBuilder() {
+        setupView()
+    }
+    
+    func setupView() {
+        layer.cornerRadius = cornerRadius
+    }
+
 }
