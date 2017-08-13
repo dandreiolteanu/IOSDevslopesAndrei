@@ -14,8 +14,8 @@ class ShadowRoundedUIView2: UIView {
         
         self.layer.cornerRadius = 17
         self.layer.shadowColor = UIColor.black.cgColor
-        self.layer.shadowOpacity = 0.24
-        self.layer.shadowRadius = 10
+        self.layer.shadowOpacity = 0.30
+        self.layer.shadowRadius = 12
     }
 
 }

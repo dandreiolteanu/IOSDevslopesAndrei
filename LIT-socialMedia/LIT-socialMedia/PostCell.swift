@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import NVActivityIndicatorView
 
 class PostCell: UITableViewCell {
 
@@ -17,15 +18,19 @@ class PostCell: UITableViewCell {
     @IBOutlet weak var caption: UILabel!
     @IBOutlet weak var likesLbl: UILabel!
 
+    @IBOutlet weak var spinner: NVActivityIndicatorView!
+    
     var post: Post!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        self.spinner.startAnimating()
     }
     
     func configureCell(post: Post, image: UIImage? = nil) {
-        
+                
         self.post = post
         self.caption.text = post.caption
         if post.likes > 1000 {
@@ -49,6 +54,10 @@ class PostCell: UITableViewCell {
                         if let img = UIImage(data: imgData) {
                             self.postImage.image = img
                             FeedVC.imageCache.setObject(img, forKey: post.imageUrl as NSString)
+                            
+                            self.spinner.stopAnimating()
+                            self.spinner.isHidden = true
+
                         }
                     }
                 }

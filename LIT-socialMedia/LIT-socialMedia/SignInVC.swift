@@ -106,8 +106,16 @@ class SignInVC: UIViewController, UITextFieldDelegate {
                         
                         if error != nil {
                             print("ANDREI: FIREBASE: Unable to authenticate with Firebase using email")
+                            // MAKING THE TEXTFIELDS RED, and after 2 seconds return to same color
+                            
                             self.emailField.backgroundColor = UIColor(red: 255, green: 0, blue: 0, alpha: 0.8)
                             self.passwordField.backgroundColor = UIColor(red: 255, green: 0, blue: 0, alpha: 0.8)
+                            let when = DispatchTime.now() + 2 // change 2 to desired number of seconds
+                            DispatchQueue.main.asyncAfter(deadline: when) {
+                                // Your code with delay
+                                self.passwordField.backgroundColor = UIColor(red: 255, green: 255, blue: 255, alpha: 0.15)
+                                self.emailField.backgroundColor = UIColor(red: 255, green: 255, blue: 255, alpha: 0.15)
+                            }
                         } else {
                             print("ANDREI: FIREBASE: Successfully authenticated with Firebase")
                             if let user = user {

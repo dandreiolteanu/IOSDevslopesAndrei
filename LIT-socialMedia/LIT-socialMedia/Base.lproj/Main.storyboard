@@ -584,6 +584,17 @@
                                                                 <constraint firstAttribute="width" constant="1" id="bOf-R2-xLM"/>
                                                             </constraints>
                                                         </view>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HQu-c9-zHg" customClass="NVActivityIndicatorView" customModule="NVActivityIndicatorView">
+                                                            <rect key="frame" x="119" y="191" width="100" height="100"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="100" id="KdZ-Ui-Akq"/>
+                                                                <constraint firstAttribute="width" constant="100" id="MMl-Kh-jmX"/>
+                                                            </constraints>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="string" keyPath="typeName" value="ballClipRotate"/>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </view>
                                                     </subviews>
                                                     <color key="backgroundColor" red="0.25882352941176467" green="0.25882352941176467" blue="0.25882352941176467" alpha="0.75" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
@@ -597,6 +608,7 @@
                                                         <constraint firstItem="wq6-r5-OqG" firstAttribute="centerY" secondItem="Tzy-bM-fJy" secondAttribute="centerY" id="Pdj-F2-Zdg"/>
                                                         <constraint firstItem="d1u-WL-61O" firstAttribute="leading" secondItem="Tzy-bM-fJy" secondAttribute="leading" id="R4N-UU-aJc"/>
                                                         <constraint firstAttribute="bottom" secondItem="wq6-r5-OqG" secondAttribute="bottom" id="Tbs-jW-8qc"/>
+                                                        <constraint firstItem="HQu-c9-zHg" firstAttribute="centerY" secondItem="Tzy-bM-fJy" secondAttribute="centerY" id="ViX-Ht-oiA"/>
                                                         <constraint firstAttribute="trailing" secondItem="d1u-WL-61O" secondAttribute="trailing" id="YHo-cT-AD3"/>
                                                         <constraint firstAttribute="trailing" secondItem="ftU-38-ZJx" secondAttribute="trailing" id="eya-8f-INa"/>
                                                         <constraint firstAttribute="trailing" secondItem="gXP-Vz-QYM" secondAttribute="trailing" id="gfb-hl-yd0"/>
@@ -607,6 +619,7 @@
                                                         <constraint firstAttribute="trailing" secondItem="wq6-r5-OqG" secondAttribute="trailing" id="tvs-cs-Ckh"/>
                                                         <constraint firstAttribute="bottom" secondItem="f1Z-Ze-DjD" secondAttribute="bottom" id="vbY-gU-21G"/>
                                                         <constraint firstItem="f1Z-Ze-DjD" firstAttribute="leading" secondItem="pfv-J3-noI" secondAttribute="trailing" id="x0z-Y1-GEb"/>
+                                                        <constraint firstItem="HQu-c9-zHg" firstAttribute="centerX" secondItem="Tzy-bM-fJy" secondAttribute="centerX" id="ykh-Ke-OJ8"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -633,6 +646,7 @@
                                             <outlet property="likesLbl" destination="ofb-dQ-fmf" id="LSt-kb-h63"/>
                                             <outlet property="postImage" destination="wq6-r5-OqG" id="DfS-9e-Om3"/>
                                             <outlet property="profileImg" destination="2xf-KW-8sw" id="Xth-xR-Ni7"/>
+                                            <outlet property="spinner" destination="HQu-c9-zHg" id="6VS-Pw-nwY"/>
                                             <outlet property="userNameLbl" destination="aaf-em-MS4" id="hDW-MH-eW4"/>
                                         </connections>
                                     </tableViewCell>

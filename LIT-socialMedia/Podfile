@@ -15,6 +15,8 @@ target 'LIT-socialMedia' do
   pod 'SwiftKeychainWrapper'
   pod 'Firebase/Database'
   pod 'Firebase/Storage'
+  pod 'NVActivityIndicatorView'
+
 
   
   target 'LIT-socialMediaTests' do
