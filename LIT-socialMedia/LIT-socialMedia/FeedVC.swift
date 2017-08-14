@@ -177,15 +177,26 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UITe
         }
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.textView.endEditing(true)
-    }
-    
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         
         let newText = (textView.text as NSString).replacingCharacters(in: range, with: text)
         let numberOfChars = newText.characters.count
+        
+        if newText.isEmpty {
+            textView.text = "Say something lit about your photo."
+            textView.textColor = UIColor.lightGray
+            textView.selectedTextRange = textView.textRange(from: textView.beginningOfDocument, to: textView.beginningOfDocument)
+            return false
+        } else if textView.textColor == UIColor.lightGray && !text.isEmpty {
+            textView.text = ""
+            textView.textColor = UIColor.black
+        }
+        
         return numberOfChars < 46
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.textView.endEditing(true)
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
