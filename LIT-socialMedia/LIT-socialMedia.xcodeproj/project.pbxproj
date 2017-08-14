@@ -19,7 +19,6 @@
 		903C1ED5CA8B52DB6E54D43D /* Pods_LIT_socialMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67D95442C149F07F67393DFB /* Pods_LIT_socialMedia.framework */; };
 		9514DBDF1F3A546100D21D56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9514DBDE1F3A546100D21D56 /* AppDelegate.swift */; };
 		9514DBE41F3A546100D21D56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9514DBE21F3A546100D21D56 /* Main.storyboard */; };
-		9514DBE61F3A546100D21D56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9514DBE51F3A546100D21D56 /* Assets.xcassets */; };
 		9514DBE91F3A546100D21D56 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9514DBE71F3A546100D21D56 /* LaunchScreen.storyboard */; };
 		9514DBF41F3A546200D21D56 /* LIT_socialMediaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9514DBF31F3A546200D21D56 /* LIT_socialMediaTests.swift */; };
 		9514DBFF1F3A546200D21D56 /* LIT_socialMediaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9514DBFE1F3A546200D21D56 /* LIT_socialMediaUITests.swift */; };
@@ -32,6 +31,7 @@
 		95459EEF1F3BBC3E00746B75 /* ShadowRoundedUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95459EEE1F3BBC3E00746B75 /* ShadowRoundedUIView.swift */; };
 		95598ED91F3CBF5400B5DF58 /* ShadowView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95598ED81F3CBF5400B5DF58 /* ShadowView2.swift */; };
 		955F843D1F3A864700D65183 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 955F843C1F3A864700D65183 /* GoogleService-Info.plist */; };
+		95A05B3B1F424EE700AB78A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95A05B3A1F424EE700AB78A1 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,7 +69,6 @@
 		9514DBDB1F3A546100D21D56 /* LIT-socialMedia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LIT-socialMedia.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9514DBDE1F3A546100D21D56 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9514DBE31F3A546100D21D56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		9514DBE51F3A546100D21D56 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9514DBE81F3A546100D21D56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9514DBEA1F3A546100D21D56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9514DBEF1F3A546200D21D56 /* LIT-socialMediaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "LIT-socialMediaTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,6 +86,7 @@
 		95459EEE1F3BBC3E00746B75 /* ShadowRoundedUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowRoundedUIView.swift; sourceTree = "<group>"; };
 		95598ED81F3CBF5400B5DF58 /* ShadowView2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowView2.swift; sourceTree = "<group>"; };
 		955F843C1F3A864700D65183 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		95A05B3A1F424EE700AB78A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9955BCB131B3001BF6E65C9E /* Pods_LIT_socialMediaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LIT_socialMediaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D065C2371B5A8234DA9320D /* Pods-LIT-socialMediaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LIT-socialMediaUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LIT-socialMediaUITests/Pods-LIT-socialMediaUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -178,7 +178,7 @@
 				956FCAB31F3A568200F370D2 /* Controller */,
 				9514DBDE1F3A546100D21D56 /* AppDelegate.swift */,
 				9514DBE21F3A546100D21D56 /* Main.storyboard */,
-				9514DBE51F3A546100D21D56 /* Assets.xcassets */,
+				95A05B3A1F424EE700AB78A1 /* Assets.xcassets */,
 				9514DBE71F3A546100D21D56 /* LaunchScreen.storyboard */,
 				955F843C1F3A864700D65183 /* GoogleService-Info.plist */,
 				9514DBEA1F3A546100D21D56 /* Info.plist */,
@@ -371,9 +371,9 @@
 			files = (
 				9514DBE91F3A546100D21D56 /* LaunchScreen.storyboard in Resources */,
 				95264E471F3F7AF8008D21C5 /* andrei.jpg in Resources */,
-				9514DBE61F3A546100D21D56 /* Assets.xcassets in Resources */,
 				9514DBE41F3A546100D21D56 /* Main.storyboard in Resources */,
 				955F843D1F3A864700D65183 /* GoogleService-Info.plist in Resources */,
+				95A05B3B1F424EE700AB78A1 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
