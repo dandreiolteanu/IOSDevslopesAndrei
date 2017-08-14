@@ -10,6 +10,7 @@ import UIKit
 import Firebase
 import SwiftKeychainWrapper
 import FirebaseDatabase
+import FirebaseStorage
 
 class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     // FEED VC
@@ -57,15 +58,18 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UITe
         
         
         DataService.ds.REF_POSTS.observe(.value, with: { (snapshot) in
+            
+            self.posts = []
+            
             if let snapshot = snapshot.children.allObjects as? [DataSnapshot] {
                 for snap in snapshot {
-                    print("ANDREI: FIREBASE: SNAP: \(snap)")
+//                    print("ANDREI: FIREBASE: SNAP: \(snap)")
                     if let postDict = snap.value as? Dictionary<String, AnyObject> {
                         
                         let key = snap.key
                         let post = Post(postKey: key, postData: postDict)
                         self.posts.append(post)
-                        print(post.imageUrl)
+//                        print(post.imageUrl)
                     }
                 }
             }
@@ -98,8 +102,8 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UITe
                 return cell
             } else {
                 cell.configureCell(post: post)
-                return cell
             }
+            return cell
         } else {
             return PostCell()
         }
@@ -109,6 +113,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UITe
         let keychainResult = KeychainWrapper.standard.removeObject(forKey: KEY_UID)
         print("ANDREI: ID Removed from KEYCHAIN \(keychainResult)")
         try! Auth.auth().signOut()
+        downloadedImages = true
         dismiss(animated: true, completion: nil)
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -208,7 +213,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UITe
     }
     @IBAction func postButtonPressed(_ sender: Any) {
         
-        guard let caption = textView.text, caption != "" || caption != "Say something lit about your photo." else {
+        guard let caption = textView.text, caption != "" && caption != "Say something lit about your photo." else {
             print("ANDREI: Caption must be entered")
             return
         }
@@ -218,9 +223,45 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UITe
             return
         }
         
-//        if let imgData = UIImageJPEGRepresentation(image, 0.2) {
-//            DataService.ds.REF_POST_IMAGES.child("post-photos")
-//        }
+        if let imageData = UIImageJPEGRepresentation(image, 0.7) {
+            
+            let imageUid = NSUUID().uuidString
+            
+            let metadata = StorageMetadata()
+            metadata.contentType = "image/jpeg"
+            
+            DataService.ds.REF_POST_IMAGES.child(imageUid).putData(imageData, metadata: metadata, completion: { (metadata, error) in
+                
+                if error != nil {
+                    print("ANDREI: Unable to upload image to firebase storage")
+                } else {
+                    print("ANDREI: Succesfully uploaded image to Firebase storage")
+                    let downloadURL = metadata?.downloadURL()?.absoluteString
+                    self.postToFirebase(imageUrl: downloadURL!)
+                }
+            })
+            
+        }
+    }
+    
+    func postToFirebase(imageUrl: String) {
+        
+        let post: Dictionary<String, AnyObject> = [
+            "caption": textView.text as AnyObject,
+            "image": imageUrl as String as AnyObject,
+            "likes": 0 as AnyObject
+        ]
+        // HERE IS THE POST ID
+        let firebasePost = DataService.ds.REF_POSTS.childByAutoId()
+        firebasePost.setValue(post)
+        
+        textView.text = ""
+        imageAddShadow.isHidden = true
+        imageAdd.isHidden = true
+        imageAddDelete.isHidden = true
+        closePopUp((Any).self)
+        
+        tableView.reloadData()
     }
 }
 

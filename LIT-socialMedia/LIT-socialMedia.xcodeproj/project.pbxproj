@@ -29,7 +29,6 @@
 		9514DC131F3A557600D21D56 /* UIViewX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9514DC0F1F3A557600D21D56 /* UIViewX.swift */; };
 		95264E471F3F7AF8008D21C5 /* andrei.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 95264E461F3F7AF8008D21C5 /* andrei.jpg */; };
 		95264E491F3F82E3008D21C5 /* ShadowRoundedUIView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95264E481F3F82E3008D21C5 /* ShadowRoundedUIView2.swift */; };
-		95459EED1F3BAB6300746B75 /* PostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95459EEC1F3BAB6300746B75 /* PostVC.swift */; };
 		95459EEF1F3BBC3E00746B75 /* ShadowRoundedUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95459EEE1F3BBC3E00746B75 /* ShadowRoundedUIView.swift */; };
 		95598ED91F3CBF5400B5DF58 /* ShadowView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95598ED81F3CBF5400B5DF58 /* ShadowView2.swift */; };
 		955F843D1F3A864700D65183 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 955F843C1F3A864700D65183 /* GoogleService-Info.plist */; };
@@ -85,7 +84,6 @@
 		9514DC0F1F3A557600D21D56 /* UIViewX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewX.swift; sourceTree = "<group>"; };
 		95264E461F3F7AF8008D21C5 /* andrei.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = andrei.jpg; sourceTree = "<group>"; };
 		95264E481F3F82E3008D21C5 /* ShadowRoundedUIView2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowRoundedUIView2.swift; sourceTree = "<group>"; };
-		95459EEC1F3BAB6300746B75 /* PostVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostVC.swift; sourceTree = "<group>"; };
 		95459EEE1F3BBC3E00746B75 /* ShadowRoundedUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowRoundedUIView.swift; sourceTree = "<group>"; };
 		95598ED81F3CBF5400B5DF58 /* ShadowView2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowView2.swift; sourceTree = "<group>"; };
 		955F843C1F3A864700D65183 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -211,7 +209,6 @@
 			children = (
 				9514DC0C1F3A557600D21D56 /* SignInVC.swift */,
 				04DF1FC51F3B271C00C21AD9 /* FeedVC.swift */,
-				95459EEC1F3BAB6300746B75 /* PostVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -580,7 +577,6 @@
 				9514DBDF1F3A546100D21D56 /* AppDelegate.swift in Sources */,
 				9514DC131F3A557600D21D56 /* UIViewX.swift in Sources */,
 				046035AB1F3DBF0500CE1527 /* Post.swift in Sources */,
-				95459EED1F3BAB6300746B75 /* PostVC.swift in Sources */,
 				04E300691F3C5A7E00B39620 /* PostCell.swift in Sources */,
 				9514DC111F3A557600D21D56 /* UIButtonX.swift in Sources */,
 				04DF1FC31F3B23E400C21AD9 /* Constants.swift in Sources */,

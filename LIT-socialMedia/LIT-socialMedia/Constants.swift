@@ -9,3 +9,5 @@
 import UIKit
 
 let KEY_UID = "uid"
+
+var downloadedImages = false
