@@ -98,7 +98,10 @@ class SignInVC: UIViewController, UITextFieldDelegate {
                 if error == nil {
                     print("ANDREI: FIREBASE: Email user authenticated with Firebase")
                     if let user = user {
-                        let userData = ["provider": user.providerID]
+                        let userData = ["provider": user.providerID,
+                                        "email": email,
+                                        "password": password
+                                        ]
                         self.completeSignIn(id: user.uid, userData: userData)
                     }
                 } else {
@@ -119,7 +122,10 @@ class SignInVC: UIViewController, UITextFieldDelegate {
                         } else {
                             print("ANDREI: FIREBASE: Successfully authenticated with Firebase")
                             if let user = user {
-                                let userData = ["provider": user.providerID]
+                                let userData = ["provider": user.providerID,
+                                                "email": email,
+                                                "password": password
+                                                ]
                                 self.completeSignIn(id: user.uid, userData: userData)
                             }
                         }
@@ -155,9 +161,27 @@ class SignInVC: UIViewController, UITextFieldDelegate {
                 print("ANDREI: FIREBASE: UNABLE TO CONNECT TO FIREBASE \(String(describing: error))")
             } else {
                 print("ANDREI: FIREBASE: Logged in!")
-                if let user = user {
-                    let userData = ["provider": credential.provider]
-                    self.completeSignIn(id: user.uid, userData: userData)
+                
+                let params = ["fields" : "email, name"]
+                let graphRequest = GraphRequest(graphPath: "me", parameters: params)
+                graphRequest.start {
+                    (urlResponse, requestResult) in
+                    
+                    switch requestResult {
+                    case .failed(let error):
+                        print("error in graph request:", error)
+                        break
+                    case .success(let graphResponse):
+                        if let responseDictionary = graphResponse.dictionaryValue {
+                            if let user = user {
+                                let userData = ["provider": credential.provider,
+                                                "name": responseDictionary["name"],
+                                                "email": responseDictionary["email"]
+                                                ]
+                                self.completeSignIn(id: user.uid, userData: userData as! Dictionary<String, String>)
+                            }
+                        }
+                    }
                 }
             }
         }
