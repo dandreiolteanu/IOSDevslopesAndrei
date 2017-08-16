@@ -247,6 +247,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UITe
                     print("ANDREI: Unable to upload image to firebase storage")
                 } else {
                     print("ANDREI: Succesfully uploaded image to Firebase storage")
+                    self.closePopUp((Any).self)
                     let downloadURL = metadata?.downloadURL()?.absoluteString
                     self.postToFirebase(imageUrl: downloadURL!)
                 }
@@ -270,7 +271,6 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UITe
         imageAddShadow.isHidden = true
         imageAdd.isHidden = true
         imageAddDelete.isHidden = true
-        closePopUp((Any).self)
         
         tableView.reloadData()
     }

@@ -1,0 +1,603 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		04F3DC191F446E750023D74D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F3DC181F446E750023D74D /* AppDelegate.swift */; };
+		04F3DC1B1F446E750023D74D /* CameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F3DC1A1F446E750023D74D /* CameraVC.swift */; };
+		04F3DC1E1F446E750023D74D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04F3DC1C1F446E750023D74D /* Main.storyboard */; };
+		04F3DC201F446E750023D74D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04F3DC1F1F446E750023D74D /* Assets.xcassets */; };
+		04F3DC231F446E750023D74D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04F3DC211F446E750023D74D /* LaunchScreen.storyboard */; };
+		04F3DC2E1F446E750023D74D /* LIT_snapAndChatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F3DC2D1F446E750023D74D /* LIT_snapAndChatTests.swift */; };
+		04F3DC3C1F4470680023D74D /* SwiftyRecordButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F3DC3B1F4470680023D74D /* SwiftyRecordButton.swift */; };
+		16B5D05724B6B3471B90E634 /* Pods_LIT_snapAndChatTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 680DBE337D0BAF91C4BF0F31 /* Pods_LIT_snapAndChatTests.framework */; };
+		994B86DCB86561263E375F9F /* Pods_LIT_snapAndChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9251FD75BDA8E3ED07A1C93D /* Pods_LIT_snapAndChat.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		04F3DC2A1F446E750023D74D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04F3DC0D1F446E750023D74D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 04F3DC141F446E750023D74D;
+			remoteInfo = "LIT-snapAndChat";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		04F3DC151F446E750023D74D /* LIT-snapAndChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LIT-snapAndChat.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		04F3DC181F446E750023D74D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		04F3DC1A1F446E750023D74D /* CameraVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraVC.swift; sourceTree = "<group>"; };
+		04F3DC1D1F446E750023D74D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		04F3DC1F1F446E750023D74D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		04F3DC221F446E750023D74D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		04F3DC241F446E750023D74D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04F3DC291F446E750023D74D /* LIT-snapAndChatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "LIT-snapAndChatTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		04F3DC2D1F446E750023D74D /* LIT_snapAndChatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LIT_snapAndChatTests.swift; sourceTree = "<group>"; };
+		04F3DC2F1F446E750023D74D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04F3DC3B1F4470680023D74D /* SwiftyRecordButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyRecordButton.swift; sourceTree = "<group>"; };
+		325A76D91C89535A71A8BE6B /* Pods-LIT-snapAndChatTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LIT-snapAndChatTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LIT-snapAndChatTests/Pods-LIT-snapAndChatTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4BF84C7D2762BE5AC3CD0F23 /* Pods-LIT-snapAndChatTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LIT-snapAndChatTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LIT-snapAndChatTests/Pods-LIT-snapAndChatTests.release.xcconfig"; sourceTree = "<group>"; };
+		680DBE337D0BAF91C4BF0F31 /* Pods_LIT_snapAndChatTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LIT_snapAndChatTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C8CF60948A2939F567CDAED /* Pods-LIT-snapAndChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LIT-snapAndChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-LIT-snapAndChat/Pods-LIT-snapAndChat.release.xcconfig"; sourceTree = "<group>"; };
+		9251FD75BDA8E3ED07A1C93D /* Pods_LIT_snapAndChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LIT_snapAndChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0543DBC64926FA94ABE4446 /* Pods-LIT-snapAndChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LIT-snapAndChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LIT-snapAndChat/Pods-LIT-snapAndChat.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		04F3DC121F446E750023D74D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				994B86DCB86561263E375F9F /* Pods_LIT_snapAndChat.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04F3DC261F446E750023D74D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16B5D05724B6B3471B90E634 /* Pods_LIT_snapAndChatTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		04F3DC0C1F446E750023D74D = {
+			isa = PBXGroup;
+			children = (
+				04F3DC171F446E750023D74D /* LIT-snapAndChat */,
+				04F3DC2C1F446E750023D74D /* LIT-snapAndChatTests */,
+				04F3DC161F446E750023D74D /* Products */,
+				8526F92E7F4052D5296BCF6A /* Pods */,
+				E6C8A06B3E9C59A71E800EDA /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		04F3DC161F446E750023D74D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				04F3DC151F446E750023D74D /* LIT-snapAndChat.app */,
+				04F3DC291F446E750023D74D /* LIT-snapAndChatTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		04F3DC171F446E750023D74D /* LIT-snapAndChat */ = {
+			isa = PBXGroup;
+			children = (
+				04F3DC3A1F4470270023D74D /* Model */,
+				04F3DC391F4470230023D74D /* View */,
+				04F3DC381F44701B0023D74D /* Controller */,
+				04F3DC181F446E750023D74D /* AppDelegate.swift */,
+				04F3DC1C1F446E750023D74D /* Main.storyboard */,
+				04F3DC1F1F446E750023D74D /* Assets.xcassets */,
+				04F3DC211F446E750023D74D /* LaunchScreen.storyboard */,
+				04F3DC241F446E750023D74D /* Info.plist */,
+			);
+			path = "LIT-snapAndChat";
+			sourceTree = "<group>";
+		};
+		04F3DC2C1F446E750023D74D /* LIT-snapAndChatTests */ = {
+			isa = PBXGroup;
+			children = (
+				04F3DC2D1F446E750023D74D /* LIT_snapAndChatTests.swift */,
+				04F3DC2F1F446E750023D74D /* Info.plist */,
+			);
+			path = "LIT-snapAndChatTests";
+			sourceTree = "<group>";
+		};
+		04F3DC381F44701B0023D74D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				04F3DC1A1F446E750023D74D /* CameraVC.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		04F3DC391F4470230023D74D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				04F3DC3B1F4470680023D74D /* SwiftyRecordButton.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		04F3DC3A1F4470270023D74D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		8526F92E7F4052D5296BCF6A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F0543DBC64926FA94ABE4446 /* Pods-LIT-snapAndChat.debug.xcconfig */,
+				8C8CF60948A2939F567CDAED /* Pods-LIT-snapAndChat.release.xcconfig */,
+				325A76D91C89535A71A8BE6B /* Pods-LIT-snapAndChatTests.debug.xcconfig */,
+				4BF84C7D2762BE5AC3CD0F23 /* Pods-LIT-snapAndChatTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E6C8A06B3E9C59A71E800EDA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9251FD75BDA8E3ED07A1C93D /* Pods_LIT_snapAndChat.framework */,
+				680DBE337D0BAF91C4BF0F31 /* Pods_LIT_snapAndChatTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		04F3DC141F446E750023D74D /* LIT-snapAndChat */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04F3DC321F446E750023D74D /* Build configuration list for PBXNativeTarget "LIT-snapAndChat" */;
+			buildPhases = (
+				781C5D05CA85BE6CC47E4531 /* [CP] Check Pods Manifest.lock */,
+				04F3DC111F446E750023D74D /* Sources */,
+				04F3DC121F446E750023D74D /* Frameworks */,
+				04F3DC131F446E750023D74D /* Resources */,
+				15810ADB87CB14C06B08931F /* [CP] Embed Pods Frameworks */,
+				5CED145B0468D14F2F5FEEBC /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "LIT-snapAndChat";
+			productName = "LIT-snapAndChat";
+			productReference = 04F3DC151F446E750023D74D /* LIT-snapAndChat.app */;
+			productType = "com.apple.product-type.application";
+		};
+		04F3DC281F446E750023D74D /* LIT-snapAndChatTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04F3DC351F446E750023D74D /* Build configuration list for PBXNativeTarget "LIT-snapAndChatTests" */;
+			buildPhases = (
+				9CF284E88C1BD9F52A991A0C /* [CP] Check Pods Manifest.lock */,
+				04F3DC251F446E750023D74D /* Sources */,
+				04F3DC261F446E750023D74D /* Frameworks */,
+				04F3DC271F446E750023D74D /* Resources */,
+				11928C279C307ACEEB2590A2 /* [CP] Embed Pods Frameworks */,
+				186416334E80DCB1B9016F55 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				04F3DC2B1F446E750023D74D /* PBXTargetDependency */,
+			);
+			name = "LIT-snapAndChatTests";
+			productName = "LIT-snapAndChatTests";
+			productReference = 04F3DC291F446E750023D74D /* LIT-snapAndChatTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		04F3DC0D1F446E750023D74D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = Mac;
+				TargetAttributes = {
+					04F3DC141F446E750023D74D = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 945V6ZBHK3;
+						ProvisioningStyle = Automatic;
+					};
+					04F3DC281F446E750023D74D = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 945V6ZBHK3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 04F3DC141F446E750023D74D;
+					};
+				};
+			};
+			buildConfigurationList = 04F3DC101F446E750023D74D /* Build configuration list for PBXProject "LIT-snapAndChat" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 04F3DC0C1F446E750023D74D;
+			productRefGroup = 04F3DC161F446E750023D74D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				04F3DC141F446E750023D74D /* LIT-snapAndChat */,
+				04F3DC281F446E750023D74D /* LIT-snapAndChatTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		04F3DC131F446E750023D74D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04F3DC231F446E750023D74D /* LaunchScreen.storyboard in Resources */,
+				04F3DC201F446E750023D74D /* Assets.xcassets in Resources */,
+				04F3DC1E1F446E750023D74D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04F3DC271F446E750023D74D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		11928C279C307ACEEB2590A2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LIT-snapAndChatTests/Pods-LIT-snapAndChatTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		15810ADB87CB14C06B08931F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-LIT-snapAndChat/Pods-LIT-snapAndChat-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SwiftyCam/SwiftyCam.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyCam.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LIT-snapAndChat/Pods-LIT-snapAndChat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		186416334E80DCB1B9016F55 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LIT-snapAndChatTests/Pods-LIT-snapAndChatTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5CED145B0468D14F2F5FEEBC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LIT-snapAndChat/Pods-LIT-snapAndChat-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		781C5D05CA85BE6CC47E4531 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LIT-snapAndChat-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9CF284E88C1BD9F52A991A0C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LIT-snapAndChatTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		04F3DC111F446E750023D74D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04F3DC1B1F446E750023D74D /* CameraVC.swift in Sources */,
+				04F3DC3C1F4470680023D74D /* SwiftyRecordButton.swift in Sources */,
+				04F3DC191F446E750023D74D /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04F3DC251F446E750023D74D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04F3DC2E1F446E750023D74D /* LIT_snapAndChatTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		04F3DC2B1F446E750023D74D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 04F3DC141F446E750023D74D /* LIT-snapAndChat */;
+			targetProxy = 04F3DC2A1F446E750023D74D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		04F3DC1C1F446E750023D74D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04F3DC1D1F446E750023D74D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		04F3DC211F446E750023D74D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04F3DC221F446E750023D74D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		04F3DC301F446E750023D74D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		04F3DC311F446E750023D74D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		04F3DC331F446E750023D74D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F0543DBC64926FA94ABE4446 /* Pods-LIT-snapAndChat.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 945V6ZBHK3;
+				INFOPLIST_FILE = "LIT-snapAndChat/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.andreiolteanu.LIT-snapAndChat";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		04F3DC341F446E750023D74D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C8CF60948A2939F567CDAED /* Pods-LIT-snapAndChat.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 945V6ZBHK3;
+				INFOPLIST_FILE = "LIT-snapAndChat/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.andreiolteanu.LIT-snapAndChat";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		04F3DC361F446E750023D74D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 325A76D91C89535A71A8BE6B /* Pods-LIT-snapAndChatTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 945V6ZBHK3;
+				INFOPLIST_FILE = "LIT-snapAndChatTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.andreiolteanu.LIT-snapAndChatTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LIT-snapAndChat.app/LIT-snapAndChat";
+			};
+			name = Debug;
+		};
+		04F3DC371F446E750023D74D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4BF84C7D2762BE5AC3CD0F23 /* Pods-LIT-snapAndChatTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 945V6ZBHK3;
+				INFOPLIST_FILE = "LIT-snapAndChatTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.andreiolteanu.LIT-snapAndChatTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LIT-snapAndChat.app/LIT-snapAndChat";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		04F3DC101F446E750023D74D /* Build configuration list for PBXProject "LIT-snapAndChat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04F3DC301F446E750023D74D /* Debug */,
+				04F3DC311F446E750023D74D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04F3DC321F446E750023D74D /* Build configuration list for PBXNativeTarget "LIT-snapAndChat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04F3DC331F446E750023D74D /* Debug */,
+				04F3DC341F446E750023D74D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04F3DC351F446E750023D74D /* Build configuration list for PBXNativeTarget "LIT-snapAndChatTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04F3DC361F446E750023D74D /* Debug */,
+				04F3DC371F446E750023D74D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 04F3DC0D1F446E750023D74D /* Project object */;
+}
