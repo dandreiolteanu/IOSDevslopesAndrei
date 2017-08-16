@@ -16,6 +16,7 @@
 		04F3DC3C1F4470680023D74D /* SwiftyRecordButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F3DC3B1F4470680023D74D /* SwiftyRecordButton.swift */; };
 		04F3DC3E1F4473900023D74D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04F3DC3D1F4473900023D74D /* GoogleService-Info.plist */; };
 		16B5D05724B6B3471B90E634 /* Pods_LIT_snapAndChatTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 680DBE337D0BAF91C4BF0F31 /* Pods_LIT_snapAndChatTests.framework */; };
+		95F269741F44AEEA00BE69CD /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F269731F44AEEA00BE69CD /* LoginVC.swift */; };
 		994B86DCB86561263E375F9F /* Pods_LIT_snapAndChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9251FD75BDA8E3ED07A1C93D /* Pods_LIT_snapAndChat.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +48,7 @@
 		680DBE337D0BAF91C4BF0F31 /* Pods_LIT_snapAndChatTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LIT_snapAndChatTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C8CF60948A2939F567CDAED /* Pods-LIT-snapAndChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LIT-snapAndChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-LIT-snapAndChat/Pods-LIT-snapAndChat.release.xcconfig"; sourceTree = "<group>"; };
 		9251FD75BDA8E3ED07A1C93D /* Pods_LIT_snapAndChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LIT_snapAndChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		95F269731F44AEEA00BE69CD /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		F0543DBC64926FA94ABE4446 /* Pods-LIT-snapAndChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LIT-snapAndChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LIT-snapAndChat/Pods-LIT-snapAndChat.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -119,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				04F3DC1A1F446E750023D74D /* CameraVC.swift */,
+				95F269731F44AEEA00BE69CD /* LoginVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -382,6 +385,7 @@
 			files = (
 				04F3DC1B1F446E750023D74D /* CameraVC.swift in Sources */,
 				04F3DC3C1F4470680023D74D /* SwiftyRecordButton.swift in Sources */,
+				95F269741F44AEEA00BE69CD /* LoginVC.swift in Sources */,
 				04F3DC191F446E750023D74D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
