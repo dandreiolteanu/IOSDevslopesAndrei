@@ -14,6 +14,7 @@
 		04F3DC231F446E750023D74D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04F3DC211F446E750023D74D /* LaunchScreen.storyboard */; };
 		04F3DC2E1F446E750023D74D /* LIT_snapAndChatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F3DC2D1F446E750023D74D /* LIT_snapAndChatTests.swift */; };
 		04F3DC3C1F4470680023D74D /* SwiftyRecordButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F3DC3B1F4470680023D74D /* SwiftyRecordButton.swift */; };
+		04F3DC3E1F4473900023D74D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04F3DC3D1F4473900023D74D /* GoogleService-Info.plist */; };
 		16B5D05724B6B3471B90E634 /* Pods_LIT_snapAndChatTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 680DBE337D0BAF91C4BF0F31 /* Pods_LIT_snapAndChatTests.framework */; };
 		994B86DCB86561263E375F9F /* Pods_LIT_snapAndChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9251FD75BDA8E3ED07A1C93D /* Pods_LIT_snapAndChat.framework */; };
 /* End PBXBuildFile section */
@@ -40,6 +41,7 @@
 		04F3DC2D1F446E750023D74D /* LIT_snapAndChatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LIT_snapAndChatTests.swift; sourceTree = "<group>"; };
 		04F3DC2F1F446E750023D74D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04F3DC3B1F4470680023D74D /* SwiftyRecordButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyRecordButton.swift; sourceTree = "<group>"; };
+		04F3DC3D1F4473900023D74D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		325A76D91C89535A71A8BE6B /* Pods-LIT-snapAndChatTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LIT-snapAndChatTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LIT-snapAndChatTests/Pods-LIT-snapAndChatTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4BF84C7D2762BE5AC3CD0F23 /* Pods-LIT-snapAndChatTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LIT-snapAndChatTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LIT-snapAndChatTests/Pods-LIT-snapAndChatTests.release.xcconfig"; sourceTree = "<group>"; };
 		680DBE337D0BAF91C4BF0F31 /* Pods_LIT_snapAndChatTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LIT_snapAndChatTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,6 +101,7 @@
 				04F3DC1F1F446E750023D74D /* Assets.xcassets */,
 				04F3DC211F446E750023D74D /* LaunchScreen.storyboard */,
 				04F3DC241F446E750023D74D /* Info.plist */,
+				04F3DC3D1F4473900023D74D /* GoogleService-Info.plist */,
 			);
 			path = "LIT-snapAndChat";
 			sourceTree = "<group>";
@@ -249,6 +252,7 @@
 				04F3DC231F446E750023D74D /* LaunchScreen.storyboard in Resources */,
 				04F3DC201F446E750023D74D /* Assets.xcassets in Resources */,
 				04F3DC1E1F446E750023D74D /* Main.storyboard in Resources */,
+				04F3DC3E1F4473900023D74D /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,11 +288,17 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-LIT-snapAndChat/Pods-LIT-snapAndChat-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyCam/SwiftyCam.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyCam.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

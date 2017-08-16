@@ -8,6 +8,10 @@ target 'LIT-snapAndChat' do
   # Pods for LIT-snapAndChat
 
 pod "SwiftyCam"
+pod 'Firebase/Core'
+pod 'FirebaseDatabase'
+pod 'FirebaseStorage'
+pod 'FirebaseAuth'
 
   target 'LIT-snapAndChatTests' do
     inherit! :search_paths
