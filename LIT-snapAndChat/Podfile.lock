@@ -38,6 +38,7 @@ PODS:
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
   - SwiftyCam (2.4.0)
+  - TextFieldEffects (1.3.3)
 
 DEPENDENCIES:
   - Firebase/Core
@@ -45,6 +46,7 @@ DEPENDENCIES:
   - FirebaseDatabase
   - FirebaseStorage
   - SwiftyCam
+  - TextFieldEffects
 
 SPEC CHECKSUMS:
   Firebase: 1492bf04e1b73a7353b4fb2cf5a20bac9692f341
@@ -58,7 +60,8 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: 5ad62e8200fa00ed011fe5e08d27fef72c5b1429
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   SwiftyCam: cb83b9a8e181f70fb741d30cea724c6b045a4549
+  TextFieldEffects: 8706f53525f1ce51c8921b7af32237caab50c467
 
-PODFILE CHECKSUM: a81d68ef8fd16d924d47bb91bd892215e54f3770
+PODFILE CHECKSUM: 6571db1acc56d96290a6bf886238f5419c734108
 
 COCOAPODS: 1.3.1

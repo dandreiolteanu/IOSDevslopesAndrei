@@ -12,6 +12,7 @@ pod 'Firebase/Core'
 pod 'FirebaseDatabase'
 pod 'FirebaseStorage'
 pod 'FirebaseAuth'
+pod "TextFieldEffects"
 
   target 'LIT-snapAndChatTests' do
     inherit! :search_paths

@@ -29,6 +29,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>TextFieldEffects.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>nanopb.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -42,12 +47,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4F2A59F2FB2B7A47ADE17506D269F5E9</key>
+		<key>2D6A40692CF81267506B5C324C869A0E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>680C993BEBAF8F0D6FA731E6BBC1E20F</key>
+		<key>4530B8CBF0BF9B24696E262FA19A1BC1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7F918A8FCB90AC7F6B71390FC6156348</key>
 		<dict>
 			<key>primary</key>
 			<true/>

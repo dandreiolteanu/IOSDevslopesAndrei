@@ -821,15 +821,21 @@ open class SwiftyCamViewController: UIViewController {
 	*/
 
 	fileprivate func processPhoto(_ imageData: Data) -> UIImage {
-		let dataProvider = CGDataProvider(data: imageData as CFData)
-		let cgImageRef = CGImage(jpegDataProviderSource: dataProvider!, decode: nil, shouldInterpolate: true, intent: CGColorRenderingIntent.defaultIntent)
+
+        //		let dataProvider = CGDataProvider(data: imageData as CFData)
+
+        //		let cgImageRef = CGImage(jpegDataProviderSource: dataProvider!, decode: nil, shouldInterpolate: true, intent: CGColorRenderingIntent.defaultIntent)
 
 		// Set proper orientation for photo
 		// If camera is currently set to front camera, flip image
+        
+        
 
-		let image = UIImage(cgImage: cgImageRef!, scale: 1.0, orientation: self.getImageOrientation(forCamera: self.currentCamera))
-
-		return image
+        //		let image = UIImage(cgImage: cgImageRef!, scale: 1.0, orientation: self.getImageOrientation(forCamera: self.currentCamera))
+        
+        let image = UIImage.self(data: imageData)
+        
+		return image!
 	}
 
 	fileprivate func capturePhotoAsyncronously(completionHandler: @escaping(Bool) -> ()) {
