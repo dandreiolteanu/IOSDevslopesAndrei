@@ -51,7 +51,6 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         
         UIView.animate(withDuration: 0.05) {
             self.hideDetailsButton.alpha = 0.0
-            self.whiteSmallUIView.alpha = 0.0
         }
         
         UIView.animate(withDuration: 0.2) {
@@ -75,10 +74,26 @@ class LoginVC: UIViewController, UITextFieldDelegate {
 
     @IBAction func showDetails(_ sender: Any) {
         
-        viewTopLogInBtnBottom.constant = -self.view.frame.height + 210
-        logoConstraint.constant = -18
+        
+        self.detailsButton.alpha = 0.0
+        UIView.animate(withDuration: 0.1, animations: {
+            
+            self.hideDetailsButton.backgroundColor = #colorLiteral(red: 0.08276576549, green: 0.19071123, blue: 0.2945209146, alpha: 1)
+            
+        }) { (finished) in
+            
+            UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseIn, animations: {
+                
+                self.viewTopLogInBtnBottom.constant = -self.view.frame.height + 210
+                self.logoConstraint.constant = -18
+                
+                self.view.layoutIfNeeded()
+                
+            }, completion: nil)
+            
+        }
+        
         UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseIn, animations: {
-            self.detailsButton.alpha = 0.0
             self.view.layoutIfNeeded()
             
         }, completion: nil)
