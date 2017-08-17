@@ -11,19 +11,16 @@ import TextFieldEffects
 
 class LoginVC: UIViewController, UITextFieldDelegate {
     
-    @IBOutlet weak var whiteSmallUIView: UIView!
+    
     
     @IBOutlet weak var emailTextField: HoshiTextField!
-    
     @IBOutlet weak var passwordTextField: HoshiTextField!
 
     @IBOutlet weak var detailsButton: UIButton!
-    
     @IBOutlet weak var hideDetailsButton: UIButton!
-    @IBOutlet weak var viewTopLogInBtnBottom: NSLayoutConstraint!
-
-    @IBOutlet weak var logoConstraint: NSLayoutConstraint!
     
+    @IBOutlet weak var viewTopLogInBtnBottom: NSLayoutConstraint!
+    @IBOutlet weak var logoConstraint: NSLayoutConstraint!
     @IBOutlet weak var textFieldConstraint: NSLayoutConstraint!
     
     override func viewDidLoad() {
@@ -64,7 +61,6 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         
         UIView.animate(withDuration: 0.5) {
             self.hideDetailsButton.alpha = 1.0
-            self.whiteSmallUIView.alpha = 1.0
         }
         
         UIView.animate(withDuration: 0.2) {
@@ -76,28 +72,14 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         
         
         self.detailsButton.alpha = 0.0
-        UIView.animate(withDuration: 0.1, animations: {
-            
-            self.hideDetailsButton.backgroundColor = #colorLiteral(red: 0.08276576549, green: 0.19071123, blue: 0.2945209146, alpha: 1)
-            
-        }) { (finished) in
-            
+        
+        self.viewTopLogInBtnBottom.constant = -self.view.frame.height + 210
+        self.logoConstraint.constant = -18
+        
             UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseIn, animations: {
-                
-                self.viewTopLogInBtnBottom.constant = -self.view.frame.height + 210
-                self.logoConstraint.constant = -18
-                
                 self.view.layoutIfNeeded()
                 
             }, completion: nil)
-            
-        }
-        
-        UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseIn, animations: {
-            self.view.layoutIfNeeded()
-            
-        }, completion: nil)
-        
     }
     @IBAction func hideDetails(_ sender: Any) {
         
@@ -114,4 +96,25 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         }, completion: nil)
     }
     
+    @IBAction func loginPressed(_ sender: Any) {
+        
+        if let email = emailTextField.text, let password = passwordTextField.text, (email.characters.count > 0 && password.characters.count > 0) {
+
+            AuthService.instance.login(email: email, password: password, onComplete: { (errMsg, data) in
+                guard errMsg == nil else {
+                    let alert = UIAlertController(title: "Error Authentication", message: errMsg, preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
+                    return
+                }
+                
+                self.dismiss(animated: true, completion: nil)
+            })
+            
+        } else {
+            let alert = UIAlertController(title: "Username and Password Required", message: "You must enter both a username and a password", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Lit", style: .cancel, handler: nil))
+            present(alert, animated: true, completion: nil)
+        }
+    }
 }

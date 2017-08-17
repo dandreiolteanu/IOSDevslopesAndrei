@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04AA08671F4594BB0081FBF6 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AA08661F4594BB0081FBF6 /* AuthService.swift */; };
+		04AA08691F45ACCD0081FBF6 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AA08681F45ACCD0081FBF6 /* DataService.swift */; };
+		04AA086B1F45B00E0081FBF6 /* UsersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AA086A1F45B00E0081FBF6 /* UsersVC.swift */; };
+		04AA086D1F45B1700081FBF6 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AA086C1F45B1700081FBF6 /* UserCell.swift */; };
+		04AA086F1F45CABB0081FBF6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AA086E1F45CABB0081FBF6 /* User.swift */; };
+		04AA08721F45CC150081FBF6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AA08711F45CC150081FBF6 /* Constants.swift */; };
 		04F3DC191F446E750023D74D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F3DC181F446E750023D74D /* AppDelegate.swift */; };
 		04F3DC1B1F446E750023D74D /* CameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F3DC1A1F446E750023D74D /* CameraVC.swift */; };
 		04F3DC1E1F446E750023D74D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04F3DC1C1F446E750023D74D /* Main.storyboard */; };
@@ -31,6 +37,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04AA08661F4594BB0081FBF6 /* AuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		04AA08681F45ACCD0081FBF6 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		04AA086A1F45B00E0081FBF6 /* UsersVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersVC.swift; sourceTree = "<group>"; };
+		04AA086C1F45B1700081FBF6 /* UserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		04AA086E1F45CABB0081FBF6 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		04AA08711F45CC150081FBF6 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		04F3DC151F446E750023D74D /* LIT-snapAndChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LIT-snapAndChat.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04F3DC181F446E750023D74D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04F3DC1A1F446E750023D74D /* CameraVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraVC.swift; sourceTree = "<group>"; };
@@ -72,6 +84,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04AA08651F4594A90081FBF6 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				04AA08661F4594BB0081FBF6 /* AuthService.swift */,
+				04AA08681F45ACCD0081FBF6 /* DataService.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		04AA08701F45CC040081FBF6 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				04AA08711F45CC150081FBF6 /* Constants.swift */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
 		04F3DC0C1F446E750023D74D = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +124,8 @@
 		04F3DC171F446E750023D74D /* LIT-snapAndChat */ = {
 			isa = PBXGroup;
 			children = (
+				04AA08701F45CC040081FBF6 /* Utilities */,
+				04AA08651F4594A90081FBF6 /* Services */,
 				04F3DC3A1F4470270023D74D /* Model */,
 				04F3DC391F4470230023D74D /* View */,
 				04F3DC381F44701B0023D74D /* Controller */,
@@ -122,6 +153,7 @@
 			children = (
 				04F3DC1A1F446E750023D74D /* CameraVC.swift */,
 				95F269731F44AEEA00BE69CD /* LoginVC.swift */,
+				04AA086A1F45B00E0081FBF6 /* UsersVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -130,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				04F3DC3B1F4470680023D74D /* SwiftyRecordButton.swift */,
+				04AA086C1F45B1700081FBF6 /* UserCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -137,6 +170,7 @@
 		04F3DC3A1F4470270023D74D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				04AA086E1F45CABB0081FBF6 /* User.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -383,8 +417,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04AA086D1F45B1700081FBF6 /* UserCell.swift in Sources */,
 				04F3DC1B1F446E750023D74D /* CameraVC.swift in Sources */,
 				04F3DC3C1F4470680023D74D /* SwiftyRecordButton.swift in Sources */,
+				04AA08671F4594BB0081FBF6 /* AuthService.swift in Sources */,
+				04AA086B1F45B00E0081FBF6 /* UsersVC.swift in Sources */,
+				04AA08721F45CC150081FBF6 /* Constants.swift in Sources */,
+				04AA086F1F45CABB0081FBF6 /* User.swift in Sources */,
+				04AA08691F45ACCD0081FBF6 /* DataService.swift in Sources */,
 				95F269741F44AEEA00BE69CD /* LoginVC.swift in Sources */,
 				04F3DC191F446E750023D74D /* AppDelegate.swift in Sources */,
 			);
