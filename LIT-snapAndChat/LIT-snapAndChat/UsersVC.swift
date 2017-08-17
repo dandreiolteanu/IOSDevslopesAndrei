@@ -57,7 +57,9 @@ class UsersVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
         let cell = tableView.cellForRow(at: indexPath) as! UserCell
 //        cell.setCheckmark(selected: true)
+        
         cell.accessoryViewImage.image = UIImage(named: "messageindicatorchecked1")
+        
         let user = users[indexPath.row]
         selectedUsers[user.uid] = user
     
@@ -65,8 +67,11 @@ class UsersVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath) as! UserCell
+        
         cell.accessoryViewImage.image = UIImage(named: "messageindicator1")
+        
 //        cell.setCheckmark(selected: false)
+//        print("false")
         let user = users[indexPath.row]
         selectedUsers[user.uid] = nil
     }

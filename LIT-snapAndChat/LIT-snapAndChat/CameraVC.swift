@@ -23,6 +23,9 @@ class CameraVC: SwiftyCamViewController, SwiftyCamViewControllerDelegate {
         shouldUseDeviceOrientation = true
         allowAutoRotate = true
         audioEnabled = true
+        
+        defaultCamera = .front
+        
         addButtons()
     }
     
